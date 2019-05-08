@@ -7,7 +7,7 @@
 	/*height: 650px;*/
 	background-color: #61c4d9;
 	position: relative;
-	background: url('/course1/img/uzor.png') #61c4d9 center right no-repeat;
+	background: url('/course1Result/img/uzor.png') #61c4d9 center right no-repeat;
 }
 
 
@@ -15,11 +15,12 @@
 	/*background-color: green;*/
 	display: flex; 
 	padding-top: 20px;
-    position: absolute;
+    /*position: absolute;*/
     align-self: start;
     justify-content: start;
     width: 100%;
 }
+
 
 .sheet-first__logo{
 	width: 53px;
@@ -37,10 +38,6 @@
 	justify-content: flex-start;
 	align-items: center;
 	margin-left: 45px;
-}
-
-.menu__option{
-	list-style-type: none;
 }
 
 .menu__option:nth-child(1n+2){
@@ -65,7 +62,6 @@
 	margin-left: auto;
 	justify-content: flex-start;
 	align-items: center;
-	padding-right: 80px;
 }
 
 .sheet-first__icon-phone{
@@ -169,18 +165,217 @@
 .sheet-why{
 	background-color: #fff;
 	width: 1100px;
-	height: 697px;
-	position: relative;
+    min-height: 697px;
+    position: relative;
+    height: 100vh;
 }
 
+.sheet-why__text{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    /* height: 100px; */
+    margin-top: 129px;	
+}
 
+.sheet-why__iconblock{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    align-items: start;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;	
+}
 /*
-.sheet3	{
+.sheet-why__iconblock>div{
+	width: 33%;
+}*/
+.sheet-why__iconblock>div:nth-of-type(1n+2):before{
+	content: '';
+	background: url('/course1Result/img/t3.png') center center no-repeat;
+	display: block;
+	width: 67px;
+    height: 21px;
+    flex: 0 0 67px;
+    align-self: start;
+    margin-top: 50px;
+}
+
+.sheet-why__text-desc{
+	color: #666666;
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 5px;
+    max-width: 450px;
+    text-align: center;	
+}
+
+.sheet-why__icon{
+	width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.sheet-why__polezno-icon{
+	background: url('/course1Result/img/polezno.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why__vkusno-icon{
+	background: url('/course1Result/img/vkusno.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why__pitatelno-icon{
+	background: url('/course1Result/img/pitatelno.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why .title{
+	text-align: center;
+	color: #000000;
+	font-size: 27px;
+	font-weight: 700;
+	margin-top: 25px;
+}
+
+.sheet-why .text{
+	text-align: center;
+	color: #666666;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 25px;	
+}
+
+.sheet-why__uzor1{
+    position: absolute;
+    bottom: 150px;
+    left: 0px;
+}
+
+.sheet-why__uzor2{
+    position: absolute;
+    z-index: 2;
+    bottom: -110px;
+    left: 0px;
+}
+
+/*=====================================chocco===================================*/
+
+.sheet-chocco {
 	background-color: #f8faf9;
 	width: 1100px;
 	height: 994px;
 	position: relative;
 }
+
+/*=====================================reviews===================================*/
+
+.sheet-reviews	{
+	width: 1100px;
+	height: 100vh;
+	min-height: 805px;
+	position: relative;
+    background-image:  url("/course1Result/img/reviews-uzor3.png");  
+	background-color: #fff;
+    background-position: top 20px right ;
+    background-repeat: no-repeat;
+}
+
+.sheet-reviews__uzor1{
+	position: absolute;
+	bottom: -200px;
+	left: 0px;
+	z-index: 2;
+}
+
+.sheet-reviews__uzor2{
+	position: absolute;
+	bottom: -125px;
+	left: 0px;
+	z-index: 3;
+}
+
+.sheet-reviews__review{
+	margin-top: 50px;
+	padding: 40px 140px 40px 40px;
+	display: flex;
+	background: url('/course1Result/img/reviews-pict.png') #f8faf9 right top no-repeat;
+	position: relative;
+}
+
+.sheet-reviews__content{
+	padding: 15px;
+}
+
+.sheet-reviews__title{
+	color: #323232;
+	font-size: 30px;
+	font-weight: 500;
+
+}
+
+.sheet-reviews__text{
+	margin-top: 30px;
+	color: #666666;
+	font-size: 18px;
+	font-weight: 400;	
+}
+
+.sheet-reviews__name{
+	margin-top: 40px;
+	color: #666666;
+	font-size: 18px;
+	font-weight: 500;	
+}
+
+.sheet-reviews__peoples{
+	display: flex;
+	padding-top: 50px;
+}
+
+.sheet-reviews__people{
+	margin: 0px 15px;
+	border-radius: 50%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-reviews__people{
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 6px #fff;
+	transition: none;
+}
+
+.sheet-reviews__active, .sheet-reviews__people:hover{
+	
+	background-color: #0f5a47;
+	box-shadow: 0px 0px 0px 6px #0f5a47;
+	cursor: pointer;
+}
+
+.sheet-reviews__circle{
+    position: absolute;
+    background-color: #ffffff;
+    width: 100px;
+    height: 100px;
+    top: -60px;
+    right: calc(50% - 50px);
+    border-radius: 50%;
+}
+
+/*=========================================howwork=====================================*/
+
+.sheet-howwork{
+	background-color: #f8faf9;
+	width: 1100px;
+	height: 864px;
+	position: relative;			
+}
+
+/*
 
 .sheet4	{
 	background-color: #fff;
@@ -196,12 +391,7 @@
 	position: relative;		
 }
 
-.sheet6	{
-	background-color: #fff;
-	width: 1100px;
-	height: 1007px;
-	position: relative;			
-}
+
 
 .sheet7	{
 	background-color: #f8faf9;
