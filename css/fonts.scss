@@ -1,0 +1,15 @@
+/*----------------------fonts--------------------*/
+@each $fontName in ('', 'Black', 'Black Italic', 'Bold', 'Bold Italic', 'Extra Bold', 'Extra Bold Italic', 'Italic', 'Light', 'Light Italic', 'Medium', 'Medium Italic', 'Thin', 'Thin Italic'){
+	@font-face {
+		@if $fontName == '' {
+			font-family: "Alegreya Sans";
+			$fontName: str-replace($fontName, ' ', '');
+			src: local('@'), url("/course1Result/fonts/AlegreyaSans.ttf") format("truetype"); 
+		}@else{
+			font-family: "Alegreya Sans - #{$fontName}";
+			$fontName: str-replace($fontName, ' ', '');
+			src: local('@'), url("/course1Result/fonts/AlegreyaSans-#{$fontName}.ttf") format("truetype"); 
+		}
+	}
+}
+
