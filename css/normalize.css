@@ -136,7 +136,7 @@ body {
   margin-top: -31px; }
 
 .pag__page {
-  background: url("/course1Result/img/ellipse.png") center center no-repeat;
+  background: url("/img/ellipse.png") center center no-repeat;
   width: 6px;
   height: 6px;
   margin: 3px 0px;
@@ -239,7 +239,7 @@ body {
   height: 650px;
   background-color: #61c4d9;
   position: relative;
-  background: url("/course1Result/img/uzor.png") #61c4d9 center right no-repeat; }
+  background: url("/img/uzor.png") #61c4d9 center right no-repeat; }
 
 .sheet-first__header {
   /*background-color: green;*/
@@ -303,7 +303,7 @@ body {
   align-items: center; }
 
 .sheet-first__icon-phone {
-  background: url("/course1Result/img/icon_phone.png") center center no-repeat;
+  background: url("/img/icon_phone.png") center center no-repeat;
   width: 12px;
   height: 11px;
   margin-right: 6px; }
@@ -363,21 +363,21 @@ body {
   /*через жопу сделано выравнивание блоков относительно друг друга, sheet-first__footer.nth-child(1n+2) почему то не сработал*/ }
 
 .sheet-first__icon-natural {
-  background: url("/course1Result/img/icon_natural.png") center center no-repeat;
+  background: url("/img/icon_natural.png") center center no-repeat;
   width: 44px;
   height: 41px;
   display: block;
   margin-right: 8px; }
 
 .sheet-first__icon-dostavka {
-  background: url("/course1Result/img/icon_dostavka.png") center center no-repeat;
+  background: url("/img/icon_dostavka.png") center center no-repeat;
   width: 50px;
   height: 40px;
   display: block;
   margin-right: 8px; }
 
 .sheet-first__icon-figura {
-  background: url("/course1Result/img/icon_figura.png") center center no-repeat;
+  background: url("/img/icon_figura.png") center center no-repeat;
   width: 42px;
   height: 42px;
   display: block;
@@ -453,7 +453,7 @@ body {
   margin-bottom: 20px; }
   .sheet-why__iconblock > div:nth-of-type(1n+2):before {
     content: '';
-    background: url("/course1Result/img/t3.png") center center no-repeat;
+    background: url("/img/t3.png") center center no-repeat;
     display: block;
     width: 67px;
     height: 21px;
@@ -480,13 +480,13 @@ body {
   margin: 0 auto; }
 
 .sheet-why__polezno-icon {
-  background: url("/course1Result/img/polezno.png") #f2f5f4 center center no-repeat; }
+  background: url("/img/polezno.png") #f2f5f4 center center no-repeat; }
 
 .sheet-why__vkusno-icon {
-  background: url("/course1Result/img/vkusno.png") #f2f5f4 center center no-repeat; }
+  background: url("/img/vkusno.png") #f2f5f4 center center no-repeat; }
 
 .sheet-why__pitatelno-icon {
-  background: url("/course1Result/img/pitatelno.png") #f2f5f4 center center no-repeat; }
+  background: url("/img/pitatelno.png") #f2f5f4 center center no-repeat; }
 
 .sheet-why .title {
   text-align: center;

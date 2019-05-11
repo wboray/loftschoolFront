@@ -28,7 +28,7 @@
 
     &>div:nth-of-type(1n+2):before{
         content: '';
-        background: url('/course1Result/img/t3.png') center center no-repeat;
+        background: url('/img/t3.png') center center no-repeat;
         display: block;
         width: 67px;
         height: 21px;
@@ -56,15 +56,15 @@
     margin: 0 auto;
 }
 .sheet-why__polezno-icon{
-	background: url('/course1Result/img/polezno.png') #f2f5f4 center center no-repeat;
+	background: url('/img/polezno.png') #f2f5f4 center center no-repeat;
 }
 
 .sheet-why__vkusno-icon{
-	background: url('/course1Result/img/vkusno.png') #f2f5f4 center center no-repeat;
+	background: url('/img/vkusno.png') #f2f5f4 center center no-repeat;
 }
 
 .sheet-why__pitatelno-icon{
-	background: url('/course1Result/img/pitatelno.png') #f2f5f4 center center no-repeat;
+	background: url('/img/pitatelno.png') #f2f5f4 center center no-repeat;
 }
 
 .sheet-why .title{
