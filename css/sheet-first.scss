@@ -5,7 +5,7 @@
 	height: 650px;
 	background-color: $backgroundColor;
 	position: relative;
-	background: url('/img/uzor.png') $backgroundColor center right no-repeat;
+	background: url('../img/uzor.png') $backgroundColor center right no-repeat;
 }
 
 
@@ -69,7 +69,7 @@
 }
 
 .sheet-first__icon-phone{
-	background: url('/img/icon_phone.png') center center no-repeat;
+	background: url('../img/icon_phone.png') center center no-repeat;
 	width: 12px;
     height: 11px;
     margin-right: 6px;	
@@ -131,21 +131,21 @@
 }
 
 .sheet-first__icon-natural{
-	background: url('/img/icon_natural.png') center center no-repeat;
+	background: url('../img/icon_natural.png') center center no-repeat;
 	width: 44px;
     height: 41px;
     display: block;
     margin-right: 8px;
 }
 .sheet-first__icon-dostavka{
-	background: url('/img/icon_dostavka.png') center center no-repeat;
+	background: url('../img/icon_dostavka.png') center center no-repeat;
 	width: 50px;
     height: 40px;
     display: block;
     margin-right: 8px;
 }
 .sheet-first__icon-figura{
-	background: url('/img/icon_figura.png') center center no-repeat;
+	background: url('../img/icon_figura.png') center center no-repeat;
 	width: 42px;
     height: 42px;
     display: block;
