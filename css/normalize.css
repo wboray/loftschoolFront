@@ -136,15 +136,26 @@ body {
   margin-top: -31px; }
 
 .pag__page {
-  background: url("/img/ellipse.png") center center no-repeat;
+  /*background: url('/img/ellipse.png') center center no-repeat;*/
   width: 6px;
   height: 6px;
   margin: 3px 0px;
   padding: 7px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
+  .pag__page:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transform: translateX(-3px) translateY(-3px);
+    -ms-transform: translateX(-3px) translateY(-3px);
+    transform: translateX(-3px) translateY(-3px); }
   .pag__page.pag__active {
     border: solid 1px #fff;
-    border-radius: 100%; }
+    border-radius: 50%; }
 
 /*=====================================why===================================*/
 /*=====================================chocco===================================*/
@@ -178,59 +189,59 @@ body {
 /*----------------------fonts--------------------*/
 @font-face {
   font-family: "Alegreya Sans";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans.woff") format("woff"), url("/fonts/AlegreyaSans.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Black";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Black.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Black.woff") format("woff"), url("/fonts/AlegreyaSans-Black.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Black Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-BlackItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-BlackItalic.woff") format("woff"), url("/fonts/AlegreyaSans-BlackItalic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Bold";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Bold.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Bold.woff") format("woff"), url("/fonts/AlegreyaSans-Bold.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Bold Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-BoldItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-BoldItalic.woff") format("woff"), url("/fonts/AlegreyaSans-BoldItalic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Extra Bold";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-ExtraBold.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-ExtraBold.woff") format("woff"), url("/fonts/AlegreyaSans-ExtraBold.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Extra Bold Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-ExtraBoldItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-ExtraBoldItalic.woff") format("woff"), url("/fonts/AlegreyaSans-ExtraBoldItalic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Italic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Italic.woff") format("woff"), url("/fonts/AlegreyaSans-Italic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Light";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Light.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Light.woff") format("woff"), url("/fonts/AlegreyaSans-Light.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Light Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-LightItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-LightItalic.woff") format("woff"), url("/fonts/AlegreyaSans-LightItalic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Medium";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Medium.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Medium.woff") format("woff"), url("/fonts/AlegreyaSans-Medium.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Medium Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-MediumItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-MediumItalic.woff") format("woff"), url("/fonts/AlegreyaSans-MediumItalic.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Thin";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-Thin.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-Thin.woff") format("woff"), url("/fonts/AlegreyaSans-Thin.woff2") format("woff2"); }
 
 @font-face {
   font-family: "Alegreya Sans - Thin Italic";
-  src: local("@"), url("/course1Result/fonts/AlegreyaSans-ThinItalic.ttf") format("truetype"); }
+  src: local("@"), url("/fonts/AlegreyaSans-ThinItalic.woff") format("woff"), url("/fonts/AlegreyaSans-ThinItalic.woff2") format("woff2"); }
 
 .sheet-first {
   width: 1100px;
@@ -263,7 +274,10 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 21px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  text-decoration: none; }
 
 .menu {
   display: -webkit-box;
@@ -331,6 +345,9 @@ body {
   width: 50%;
   padding-bottom: 60px; }
 
+.contentblock__slide-pic {
+  max-width: 503px; }
+
 .sheet-first .contentblock__column-left .text {
   padding-top: 23px; }
 
@@ -389,7 +406,8 @@ body {
   left: 40px;
   width: auto;
   bottom: -50px;
-  z-index: 1; }
+  z-index: 1;
+  max-width: 52px; }
 
 .sheet-first__listki-right-img {
   display: block;
@@ -397,7 +415,8 @@ body {
   right: 15px;
   width: auto;
   bottom: -50px;
-  z-index: 1; }
+  z-index: 1;
+  max-width: 428px; }
 
 .sheet-first__yagody-img {
   display: inline-block;
@@ -405,7 +424,8 @@ body {
   position: absolute;
   right: 90px;
   bottom: -40px;
-  z-index: 1; }
+  z-index: 1;
+  max-width: 387px; }
 
 .sheet-first .btn {
   padding: 16px 31px 16px 31px;
@@ -505,13 +525,16 @@ body {
 .sheet-why__uzor1 {
   position: absolute;
   bottom: 150px;
-  left: 0px; }
+  left: 0px;
+  width: auto;
+  max-width: 191px; }
 
 .sheet-why__uzor2 {
   position: absolute;
   z-index: 2;
   bottom: -110px;
-  left: 0px; }
+  left: 0px;
+  max-width: 161px; }
 
 .sheet-chocco {
   background-color: #f8faf9;
@@ -524,7 +547,7 @@ body {
   height: 100vh;
   min-height: 805px;
   position: relative;
-  background-image: url("/course1Result/img/reviews-uzor3.png");
+  background-image: url("/img/reviews-uzor3.png");
   background-color: #fff;
   background-position: top 20px right;
   background-repeat: no-repeat; }
@@ -533,13 +556,17 @@ body {
   position: absolute;
   bottom: -200px;
   left: 0px;
-  z-index: 2; }
+  z-index: 2;
+  width: auto;
+  max-width: 134px; }
 
 .sheet-reviews__uzor2 {
   position: absolute;
   bottom: -125px;
   left: 0px;
-  z-index: 3; }
+  z-index: 3;
+  width: auto;
+  max-width: 154px; }
 
 .sheet-reviews__review {
   margin-top: 50px;
@@ -547,7 +574,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("/course1Result/img/reviews-pict.png") #f8faf9 right top no-repeat;
+  background: url("/img/reviews-pict.png") #f8faf9 right top no-repeat;
   position: relative; }
 
 .sheet-reviews__content {
@@ -611,6 +638,14 @@ body {
   top: -60px;
   right: calc(50% - 50px);
   border-radius: 50%; }
+
+.sheet-reviews__photo {
+  width: auto;
+  max-width: 254px; }
+
+.sheet-reviews__people-icon {
+  width: auto;
+  max-width: 94px; }
 
 .sheet-howwork {
   background-color: #f8faf9;

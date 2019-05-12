@@ -4,12 +4,15 @@
 		@if $fontName == '' {
 			font-family: "Alegreya Sans";
 			$fontName: str-replace($fontName, ' ', '');
-			src: local('@'), url("/course1Result/fonts/AlegreyaSans.ttf") format("truetype"); 
+			//src: local('@'), url("/fonts/AlegreyaSans.ttf") format("truetype"); 
+			src: local('@'), url("/fonts/AlegreyaSans.woff") format("woff"), 
+			     url("/fonts/AlegreyaSans.woff2") format("woff2"); 
 		}@else{
 			font-family: "Alegreya Sans - #{$fontName}";
 			$fontName: str-replace($fontName, ' ', '');
-			src: local('@'), url("/course1Result/fonts/AlegreyaSans-#{$fontName}.ttf") format("truetype"); 
+			//src: local('@'), url("/fonts/AlegreyaSans-#{$fontName}.ttf") format("truetype"); 
+			src: local('@'), url("/fonts/AlegreyaSans-#{$fontName}.woff") format("woff"), 
+		         url("/fonts/AlegreyaSans-#{$fontName}.woff2") format("woff2"); 
 		}
 	}
-}
-
+} 

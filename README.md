@@ -1,5 +1,6 @@
-## Верстка лендоса
+# Верстка лендоса
  
--flexbox
--prepros scss
--БЭМ
+## Первая неделя
+- flexbox
+- prepros scss
+- БЭМ

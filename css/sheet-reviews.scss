@@ -3,7 +3,7 @@
 	height: 100vh;
 	min-height: 805px;
 	position: relative;
-    background-image:  url("/course1Result/img/reviews-uzor3.png");  
+    background-image:  url("/img/reviews-uzor3.png");  
 	background-color: #fff;
     background-position: top 20px right ;
     background-repeat: no-repeat;
@@ -14,6 +14,8 @@
 	bottom: -200px;
 	left: 0px;
 	z-index: 2;
+	width: auto;
+	max-width: 134px;
 }
 
 .sheet-reviews__uzor2{
@@ -21,13 +23,15 @@
 	bottom: -125px;
 	left: 0px;
 	z-index: 3;
+	width: auto;
+	max-width: 154px;
 }
 
 .sheet-reviews__review{
 	margin-top: 50px;
 	padding: 40px 140px 40px 40px;
 	display: flex;
-	background: url('/course1Result/img/reviews-pict.png') #f8faf9 right top no-repeat;
+	background: url('/img/reviews-pict.png') #f8faf9 right top no-repeat;
 	position: relative;
 }
 
@@ -90,4 +94,14 @@
     top: -60px;
     right: calc(50% - 50px);
     border-radius: 50%;
+}
+
+.sheet-reviews__photo{
+	width: auto;
+	max-width: 254px;
+}
+
+.sheet-reviews__people-icon{
+	width: auto;
+	max-width: 94px;
 }

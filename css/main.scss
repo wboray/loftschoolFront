@@ -120,16 +120,27 @@ $backgroundColor: #61c4d9;
 }
 
 .pag__page{
-	background: url('/img/ellipse.png') center center no-repeat;
+	/*background: url('/img/ellipse.png') center center no-repeat;*/
 	width: 6px;
     height: 6px;
 	margin: 3px 0px;
     padding: 7px;
-    cursor: pointer;	
+	cursor: pointer;
+	display: block;	
+
+	&:after{
+		content: '';
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #fff;
+		transform: translateX(-3px) translateY(-3px);
+	}
 
 	&.pag__active{
 		border: solid 1px #fff;
-		border-radius: 100%;
+		border-radius: 50%;
 	}	
 
 }
