@@ -5,10 +5,7 @@
 	/*height: 650px;*/
 	background-color: $backgroundColor;
 	background: url('../img/uzor.png') $backgroundColor center right no-repeat;
-
-}
-
-.sheet-first__contentside{
+	position: relative;
 }
 
 .sheet-first__header {
@@ -32,19 +29,23 @@
 	line-height: 21px;
 	text-transform: uppercase;
 	display: block;
-	cursor: pointer;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.sheet-first__logo-img{
+	width: 100%;
+	cursor: pointer;
 }
 
 .menu{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-left: 45px;
 }
 
 .menu__option:nth-child(1n+2){
-	margin-left: 27px;
+	margin-left: 20px;
 }
 
 .menu__link{
@@ -61,6 +62,10 @@
 
 }
 
+.sheet-first__menu{
+	margin-left: 45px;
+}
+
 
 
 .sheet-first__phone{
@@ -70,12 +75,6 @@
 	align-items: center;
 }
 
-.sheet-first__icon-phone{
-	background: url('../img/icon_phone.png') center center no-repeat;
-	width: 12px;
-    height: 11px;
-    margin-right: 6px;	
-}
 
 .sheet-first__number-phone{
 	color: $textColor;
@@ -84,6 +83,17 @@
 	line-height: 30px;
 	text-transform: uppercase;
 	margin-right: 51px;
+	text-decoration: none;
+	display: inline-block;
+
+	&:before{
+		content: '';
+		background: url('../img/icon_phone.png') center center no-repeat;
+		width: 12px;
+		height: 11px;
+		margin-right: 6px;
+		display: inline-block;
+	}
 }
 
 .contentblock{
@@ -115,6 +125,7 @@
 .sheet-first__footer{
 	position: absolute;
 	bottom: 44px;
+	left: 0px;
 	display: flex;
 	justify-content: start;
 }
