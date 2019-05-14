@@ -1,9 +1,13 @@
 .sheet-why{
 	background-color: #fff;
-	width: 1100px;
+	width: 100%;
     min-height: 697px;
     position: relative;
     height: 100vh;
+}
+
+.sheet-why__contentside{
+    height: 100%;
 }
 
 .sheet-why__text{
@@ -26,16 +30,27 @@
     bottom: 0px;
     margin-bottom: 20px;	
 
-    &>div:nth-of-type(1n+2):before{
-        content: '';
-        background: url('../img/t3.png') center center no-repeat;
-        display: block;
-        width: 67px;
-        height: 21px;
-        flex: 0 0 67px;
-        align-self: start;
-        margin-top: 50px;
+    &:first{
+        width: calc(33% - 67px);
     }
+
+    &>div{
+        
+        &:nth-of-type(1n+2){
+            width: 33%;
+            
+            &:before{
+                content: '';
+                background: url('../img/t3.png') center center no-repeat;
+                display: block;
+                width: 67px;
+                height: 21px;
+                flex: 0 0 67px;
+                align-self: start;
+                margin-top: 50px;
+            } 
+        }
+    }    
 }
 
 
