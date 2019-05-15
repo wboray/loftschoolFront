@@ -98,18 +98,26 @@
 	margin-top: 25px;	
 }
 
-.sheet-why__uzor1{
+.sheet-why__uzor1-block{
     position: absolute;
     bottom: 150px;
     left: 0px;
     width: auto;
     max-width: 191px;
+
+    .sheet-why__uzor1{
+        width: 100%;
+    }
 }
 
-.sheet-why__uzor2{
+.sheet-why__uzor2-block{
     position: absolute;
     z-index: 2;
     bottom: -110px;
     left: 0px;
     max-width: 161px;
+
+    .sheet-why__uzor2{
+        width: 100%;
+    }
 }
