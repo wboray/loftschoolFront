@@ -35,6 +35,7 @@
 
 .sheet-first__logo-img{
 	width: 100%;
+	max-width: 100%;
 	cursor: pointer;
 }
 
@@ -180,7 +181,7 @@
 	max-width: 52px;
 
 	.sheet-first__decor1-img{
-		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -194,7 +195,7 @@
 	max-width: 428px;
 
 	.sheet-first__decor2-img{
-		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -208,7 +209,7 @@
 	max-width: 387px;
 
 	.sheet-first__decor3-img{
-		width: 100%;
+		max-width: 100%;
 	}
 }
 
