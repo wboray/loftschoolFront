@@ -136,12 +136,12 @@
 	justify-content: start;
 }
 
-.sheet-first__natural, .sheet-first__dostavka, .sheet-first__figura{
+.sheet-first__natural, .sheet-first__delivery, .sheet-first__figure{
 	display: flex;
 	width: 178px;
 }
 
-.sheet-first__text-natural, .sheet-first__text-dostavka, .sheet-first__text-figura{
+.sheet-first__text-natural, .sheet-first__text-delivery, .sheet-first__text-figure{
    	width: 75px;
 	color: $textColor;
 	font-size: 16px;
@@ -156,22 +156,22 @@
     display: block;
     margin-right: 8px;
 }
-.sheet-first__icon-dostavka{
-	background: url('../img/icon_dostavka.png') center center no-repeat;
+.sheet-first__icon-delivery{
+	background: url('../img/icon_delivery.png') center center no-repeat;
 	width: 50px;
     height: 40px;
     display: block;
     margin-right: 8px;
 }
-.sheet-first__icon-figura{
-	background: url('../img/icon_figura.png') center center no-repeat;
+.sheet-first__icon-figure{
+	background: url('../img/icon_figure.png') center center no-repeat;
 	width: 42px;
     height: 42px;
     display: block;
     margin-right: 8px;
 }
 
-.sheet-first__listki-one-img-block{
+.sheet-first__decor1-block{
 	display: block;
 	position: absolute;
 	left: 40px;
@@ -179,12 +179,12 @@
 	z-index: 1;
 	max-width: 52px;
 
-	.sheet-first__listki-one-img{
+	.sheet-first__decor1-img{
 		width: 100%;
 	}
 }
 
-.sheet-first__listki-right-img-block{
+.sheet-first__decor2-block{
 	display: block;
 	position: absolute;
 	right: 15px;
@@ -193,12 +193,12 @@
 	z-index: 1;
 	max-width: 428px;
 
-	.sheet-first__listki-right-img{
+	.sheet-first__decor2-img{
 		width: 100%;
 	}
 }
 
-.sheet-first__yagody-img-block{
+.sheet-first__decor3-block{
 	display: inline-block;
 	width: auto;
 	position: absolute;
@@ -207,7 +207,7 @@
 	z-index: 1;
 	max-width: 387px;
 
-	.sheet-first__yagody-img{
+	.sheet-first__decor3-img{
 		width: 100%;
 	}
 }

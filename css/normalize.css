@@ -384,13 +384,13 @@ body {
   -ms-flex-pack: start;
   justify-content: start; }
 
-.sheet-first__natural, .sheet-first__dostavka, .sheet-first__figura {
+.sheet-first__natural, .sheet-first__delivery, .sheet-first__figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 178px; }
 
-.sheet-first__text-natural, .sheet-first__text-dostavka, .sheet-first__text-figura {
+.sheet-first__text-natural, .sheet-first__text-delivery, .sheet-first__text-figure {
   width: 75px;
   color: #ffffff;
   font-size: 16px;
@@ -405,31 +405,31 @@ body {
   display: block;
   margin-right: 8px; }
 
-.sheet-first__icon-dostavka {
-  background: url("../img/icon_dostavka.png") center center no-repeat;
+.sheet-first__icon-delivery {
+  background: url("../img/icon_delivery.png") center center no-repeat;
   width: 50px;
   height: 40px;
   display: block;
   margin-right: 8px; }
 
-.sheet-first__icon-figura {
-  background: url("../img/icon_figura.png") center center no-repeat;
+.sheet-first__icon-figure {
+  background: url("../img/icon_figure.png") center center no-repeat;
   width: 42px;
   height: 42px;
   display: block;
   margin-right: 8px; }
 
-.sheet-first__listki-one-img-block {
+.sheet-first__decor1-block {
   display: block;
   position: absolute;
   left: 40px;
   bottom: -50px;
   z-index: 1;
   max-width: 52px; }
-  .sheet-first__listki-one-img-block .sheet-first__listki-one-img {
+  .sheet-first__decor1-block .sheet-first__decor1-img {
     width: 100%; }
 
-.sheet-first__listki-right-img-block {
+.sheet-first__decor2-block {
   display: block;
   position: absolute;
   right: 15px;
@@ -437,10 +437,10 @@ body {
   bottom: -50px;
   z-index: 1;
   max-width: 428px; }
-  .sheet-first__listki-right-img-block .sheet-first__listki-right-img {
+  .sheet-first__decor2-block .sheet-first__decor2-img {
     width: 100%; }
 
-.sheet-first__yagody-img-block {
+.sheet-first__decor3-block {
   display: inline-block;
   width: auto;
   position: absolute;
@@ -448,7 +448,7 @@ body {
   bottom: -40px;
   z-index: 1;
   max-width: 387px; }
-  .sheet-first__yagody-img-block .sheet-first__yagody-img {
+  .sheet-first__decor3-block .sheet-first__decor3-img {
     width: 100%; }
 
 .sheet-first .btn {
@@ -530,14 +530,14 @@ body {
   border-radius: 100%;
   margin: 0 auto; }
 
-.sheet-why__polezno-icon {
-  background: url("../img/polezno.png") #f2f5f4 center center no-repeat; }
+.sheet-why__useful-icon {
+  background: url("../img/icon_useful.png") #f2f5f4 center center no-repeat; }
 
-.sheet-why__vkusno-icon {
-  background: url("../img/vkusno.png") #f2f5f4 center center no-repeat; }
+.sheet-why__tasty-icon {
+  background: url("../img/icon_tasty.png") #f2f5f4 center center no-repeat; }
 
-.sheet-why__pitatelno-icon {
-  background: url("../img/pitatelno.png") #f2f5f4 center center no-repeat; }
+.sheet-why__nutritional-icon {
+  background: url("../img/icon_nutritional.png") #f2f5f4 center center no-repeat; }
 
 .sheet-why .title {
   text-align: center;
@@ -553,22 +553,22 @@ body {
   font-weight: 300;
   margin-top: 25px; }
 
-.sheet-why__uzor1-block {
+.sheet-why__decor1-block {
   position: absolute;
   bottom: 150px;
   left: 0px;
   width: auto;
   max-width: 191px; }
-  .sheet-why__uzor1-block .sheet-why__uzor1 {
+  .sheet-why__decor1-block .sheet-why__decor1 {
     width: 100%; }
 
-.sheet-why__uzor2-block {
+.sheet-why__decor2-block {
   position: absolute;
   z-index: 2;
   bottom: -110px;
   left: 0px;
   max-width: 161px; }
-  .sheet-why__uzor2-block .sheet-why__uzor2 {
+  .sheet-why__decor2-block .sheet-why__decor2 {
     width: 100%; }
 
 .sheet-chocco {
@@ -584,28 +584,28 @@ body {
   min-height: 805px;
   position: relative;
   background-color: #fff;
-  background-image: url("../img/reviews-uzor3.png");
+  background-image: url("../img/reviews-decor3.png");
   background-position: top 20px right;
   background-repeat: no-repeat; }
 
-.sheet-reviews__uzor1-block {
+.sheet-reviews__decor1-block {
   position: absolute;
   bottom: -200px;
   left: 0px;
   z-index: 10;
   width: 134px;
   max-width: 134px; }
-  .sheet-reviews__uzor1-block .sheet-reviews__uzor1 {
+  .sheet-reviews__decor1-block .sheet-reviews__decor1 {
     widows: 100%; }
 
-.sheet-reviews__uzor2-block {
+.sheet-reviews__decor2-block {
   position: absolute;
   bottom: -125px;
   left: 0px;
   z-index: 11;
   width: 154px;
   max-width: 154px; }
-  .sheet-reviews__uzor2-block .sheet-reviews__uzor2 {
+  .sheet-reviews__decor2-block .sheet-reviews__decor2 {
     width: 100%; }
 
 .sheet-reviews__review {

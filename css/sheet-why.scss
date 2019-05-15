@@ -70,16 +70,16 @@
     border-radius: 100%;
     margin: 0 auto;
 }
-.sheet-why__polezno-icon{
-	background: url('../img/polezno.png') #f2f5f4 center center no-repeat;
+.sheet-why__useful-icon{
+    background: url('../img/icon_useful.png') #f2f5f4 center center no-repeat;
 }
 
-.sheet-why__vkusno-icon{
-	background: url('../img/vkusno.png') #f2f5f4 center center no-repeat;
+.sheet-why__tasty-icon{
+    background: url('../img/icon_tasty.png') #f2f5f4 center center no-repeat;
 }
 
-.sheet-why__pitatelno-icon{
-	background: url('../img/pitatelno.png') #f2f5f4 center center no-repeat;
+.sheet-why__nutritional-icon{
+	background: url('../img/icon_nutritional.png') #f2f5f4 center center no-repeat;
 }
 
 .sheet-why .title{
@@ -98,26 +98,26 @@
 	margin-top: 25px;	
 }
 
-.sheet-why__uzor1-block{
+.sheet-why__decor1-block{
     position: absolute;
     bottom: 150px;
     left: 0px;
     width: auto;
     max-width: 191px;
 
-    .sheet-why__uzor1{
+    .sheet-why__decor1{
         width: 100%;
     }
 }
 
-.sheet-why__uzor2-block{
+.sheet-why__decor2-block{
     position: absolute;
     z-index: 2;
     bottom: -110px;
     left: 0px;
     max-width: 161px;
 
-    .sheet-why__uzor2{
+    .sheet-why__decor2{
         width: 100%;
     }
 }
