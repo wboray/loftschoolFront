@@ -1,10 +1,35 @@
 .sheet-command{
     /*width: 980px;*/
+    min-height: 615px;
     height: 100vh;
-    min-height: 810px;
+
+    /*min-height: 810px;*/
     position: relative;
     background-color: #fff;
+
+    @include tablets{
+        height: unset;
+        min-height: unset;
+    }
+
+    .centered-container{
+        /*height: 100%;*/
+
+        @include tablets{
+            padding: 0 50px;
+            height: unset;
+            min-height: unset;
+        }
+
+        @include phones{
+            padding: 0 0;
+        }
+        .header-h1{
+            margin-bottom: 50px;
+        }
+    }
 }
+
 
 .sheet-command__peoples{
     display: flex;
@@ -12,17 +37,34 @@
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    min-height: 360px;
-    margin-bottom: 50px;
+    min-height: rem(360px);
+    margin-bottom: rem(50px);
+
+    @include tablets{
+        justify-content: center;
+        align-items: start;
+
+    }
+
+
+
 
     .sheet-command__people{
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 23%;
+
+        @include tablets{
+            padding: 0 1%; 
+        }
     }
 
     .sheet-command__people:nth-of-type(2n){
         align-self: flex-end;
+        
+        @include tablets{
+            align-self: flex-start;
+        }
     }
 
     .sheet-command__trigon{
@@ -39,20 +81,20 @@
 
     .sheet-command__title{
         color: #323232;
-        font-size: 21px;
+        font-size: rem(21px);
         font-weight: 500;
     }
 
     .sheet-command__article{
         .sheet-command__position{
             color: #281e1e;
-            font-size: 18px;
+            font-size: rem(18px);
             font-weight: 400;        
         }
     
         .sheet-command__desc{
             color: #666666;
-            font-size: 16px;
+            font-size: rem(16px);
             font-weight: 200;        
         }
     
@@ -63,13 +105,76 @@
     }    
 }
 
-@media screen and (max-width: 992px){
-    .sheet-command__peoples{
-        justify-content: space-around;
-        align-items: start;
+.sheet-command__decor1-block{
+	position: absolute;
+	bottom: rem(-40px);
+	left: 3%;
+	z-index: 10;
+	width: rem(104px);
+    max-width: rem(104px);
+    z-index: 100;
 
-        .sheet-command__people:nth-of-type(2n){
-            align-self: flex-start
-        }
-    }    
-}    
+	.sheet-command__decor1-img{
+		width: 100%;
+	}
+
+	@include tablets{
+		width: 10%;	
+		max-width: unset;
+	}
+
+	@include phones{
+		width: 15%;	
+		max-width: unset;
+		transform: translateX(-20%);
+	}	
+}
+
+.sheet-command__decor2-block{
+	position: absolute;
+	top: rem(-240px);
+	right: 0;
+	z-index: 10;
+	width: rem(196px);
+	max-width: rem(196px);
+
+	.sheet-command__decor2-img{
+		width: 100%;
+	}
+
+	@include tablets{
+		width: 20%;	
+		max-width: unset;
+	}
+
+	@include phones{
+		width: 20%;	
+		max-width: unset;
+		transform: translateX(-20%);
+	}	
+}
+
+.sheet-command__decor3-block{
+	position: absolute;
+	top: rem(-60px);
+	right: 0;
+	z-index: 10;
+	width: rem(135px);
+	max-width: rem(135px);
+
+	.sheet-command__decor3-img{
+		width: 100%;
+	}
+
+	@include tablets{
+        right: -2%;
+		width: 13%;	
+		max-width: unset;
+	}
+
+	@include phones{
+		width: 20%;	
+		max-width: unset;
+		transform: translateX(-20%);
+	}	
+}

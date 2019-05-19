@@ -1,7 +1,7 @@
 $desktop: '1100px';
 $laptop: '980px';
 $tablets: '768px';
-$phones: '450px';
+$phones: '480px';
 $min-screen: '320px';
 
 /*
@@ -41,5 +41,5 @@ $min-screen: '320px';
 }
 
 @function rem($px){
-    @return $px / 160px + 0rem;
+    @return $px / 16px + 0rem;
 }

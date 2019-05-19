@@ -29,7 +29,7 @@ html{
 		font-size: 14px;		
 	}
 	@include phones{
-		font-size: 13px;		
+		font-size: 12px;		
 	}
 }
 
@@ -40,9 +40,11 @@ body{
 
 .wrapper{
 	width: 100%;
+	min-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	overflow: auto;
 }
 
 /*
@@ -96,21 +98,21 @@ body{
 
 .text h1{
 	color: #ffffff;
-	font-size: 60px;
+	font-size: rem(60px);
 	font-weight: 700;
-	line-height: 60px;
+	line-height: rem(60px);
 	text-transform: uppercase;	
 }
 
 .text p{
 	color: #ffffff;
-	font-size: 21px;
+	font-size: rem(21px);
 	font-weight: 400;	
 }
 
 .header-h1, h2.header-h1{
 	color: #0d0d0d;
-	font-size: 48px;
+	font-size: rem(48px);
 	font-weight: 700;
 	text-transform: uppercase;	
 }
@@ -121,12 +123,12 @@ body{
 	background-color: #ffffff;
     color: #0f5a47;
     font-family: "Alegreya Sans - Extra Bold";
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: 400;
     text-transform: uppercase;
-    border-radius: 50px;
+    border-radius: rem(50px);
     border-width: 0px;
-    padding: 16px 31px 16px 31px;
+    padding: rem(16px) rem(31px) rem(16px) rem(31px);
     margin: 0px;
 
 	&:hover{
@@ -140,7 +142,7 @@ body{
 .pag-absolute{
 	position: absolute;
     right: 0;
-    width: 61px;
+    width: rem(61px);
     height: 100vh;
 }*/
 
@@ -149,11 +151,14 @@ body{
     justify-content: center;
     z-index: 999;
 	position: fixed;
-	right: 40px;
+	right: rem(40px);
     height: 100vh;
     flex-direction: column;
-	margin-top: -31px;
-	
+	margin-top: rem(-31px);
+
+	@include tablets{
+		display: none;
+	}
 }
 
 .navigation__page{
