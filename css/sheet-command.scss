@@ -1,0 +1,75 @@
+.sheet-command{
+    /*width: 980px;*/
+    height: 100vh;
+    min-height: 810px;
+    position: relative;
+    background-color: #fff;
+}
+
+.sheet-command__peoples{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    min-height: 360px;
+    margin-bottom: 50px;
+
+    .sheet-command__people{
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 23%;
+    }
+
+    .sheet-command__people:nth-of-type(2n){
+        align-self: flex-end;
+    }
+
+    .sheet-command__trigon{
+        width: 9px;
+        height: 8px;
+        fill:#0f5a47;
+    }
+    .sheet-command__trigon-revers{
+        width: 9px;
+        height: 8px;
+        fill:#0f5a47;
+        transform: translateY(-4px) rotate(180deg);
+    }
+
+    .sheet-command__title{
+        color: #323232;
+        font-size: 21px;
+        font-weight: 500;
+    }
+
+    .sheet-command__article{
+        .sheet-command__position{
+            color: #281e1e;
+            font-size: 18px;
+            font-weight: 400;        
+        }
+    
+        .sheet-command__desc{
+            color: #666666;
+            font-size: 16px;
+            font-weight: 200;        
+        }
+    
+        &--hidden{
+            height: 0px;
+            overflow: hidden;
+        }
+    }    
+}
+
+@media screen and (max-width: 992px){
+    .sheet-command__peoples{
+        justify-content: space-around;
+        align-items: start;
+
+        .sheet-command__people:nth-of-type(2n){
+            align-self: flex-start
+        }
+    }    
+}    

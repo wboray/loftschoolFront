@@ -50,10 +50,11 @@
     }
 }
 
+/*
 .sheet-why__iconblock:first-of-type {
-    width: calc(33% - 67px) !important;
+    width: calc(33% - 67px);
 }
-
+*/
 
 .sheet-why__text-desc{
 	color: $textColorOnWhite;
@@ -121,3 +122,32 @@
         width: 100%;
     }
 }
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .sheet-why{
+        min-height: 1168px;
+        height: 100%;
+    }
+
+    .sheet-why__iconblock{
+        flex-flow: row wrap;
+        position: relative;
+        width: 33%;
+    
+
+        &>div:first-child, &>div, &>div:nth-of-type(1n+2) {
+            width: 100%;
+            /*flex-basis: 33%;*/
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+}   

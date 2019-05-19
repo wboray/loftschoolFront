@@ -1,0 +1,45 @@
+$desktop: '1100px';
+$laptop: '980px';
+$tablets: '768px';
+$phones: '450px';
+$min-screen: '320px';
+
+/*
+@include tablets{
+    font-size: rem(48px);
+} 
+*/
+
+@mixin desktop {
+    @media screen and (max-width: $desktop){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: $laptop){
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets){
+        @content;
+    }
+}
+
+@mixin phones{
+    @media screen and (max-width: $phones){
+        @content;
+    }
+}
+
+@mixin min-screen {
+    @media screen and (max-width: $min-screen){
+        @content;
+    }
+}
+
+@function rem($px){
+    @return $px / 160px + 0rem;
+}

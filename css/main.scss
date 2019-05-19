@@ -16,6 +16,27 @@ $backgroundColor: #61c4d9;
 }
 
 /*===blocks===*/
+html{
+	font-size: 17px;
+
+	@include desktop{
+		font-size: 16px;		
+	}
+	@include laptop{
+		font-size: 15px;		
+	}
+	@include tablets{
+		font-size: 14px;		
+	}
+	@include phones{
+		font-size: 13px;		
+	}
+}
+
+body{
+	font-size: 1rem;
+}
+
 
 .wrapper{
 	width: 100%;
@@ -87,7 +108,7 @@ $backgroundColor: #61c4d9;
 	font-weight: 400;	
 }
 
-.header-h1{
+.header-h1, h2.header-h1{
 	color: #0d0d0d;
 	font-size: 48px;
 	font-weight: 700;
@@ -161,6 +182,7 @@ $backgroundColor: #61c4d9;
 	}	
 
 }
+
 
 
 
