@@ -1,0 +1,307 @@
+.sheet-form{
+	background-color: #fff;
+	width: 100%;
+    min-height: 382px;
+    position: relative;
+    height: 100vh;
+    background-color: #cfdeda;
+    background: url('../img/sheet-form-background.png') 40% center no-repeat;
+    background-size: cover;
+
+    color: #0f5a47;
+}    
+    .sheet-form__contentblock{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+
+        .contentblock__column-left,
+        .contentblock__column-right{
+            align-items: flex-start;
+        }
+
+        @include tablets{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .contentblock__column-left{
+                margin-bottom: unset;
+            }
+
+            .contentblock__column-right{
+                margin-top: unset;
+            }    
+
+            .contentblock__column-left,
+            .contentblock__column-right{
+                width: 60%;
+                align-items: center;
+
+                @include phones{
+                    width: 100%;
+                }
+            }
+    
+        }
+    }
+
+    h2.header-h1{
+        color: #0f5a47;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .form{
+        height: 100%;
+    }
+
+    .form__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 17px;
+
+        @include tablets{
+            width: 100%;
+        }    
+    }
+
+    .visuallyHidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+
+    textarea,
+    input {
+        border-radius: 1px;
+        outline: none;
+        resize: none;
+        border: 1px solid #fff;
+    }
+    
+    
+    input:focus, textarea:focus {
+        outline: 3px solid #dde3bd;
+    }
+            
+
+
+
+    
+    .form__row:last-child {
+        margin-bottom: 15px;
+    }
+    
+    .form__field {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 1%;
+    }
+
+    .form__field--min{
+        .form__field {
+            width: 23%;
+        }
+    }
+    
+    .form__field-title {
+        font-weight: 300;
+        margin-bottom: 0px;
+        color: #0f5a47;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30.05px;
+    }
+    
+    .form__field--textarea {
+        width: 100%;
+    }
+    
+    .form__input {
+        padding: 12px 10px;
+
+    }
+    /*
+    .form__field--namephones{
+        @include tablets{
+            width: 48%;
+        }
+    }*/
+
+    .form__textarea {
+        height: 90px;
+        padding: 6px 8px;
+    }
+
+    .form__send-btn{
+        margin-left: 1%;
+
+    }
+
+    .form__btn-custom {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 14px 20px 14px 20px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        background-color: #0f5a47;
+        letter-spacing: 2.4px;
+        border-radius: 50px;
+        transition: 0.6s;
+    }
+    
+    .form__btn-custom::after, .form__btn-custom::before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        top: 50%;
+        right: 19px;
+        transform: translateY(-50%);
+        transition: 0.6s;
+    }
+    
+    .form__btns {
+        margin-top: 4px;
+    }
+    
+    .form__btn-custom:hover {
+        color: #0f5a47;
+        background-color: #ffffff;
+    }
+    
+    .form__btn-custom:hover::after {
+        opacity: 1;
+    }
+    
+    .form__btn-custom::before {
+        background: url("../img/form-btn.png") no-repeat;
+    }
+    
+    .form__btn-custom::after {
+        opacity: 0;
+        background: url("../img/form-btn_active.png") no-repeat;
+    }
+
+    .form__radio{
+        width: 100%;
+    }
+
+    .order__radio {
+        position: relative;
+        white-space: nowrap;
+        margin-right: rem(20px);
+        display: inline-block;
+        vertical-align: middle;
+        /*width: 48%;*/
+        cursor: pointer;
+        margin-left: 2%;
+      }
+      
+      .order__radio-elem {
+        position: absolute;
+        top: 0;
+        left: rem(-9999px);
+      }
+      
+      .order__radio-fake {
+        width: rem(16px);
+        height: rem(16px);
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+	    vertical-align: middle;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: rem(0px);
+          height: rem(0px);
+          border-radius: 50%;
+          background: #0f5a47;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: width .3s, height .3s;
+        }
+      }
+      
+      .order__radio-elem:checked {
+        &+.order__radio-fake {
+          &:after {
+            width: rem(8px);
+            height: rem(8px);
+          }
+        }
+      }
+      
+      .order__radio-title {
+        display: inline-block;
+	    vertical-align: middle;
+        font-size: rem(14px);
+        color: #fff;
+        margin-left: rem(10px);
+      }
+      
+
+    .order__radio_checkbox {
+        color:#0f5a47;
+
+        .order__radio-fake {
+          border-radius: rem(0px);
+        }
+        .order__radio-elem {
+          &+.order__radio-fake {
+            &:after {
+              background: transparent;
+            }
+          }
+        }
+        .order__radio-elem:checked {
+          &+.order__radio-fake {
+            &:after {
+              background: url("../img/checkbox-active-icon.png") 50% no-repeat;
+              /*background-size: contain;*/
+              width: rem(11px);
+              height: rem(9px);
+            }
+          }
+        }
+      }
+
+.form__row--button{
+    justify-content: flex-start;
+
+    .form__clear{
+        margin-left: 3%;
+        text-decoration: none;
+        color: #0f5a47;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30.05px;
+
+        @include tablets{
+            margin-left: 10px;
+        }        
+    }
+}
+
+.form__row--center{
+    @include tablets{
+        justify-content: center;
+        text-align: center;
+    }
+}

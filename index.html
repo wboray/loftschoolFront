@@ -301,6 +301,103 @@
 			<div class="centered-container">
 			</div>
 		</section>		
+		<section class='sheet-form'>
+			<div class="centered-container">
+				<form action="form.php" class="form">
+					<div class="contentblock flex-jcenter">
+						<h2 class="header-h1">Закажите доставку</h2>
+						<div class='sheet-form__contentblock'>
+							<div class="contentblock__column-left">
+								<div class='form__row form__field--namephones'>
+									<label class="form__field">
+										<span class="form__field-title">Имя</span>
+										<input type="text" name="name" class="form__input" placeholder="Имя" />
+									</label>
+									<label class="form__field">
+										<span class="form__field-title">Телефон</span>
+										<input type="text" name="phone" class="form__input" placeholder="Телефон" />
+									</label>
+								</div>
+								<div class='form__row'>		
+									<label class="form__field">
+										<span class="form__field-title">Улица</span>
+										<input type="text" name="street" class="form__input" placeholder="Улица" />
+									</label>
+								</div>
+								<div class='form__row form__field--min'>		
+									<label class="form__field">
+										<span class="form__field-title">Дом</span>
+										<input type="text" name="home" class="form__input" placeholder="Дом" />
+									</label>
+									<label class="form__field">
+										<span class="form__field-title">Корпус</span>
+										<input type="text" name="housing" class="form__input" placeholder="Корпус" />
+									</label>
+									<label class="form__field">
+										<span class="form__field-title">Квартира</span>
+										<input type="text" name="apartment" class="form__input" placeholder="Квартира" />
+									</label>
+									<label class="form__field">
+										<span class="form__field-title">Этаж</span>
+										<input type="text" name="floor" class="form__input" placeholder="Этаж" />
+									</label>
+								</div>
+							</div>
+							<div class="contentblock__column-right">
+								<div class='form__row'>
+									<label class="form__field form__field--textarea">
+										<span class="form__field-title">Комментарий</span>
+										<textarea name="text-message" class="form__textarea" placeholder="Что-то тут есть"></textarea>
+									</label>
+								</div>	
+								<div class='form__row form__row--center'>	
+									<div class="form__radio">
+											<label class="order__radio">
+												<input class="order__radio-elem" name="payment" type="radio">
+												<div class="order__radio-fake"></div>
+												<div class="order__radio-title">Потребуется сдача</div>
+											</label>
+											<label class="order__radio">
+												<input class="order__radio-elem" name="payment" type="radio">
+												<div class="order__radio-fake"></div>
+												<div class="order__radio-title">Оплата по карте</div>
+											</label>
+									</div>
+								</div>	
+								<div class='form__row form__row--center'>
+									<label class="order__radio order__radio_checkbox">
+										<input class="order__radio-elem" name="callback" type="checkbox">
+										<div class="order__radio-fake"></div>
+										<div class="order__radio-title">Не перезванивать</div>
+									</label>
+								</div>
+											
+								
+								<div class='form__row form__row--button form__row--center'>
+									<label for="send-btn" class="form__send-btn">
+										<button class="visuallyHidden" type="submit" id="send-btn">
+											Заказать
+										</button>
+										<span class="form__btn-custom">Заказать</span>
+									</label>
+									<a href='#' class="form__clear">Очистить</a>
+								</div>						
+							</div>
+						</div>	
+					</div>
+				</form>
+			</div>
+		</section>		
+		<section class='sheet-map'>
+			<div class="centered-container">
+			</div>
+		</section>		
+		<footer class='footer'>
+			<div class="centered-container">
+			</div>
+		</footer>		
+	
+
 	</div>
 
 
