@@ -48,7 +48,7 @@
 
     h2.header-h1{
         color: #0f5a47;
-        font-size: 48px;
+        font-size: rem(48px);
         font-weight: 700;
         text-transform: uppercase;
         text-align: center;
@@ -127,18 +127,18 @@
     }
     
     .form__input {
-        padding: 12px 10px;
+        padding: 13px 10px;
 
     }
-    /*
-    .form__field--namephones{
+    
+    .form__field--namephones .form__field{
         @include tablets{
             width: 48%;
         }
-    }*/
+    }
 
     .form__textarea {
-        height: 90px;
+        height: 160px;
         padding: 6px 8px;
     }
 
@@ -251,9 +251,11 @@
       .order__radio-title {
         display: inline-block;
 	    vertical-align: middle;
-        font-size: rem(14px);
-        color: #fff;
-        margin-left: rem(10px);
+        font-size: rem(18px);
+        color: #0f5a47;
+        margin-left: rem(8px);
+        font-weight: 400;
+        line-height: rem(30.05px);
       }
       
 
@@ -296,6 +298,14 @@
         @include tablets{
             margin-left: 10px;
         }        
+    }
+}
+
+.form__row--nomarign{
+    margin-bottom: 0px;
+
+    @include tablets{
+        margin-bottom: 17px;
     }
 }
 
