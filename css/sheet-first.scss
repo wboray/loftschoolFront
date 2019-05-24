@@ -8,8 +8,16 @@
 	position: relative;
 
 	@include tablets {
-		/*min-height: 1025px;*/
+		min-height: 1025px;
 		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+	}
+
+	@include phones{
+		background-image: url('../img/sheet-wirst-decor.png');
+		background-color:  $backgroundColor;
+		background-position: 100% 100%;
+		background-position: 100% 0%;
+    	background-size: 88%;
 	}
 }
 
@@ -24,18 +32,31 @@
 	width: 100%;
 
 	@include tablets{
-		padding: rem(25px) rem(25px) rem(0px) rem(25px);
+		padding: 25px rem(25px) rem(0px) 25px;
 
 		.menu, .sheet-first__phone{
 			display: none;
-		}	
+			width: 0;
+			height: 0;
+		}
+		
+		&::after{
+			content: '';
+			position: absolute;
+			right: rem(25px);
+			width: 24px;
+			height: 26px;
+			background: url('../img/icons/menu-icon.svg') center center no-repeat;
+			background-size: 100% 100%;
+			align-self: center;
+		}
 	}
 }
 
 
 .sheet-first__logo{
-	width: rem(53px);
-    height: rem(38px);
+	width: 53px;
+    height: 38px;
 	color: $textColor;
 	font-family: "Museo Sans Cyrl -500";
 	font-size: rem(24px);
@@ -92,7 +113,6 @@
 	display: flex;
 	margin-left: auto;
 	justify-content: flex-start;
-	align-items: center;
 	/*margin-right: rem(51px);*/
 }
 
@@ -105,6 +125,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	display: inline-block;
+	min-width: rem(170px);
 
 	&:before{
 		content: '';
@@ -153,7 +174,7 @@
 
 	@include phones{
 		.text{
-			max-width: 90%;
+			max-width: 100%;
 		}	
 	}
 }
@@ -165,6 +186,12 @@
 	.contentblock__column-left{
 		margin-top: rem(60px);
 		margin-bottom: rem(110px);
+	}
+}
+
+@include phones{
+	.contentblock__column-left{
+		margin-top: 0;
 	}
 }
 
@@ -183,9 +210,16 @@
 		@include tablets{
 			width: unset;
 			max-width: unset;
-			height: 100%
+			height: 100%;
+			transform: translateX(-17px) translatey(9px);
 		}
 	
+		@include phones{
+			width: 88%;
+			max-width: unset;
+			height: unset;
+			transform: translateX(20px) translatey(-12px);
+		}
 	}
 }
 
@@ -193,12 +227,20 @@
 
 .sheet-first .contentblock__column-left {
     .text{
-    	padding-top: rem(23px);
+		padding-top: rem(23px);
+		
+		@include phones{
+			padding-top: rem(19px);
+		}
 	}
 
 	p{
 		margin-top: rem(5px);
-		max-width: rem(360px);
+		max-width: rem(400px);
+
+		@include phones{
+			line-height: unset;
+		}
 	}
 }
 
@@ -335,15 +377,32 @@
 	bottom: rem(-50px);
 	z-index: 1;
 	max-width: rem(52px);
-
-	.sheet-first__decor1-img{
-		max-width: 100%;
-	}
+	max-height: rem(108px);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 
 	@include tablets{
-		left: 26%;
-    	bottom: 55%;
-		z-index: 10;
+		left: 21%;
+		bottom: 58%;
+		z-index: 101;
+	}
+
+	@include phones{
+		left: 6%;
+		bottom: 60%;
+	}
+
+	&::before{
+		content: ''; 
+		background-image: url('../img/sheet-first-decor1.png');
+		background-size: contain;
+		display: block;
+		position: relative;
+		@include tablets{
+			width: 99%;
+			height: 90%;
+		}
 	}
 
 }
@@ -356,18 +415,37 @@
 	bottom: rem(-50px);
 	z-index: 1;
 	max-width: rem(428px);
-
-	.sheet-first__decor2-img{
-		max-width: 100%;
-	}
+	max-height: rem(353px);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 
 	@include tablets{
-		left: 50%;
-    	bottom: 50%;
-		z-index: 10;
-		transform: translateX(-50%) translateY(14%);
+		right: 22%;
+    	bottom: 51%;
+		z-index: 101;
+		max-width: 247px;
+		max-height: 265px;
 	}
 
+	@include phones{
+		right: 4%;
+		bottom: 52%;
+	}
+
+	&::before{
+		content: url('../img/sheet-first-decor2.png'); 
+
+		@include tablets{
+			content: ''; 
+			background-image: url('../img/sheet-first-decor2-mobile.png');
+			background-size: contain;
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
 .sheet-first__decor3-block{
@@ -376,27 +454,52 @@
 	position: absolute;
 	right: rem(90px);
 	bottom: rem(-40px);
-	z-index: 1;
+	z-index: 101;
 	max-width: rem(387px);
-
-	.sheet-first__decor3-img{
-		max-width: 100%;
-	}
+	max-height: rem(286px);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 
 	@include tablets{
-		left: 50%;
-    	bottom: 50%;
-		z-index: 10;
-		transform: translateX(-50%) translateY(0%);
-	}	
+		right: 24%;
+    	bottom: 52%;
+		z-index: 101;
+		max-width: 388px;
+		max-height: 272px;
+		overflow: unset;
+	}
 
+	@include phones{
+		right: 6%;
+    	bottom: 53%;
+	}
 
+	&::before{
+		content: url('../img/sheet-first-decor3.png'); 
+
+		@include tablets{
+			content: ''; 
+			background-image: url('../img/sheet-first-decor3-mobile.png');
+			background-size: contain;
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
 .sheet-first{
 	.btn{
 	    padding: rem(16px) rem(31px) rem(16px) rem(31px);
-	    margin: rem(34px) rem(0px) rem(40px) rem(0px);
+		margin: rem(34px) rem(0px) rem(40px) rem(0px);
+		
+		@include tablets{
+			font-size: 20px;
+			margin: rem(39px) rem(0px) rem(40px) rem(8px);
+			padding: rem(20px) rem(34px) rem(20px) rem(34px);
+		}
 	}
 }
 
