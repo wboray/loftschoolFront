@@ -10,6 +10,88 @@
         /*min-height: 1168px;*/
         min-height: unset;
     }
+/*
+    <img src="./img/sheet-why-decor1.png" alt="" class="sheet-why__decor1">
+*/
+
+    background-image: url('../img/sheet-why-decor1.png');
+    background-size: auto;
+    background-position: left 60%;
+    background-repeat: no-repeat;
+
+    @include tablets{
+        background-position: left 30%;
+    }
+
+    @include phones{
+        background-size: 30%;
+    }
+
+    &::after{
+		content: url('../img/sheet-why-decor2.png'); 
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -114px;
+        z-index: 1;
+        max-width: 161px;
+        max-height: 315px;
+        
+        width: 100%;
+        
+        height: 100%;
+/*
+        max-width: ;
+        max-height: ;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+*/
+		@include tablets{
+            bottom: -51px;
+        }
+        
+        @include phones{
+			content: ''; 
+			background-image: url('../img/sheet-why-decor2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            bottom: -71px;
+            left: -10px;
+            width: 30%;
+        }
+    }
+/*
+    .sheet-why__decor1-block{
+        position: absolute;
+        bottom: rem(150px);
+        left: rem(0px);
+        width: auto;
+        max-width: rem(191px);
+    
+        @include tablets{
+            bottom: unset;
+            top: rem(230px);    
+        }
+    
+        .sheet-why__decor1{
+            width: 100%;
+        }
+    }
+    
+    .sheet-why__decor2-block{
+        position: absolute;
+        z-index: 2;
+        bottom: rem(-110px);
+        left: rem(0px);
+        max-width: rem(161px);
+    
+        .sheet-why__decor2{
+            width: 100%;
+        }
+    }
+*/
 }
 
 .sheet-why__text{
@@ -133,34 +215,7 @@
 	margin-top: rem(25px);	
 }
 
-.sheet-why__decor1-block{
-    position: absolute;
-    bottom: rem(150px);
-    left: rem(0px);
-    width: auto;
-    max-width: rem(191px);
 
-    @include tablets{
-        bottom: unset;
-        top: rem(230px);    
-    }
-
-    .sheet-why__decor1{
-        width: 100%;
-    }
-}
-
-.sheet-why__decor2-block{
-    position: absolute;
-    z-index: 2;
-    bottom: rem(-110px);
-    left: rem(0px);
-    max-width: rem(161px);
-
-    .sheet-why__decor2{
-        width: 100%;
-    }
-}
 
 
 
