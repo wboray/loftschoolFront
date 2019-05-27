@@ -1,6 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
-    <symbol id="trigon">
+<svg xmlns="http://www.w3.org/2000/svg" >
+    <symbol id="trigon" viewBox="0 0 9 6">
         <path d="M4.506 6.14L.006.136h9.001z"/>
+    </symbol>
+
+    <symbol id="arrow-icon" viewBox="0 0 15 29">
+        <clipPath id="w3i0a">
+        <path fill="#fff" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726l11.767 10.644"/></clipPath>
+        <g> 
+        <path fill="#0d0d0d" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726l11.767 10.644"/>
+        <path fill="#fff" stroke="#fff" stroke-miterlimit="50" stroke-width="4" d="M13.994.817L2.227 11.46a3.973 3.973 0 0 0 0 5.726l11.767 10.644" clip-path="url(&quot;#w3i0a&quot;)"/>
+        </g>
     </symbol>
 
     <symbol id="phone-icon">

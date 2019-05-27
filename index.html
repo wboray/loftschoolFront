@@ -7,7 +7,7 @@
 		<title>Лендинг</title>
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
-
+		<script src="./js/js.js"></script>
 
 	</head>
 <body>
@@ -27,7 +27,7 @@
 		</ul>
 
 
-		<section class="sheet-first">
+		<section class="sheet-first" id='sheet-first'>
 			<div class="centered-container flex-jcenter">
 				<div class="sheet-first__header">
 					<a href="#" class="sheet-first__logo"><img class='sheet-first__logo-img' src='./img/logo.png' alt='CHO CCO'></a>
@@ -60,6 +60,7 @@
 						<a href="tel:+78008888888" class="sheet-first__number-phone">8 800 888 88 88</a>
 					</div>
 					
+					<div class='hamburger' id='hamburger'></div>
 				</div>						
 				
 				
@@ -109,7 +110,7 @@
 				-->
 			</div>
 		</section>
-		<section class="sheet-why">
+		<section class="sheet-why" id='sheet-why'>
 			<div class="centered-container flex-jcenter">
 				<div class="sheet-why__text">
 					<div class="header-h1">почему chocco?</div>
@@ -148,11 +149,44 @@
 			</div>
 			-->
 		</section>
-		<section class='sheet-chocco'>
-			<div class="centered-container">
-			</div>
+		<section class='sheet-chocco' id='sheet-chocco'>
+			<div class="slider centered-container flex-jcenter">
+				<div class='slider__left'>
+				</div>
+				<div class='slider__right'>
+				</div>
+				<ul class="slider__items">
+					<li class="slider__item">
+						<div class="slider__pict contentblock__column-left">
+							<img src='./img/sheet-chocco_slide2.png' class='slider__slide-img alt='слайд 1'>
+							<img src='./img/sheet-chocco_slider-decor1.png' class='slider__slide-decor1'>
+						</div>	
+						<div class="slider__content contentblock__column-right">
+							<h2 class="header-h1">Батончик “Морские водоросли”</h2>
+							<article class='slider__desc'>
+								<div class="slider_name">Состав:</div>
+								<p>Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.</p>
+							</article>
+							<div class="slider__param">
+								<div class="slider_caloria">
+									<div class="slider_param-title">Калорийность</div>
+									<div class="slider_param-data">120 ккал</div>
+								</div>
+								<div class="slider_weight">
+									<div class="slider_param-title">Вес</div>
+									<div class="slider_param-data">98 грамм</div>
+								</div>
+							</div>
+							<div class="slider__price">
+								<div class="slider__cost">140 &#8381;</div>
+								<button type="button" class="btn btn--green">Заказать</button>
+							</div>
+					</div>
+
+					</li>
+				</ul>
 		</section>
-		<section class='sheet-command'>
+		<section class='sheet-command' id='sheet-command'>
 			<div class="centered-container flex-jcenter">
 				<h2 class="header-h1">Команда</h2>	
 				<ul class="sheet-command__peoples">
@@ -237,7 +271,7 @@
 			</div>
 			
 		</section>
-		<section class='sheet-menu'>
+		<section class='sheet-menu' id='sheet-menu'>
 			<h2 class="header-h1">Меню</h2>
 			<div class="sheet-menu__accordion">
 				<ul class="sheet-menu__accordion-items">
@@ -275,7 +309,7 @@
 						<a class="sheet-menu__accordion-item-background sheet-menu__accordion-item-background--acco3" style='background-image: url("./img/menu-acco3.jpg")'>
 							<span class="sheet-menu__title">Дикие ягоды</span>
 						</a>
-						<div class="sheet-menu__accordion-item-background sheet-menu__accordion-item-background--acco3" style='background-image: url("./img/sheet-menu__accordion-item-background--acco3.jpg")'>
+						<div class="sheet-menu__accordion-item-background sheet-menu__accordion-item-background--acco3" style='background-image: url("./img/menu-acco3.jpg")'>
 							<span class="sheet-menu__title">Дикие ягоды</span>
 						</div>
 						<article class="sheet-menu__desc">
@@ -290,7 +324,7 @@
 				</ul>	
 			
 		</section>
-		<section class="sheet-reviews">
+		<section class="sheet-reviews" id='sheet-reviews'>
 			<div class="centered-container flex-jcenter">
 				<div class="header-h1">Отзывы</div>
 				<div class="sheet-reviews__review">
@@ -329,11 +363,11 @@
 				<img src="./img/reviews-decor2.png" alt="" class="sheet-reviews__decor2">	
 			</div>
 		</section>
-		<section class='sheet-howwork'>
+		<section class='sheet-howwork' id='sheet-howwork'>
 			<div class="centered-container">
 			</div>
 		</section>		
-		<section class='sheet-form'>
+		<section class='sheet-form' id='sheet-form'>
 			<div class="centered-container">
 				<form action="form.php" class="form">
 					<div class="contentblock flex-jcenter">
@@ -420,7 +454,7 @@
 				</form>
 			</div>
 		</section>		
-		<section class='sheet-map'>
+		<section class='sheet-map' id='sheet-map'>
 			<div class="centered-container">
 			</div>
 		</section>		
@@ -430,10 +464,39 @@
 		</footer>		
 	
 
+
 	</div>
 
+<!--OVERLAY-->
+<div class="hamburger-overlay" id='hamburger-overlay'>
+	<div class='hamburger-overlay__close' id='hamburger-overlay__close'></div>
+	<nav class="nav-main">
+		<ul class="nav-main__list" id='nav-main__list'>
+			<li class="nav-main__item">
+				<a href="#sheet-first" class="nav-main__link">Главная</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#sheet-why" class="nav-main__link">Почему CHOKKO</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#" class="nav-main__link">menu</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#" class="nav-main__link">menu</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#" class="nav-main__link">menu</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#" class="nav-main__link">menu</a>
+			</li>
+			<li class="nav-main__item">
+				<a href="#" class="nav-main__link">menu</a>
+			</li>
+		</ul>
+	</nav>
 
-
+</div>
 
 <!--
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

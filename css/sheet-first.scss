@@ -40,16 +40,6 @@
 			height: 0;
 		}
 		
-		&::after{
-			content: '';
-			position: absolute;
-			right: rem(25px);
-			width: 24px;
-			height: 26px;
-			background: url('../img/icons/menu-icon.svg') center center no-repeat;
-			background-size: 100% 100%;
-			align-self: center;
-		}
 	}
 }
 
