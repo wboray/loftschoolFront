@@ -1,5 +1,5 @@
 $desktop: '1100px';
-$laptop: '980px';
+//$laptop: '992px';
 $tablets: '768px';
 $phones: '480px';
 $min-screen: '320px';
@@ -15,12 +15,12 @@ $min-screen: '320px';
         @content;
     }
 }
-
+/*
 @mixin laptop {
     @media screen and (max-width: $laptop){
         @content;
     }
-}
+}*/
 
 @mixin tablets {
     @media screen and (max-width: $tablets){

@@ -53,19 +53,59 @@
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 23%;
+        max-width: rem(223px);
+
+        .sheet-command__content{
+            max-width: rem(223px);
+        }
 
         @include tablets{
-            padding: 0 1%; 
+            padding: 0 1%;
+            flex-basis: 48%;
+            max-width: unset;
+            min-width: rem(223px);
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        @include phones{
+            min-width: unset;
+        }
+
+
+        .sheet-command__people-photo{
+            width: 100%;
+
+            .sheet-command__photo{
+                max-width: 100%;
+            }
+        }
+
+        .sheet-command__name{
+            text-decoration: none;
         }
     }
+
+
 
     .sheet-command__people:nth-of-type(2n){
         align-self: flex-end;
         
         @include tablets{
+            justify-content: flex-start;
+            align-items: flex-start;
             align-self: flex-start;
         }
     }
+
+    .sheet-command__people:nth-of-type(2n+1){
+        @include tablets{
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+
 
     .sheet-command__trigon{
         width: 9px;
@@ -160,14 +200,19 @@
 	right: 0;
 	z-index: 10;
 	width: rem(135px);
-	max-width: rem(135px);
+    max-width: rem(135px);
+    overflow: hidden;
 
 	.sheet-command__decor3-img{
 		width: 100%;
-	}
+
+        @include tablets{
+            position: relative;
+            right: -2%;
+        }
+    }
 
 	@include tablets{
-        right: -2%;
 		width: 13%;	
 		max-width: unset;
 	}

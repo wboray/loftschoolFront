@@ -103,15 +103,18 @@
     margin: 0 auto;
 }
 .sheet-why__useful-icon{
-    background: url('../img/icon_useful.png') #f2f5f4 center center no-repeat;
+    background: url('../img/icons/useful-icon.svg') #f2f5f4 center center no-repeat;
+    background-size: 66px 69px;
 }
 
 .sheet-why__tasty-icon{
-    background: url('../img/icon_tasty.png') #f2f5f4 center center no-repeat;
+    background: url('../img/icons/tasty-icon.svg') #f2f5f4 center center no-repeat;
+    background-size: 70px 69px;
 }
 
 .sheet-why__nutritional-icon{
-	background: url('../img/icon_nutritional.png') #f2f5f4 center center no-repeat;
+	background: url('../img/icons/nutritional-icon.svg') #f2f5f4 center center no-repeat;
+    background-size: 75px 64px;
 }
 
 .sheet-why .title{
