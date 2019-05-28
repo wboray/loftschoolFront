@@ -1,0 +1,189 @@
+.sheet-why{
+	background-color: #fff;
+	width: 100%;
+    min-height: 697px;
+    position: relative;
+    height: 100vh;
+
+    @include tablets{
+        height: 100%;
+        /*min-height: 1168px;*/
+        min-height: unset;
+    }
+}
+
+.sheet-why__text{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    /* height: 100px; */
+    margin-bottom: rem(50px);
+
+    @include tablets{
+        margin-top: rem(40px);
+    }
+}
+
+.sheet-why__iconblock{
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    /*height: 50%;*/
+    align-items: start;
+    /*position: absolute;*/
+    /*bottom: rem(0px);*/
+    /*margin-bottom: rem(20px);*/
+
+
+    &>div{
+
+        &:nth-of-type(1n+2){
+            width: 33%;
+            
+            &:before{
+                content: '';
+                background: url('../img/t3.png') center center no-repeat;
+                display: block;
+                width: rem(67px);
+                height: rem(21px);
+                flex: 0 0 rem(67px);
+                align-self: start;
+                margin-top: rem(50px);
+            } 
+        }
+        &:first-child{
+            width: calc(33% - 67px);
+        }
+
+    }
+
+    @include tablets{
+        flex-flow: row wrap;
+        position: relative;
+        width: 33%;
+        padding-bottom: rem(80px);
+
+
+        &>div:first-child, &>div, &>div:nth-of-type(1n+2) {
+            padding-bottom: rem(20px);
+            width: 100%;
+
+            &::before{
+                display: none;
+            }
+        }    
+    }
+
+    @include phones{
+        width: 50%;
+    }
+}
+
+/*
+.sheet-why__iconblock:first-of-type {
+    width: calc(33% - 67px);
+}
+*/
+
+.sheet-why__text-desc{
+	color: $textColorOnWhite;
+	font-size: rem(18px);
+	font-weight: 400;
+	margin-top: rem(5px);
+    max-width: rem(450px);
+    text-align: center;	
+}
+
+.sheet-why__icon{
+	width: rem(125px);
+    height: rem(125px);
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.sheet-why__useful-icon{
+    background: url('../img/icon_useful.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why__tasty-icon{
+    background: url('../img/icon_tasty.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why__nutritional-icon{
+	background: url('../img/icon_nutritional.png') #f2f5f4 center center no-repeat;
+}
+
+.sheet-why .title{
+	text-align: center;
+	color: #000000;
+	font-size: rem(27px);
+	font-weight: 700;
+	margin-top: rem(25px);
+}
+
+.sheet-why .text{
+	text-align: center;
+	color: $textColorOnWhite;
+	font-size: rem(18px);
+	font-weight: 300;
+	margin-top: rem(25px);	
+}
+
+.sheet-why__decor1-block{
+    position: absolute;
+    bottom: rem(150px);
+    left: rem(0px);
+    width: auto;
+    max-width: rem(191px);
+
+    @include tablets{
+        bottom: unset;
+        top: rem(230px);    
+    }
+
+    .sheet-why__decor1{
+        width: 100%;
+    }
+}
+
+.sheet-why__decor2-block{
+    position: absolute;
+    z-index: 2;
+    bottom: rem(-110px);
+    left: rem(0px);
+    max-width: rem(161px);
+
+    .sheet-why__decor2{
+        width: 100%;
+    }
+}
+
+
+
+
+/*
+@media screen and (max-width: 768px){
+
+    .sheet-why{
+        min-height: 1168px;
+        height: 100%;
+    }
+
+    .sheet-why__iconblock{
+        flex-flow: row wrap;
+        position: relative;
+        width: 33%;
+    
+
+        &>div:first-child, &>div, &>div:nth-of-type(1n+2) {
+            width: 100%;
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+}   
+*/

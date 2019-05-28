@@ -1,0 +1,492 @@
+.sheet-first{
+	width: 100%;
+	height: 100vh;
+	min-height: 650px;
+	/*height: 650px;*/
+	background-color: $backgroundColor;
+	background: url('../img/sheet-wirst-decor.png') $backgroundColor center right no-repeat;
+	position: relative;
+
+	@include tablets {
+		/*min-height: 1025px;*/
+		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+	}
+}
+
+.sheet-first__header {
+	/*background-color: green;*/
+	display: flex; 
+	padding-top: rem(25px);
+	position: absolute;
+	top: 0;
+    align-self: start;
+    justify-content: start;
+	width: 100%;
+
+	@include tablets{
+		padding: rem(25px) rem(25px) rem(0px) rem(25px);
+
+		.menu, .sheet-first__phone{
+			display: none;
+		}	
+	}
+}
+
+
+.sheet-first__logo{
+	width: rem(53px);
+    height: rem(38px);
+	color: $textColor;
+	font-family: "Museo Sans Cyrl -500";
+	font-size: rem(24px);
+	font-weight: 400;
+	line-height: rem(21px);
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.sheet-first__logo-img{
+	width: 100%;
+	max-width: 100%;
+	cursor: pointer;
+}
+
+.menu{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.menu__option:nth-child(1n+2){
+	margin-left: rem(20px);
+}
+
+.menu__link{
+	color: $textColor;
+	font-size: rem(18px);
+	font-weight: 400;
+	line-height: rem(30px);
+	text-decoration: none;
+
+	&:hover{
+		color: $textColor;
+		text-decoration: underline;
+	}
+
+}
+
+.sheet-first__menu{
+	margin-left: rem(45px);
+}
+
+
+
+.sheet-first__phone{
+	display: flex;
+	margin-left: auto;
+	justify-content: flex-start;
+	align-items: center;
+	/*margin-right: rem(51px);*/
+}
+
+
+.sheet-first__number-phone{
+	color: $textColor;
+	font-size: rem(24px);
+	font-weight: 400;
+	line-height: rem(30px);
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+
+	&:before{
+		content: '';
+		background: url('../img/icon_phone.png') center center no-repeat;
+		width: rem(12px);
+		height: rem(11px);
+		margin-right: rem(6px);
+		display: inline-block;
+	}
+}
+
+.contentblock{
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+@include tablets {
+	.sheet-first__contentblock{
+		flex-direction: column-reverse;
+		height: 100%;
+	}
+}
+
+.contentblock__column-left, .contentblock__column-right{
+	width: 50%;
+	padding-bottom: rem(60px);
+	
+	@include tablets{
+		width: 100%;
+		height: 50%;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		
+		.text{
+			text-align: center;
+			max-width: 70%;
+
+			p{
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@include phones{
+		.text{
+			max-width: 90%;
+		}	
+	}
+}
+
+@include tablets{
+	.contentblock__column-right{
+		margin-top: rem(60px);
+	}
+	.contentblock__column-left{
+		margin-top: rem(60px);
+		margin-bottom: rem(110px);
+	}
+}
+
+.contentblock__slide-pic-block{
+	max-width: rem(503px);
+
+	@include tablets{
+		max-width: unset;
+		height: 100%
+	}
+
+	.contentblock__slide-pic{
+		width: 100%;
+		max-width: 100%;	
+
+		@include tablets{
+			width: unset;
+			max-width: unset;
+			height: 100%
+		}
+	
+	}
+}
+
+
+
+.sheet-first .contentblock__column-left {
+    .text{
+    	padding-top: rem(23px);
+	}
+
+	p{
+		margin-top: rem(5px);
+		max-width: rem(360px);
+	}
+}
+
+.sheet-first__footer{
+	position: absolute;
+	bottom: rem(44px);
+	left: 0;
+	display: flex;
+	justify-content: start;
+	width: 50%;
+
+	@include tablets {
+		left: unset;
+		width: 100%;
+	}
+
+	.sheet-first__icon-items{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 0;
+		flex-flow: row wrap;
+
+		@include tablets{
+			justify-content: center;
+		}
+
+		@include phones{
+			justify-content: space-around;
+		}
+		
+		.sheet-first__item{
+			display: flex;
+			justify-content: start;
+			padding: 0 1%;
+			min-width: rem(120px);
+			
+			@include tablets{
+				margin: 2% 3%;
+			}
+			
+			@include phones{
+				min-width: unset;
+				margin: 2% 0;
+			}
+
+			.text{
+				color: white;
+				font-size: rem(16px);
+				font-weight: 400;
+				max-width: rem(60px);
+				margin-left: rem(5px);
+
+			}
+			&-natural{
+				.text {
+					min-width: rem(85px);
+				}
+			}
+
+			&-natural::before{
+				content: '';
+				background: url('../img/icon_natural.png') center center no-repeat;
+				width: 44px;
+				height: 41px;
+				display: inline-block;
+				flex-basis: 44px;
+			}
+			&-delivery::before{
+				content: '';
+				background: url('../img/icon_delivery.png') center center no-repeat;
+				width: 50px;
+				height: 40px;
+				display: inline-block;
+				flex-basis: 50px;
+			}
+			&-figure::before{
+				content: '';
+				background: url('../img/icon_figure.png') center center no-repeat;
+				width: 42px;
+				height: 42px;
+				display: inline-block;
+				flex-basis: 42px;
+			}
+
+		}
+
+	}
+}
+
+
+/*
+.sheet-first__natural, .sheet-first__delivery, .sheet-first__figure{
+	display: flex;
+	width: rem(178px);
+}
+
+.sheet-first__text-natural, .sheet-first__text-delivery, .sheet-first__text-figure{
+   	width: rem(75px);
+	color: $textColor;
+	font-size: rem(16px);
+	font-weight: 400;
+    margin-right: rem(30px);//через жопу сделано выравнивание блоков относительно друг друга, sheet-first__footer.nth-child(1n+2) почему то не сработал
+}
+
+
+.sheet-first__icon-natural{
+	background: url('../img/icon_natural.png') center center no-repeat;
+	width: rem(44px);
+    height: rem(41px);
+    display: block;
+    margin-right: rem(8px);
+}
+.sheet-first__icon-delivery{
+	background: url('../img/icon_delivery.png') center center no-repeat;
+	width: rem(50px);
+    height: rem(40px);
+    display: block;
+    margin-right: rem(8px);
+}
+.sheet-first__icon-figure{
+	background: url('../img/icon_figure.png') center center no-repeat;
+	width: rem(42px);
+    height: rem(42px);
+    display: block;
+    margin-right: rem(8px);
+}
+*/
+
+.sheet-first__decor1-block{
+	display: block;
+	position: absolute;
+	left: rem(40px);
+	bottom: rem(-50px);
+	z-index: 1;
+	max-width: rem(52px);
+
+	.sheet-first__decor1-img{
+		max-width: 100%;
+	}
+
+	@include tablets{
+		left: 26%;
+    	bottom: 55%;
+		z-index: 10;
+	}
+
+}
+
+.sheet-first__decor2-block{
+	display: block;
+	position: absolute;
+	right: rem(15px);
+	width: auto;
+	bottom: rem(-50px);
+	z-index: 1;
+	max-width: rem(428px);
+
+	.sheet-first__decor2-img{
+		max-width: 100%;
+	}
+
+	@include tablets{
+		left: 50%;
+    	bottom: 50%;
+		z-index: 10;
+		transform: translateX(-50%) translateY(14%);
+	}
+
+}
+
+.sheet-first__decor3-block{
+	display: inline-block;
+	width: auto;
+	position: absolute;
+	right: rem(90px);
+	bottom: rem(-40px);
+	z-index: 1;
+	max-width: rem(387px);
+
+	.sheet-first__decor3-img{
+		max-width: 100%;
+	}
+
+	@include tablets{
+		left: 50%;
+    	bottom: 50%;
+		z-index: 10;
+		transform: translateX(-50%) translateY(0%);
+	}	
+
+
+}
+
+.sheet-first{
+	.btn{
+	    padding: rem(16px) rem(31px) rem(16px) rem(31px);
+	    margin: rem(34px) rem(0px) rem(40px) rem(0px);
+	}
+}
+
+
+/*
+@media screen and (max-width: rem(992px)){
+	.sheet-first__header{
+		justify-content: center;
+		flex-flow: row wrap;
+	}
+
+	.sheet-first__phone{
+		text-align: center;
+		justify-content: center;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: rem(768px)){
+	.navigation{
+		display: none;
+	}
+
+	.sheet-first{
+		min-height: 1025px;
+		height: 100%;
+		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+	}
+
+	.sheet-first__header{
+		position: relative;
+		flex-basis: rem(63px);
+		flex-grow: 0;
+		flex-shrink: 1;
+		align-items: start;
+		justify-content: start;
+		width: 100%;
+		padding: rem(25px) rem(25px) rem(0px) rem(25px);
+
+		.menu, .sheet-first__phone{
+			display: none;
+		}
+	}
+	.sheet-first__contentblock{
+		flex-direction: column-reverse;
+		flex-basis: calc(100% - 219px);
+		flex-grow: 1;
+		flex-shrink: 1;
+
+		.contentblock__column-left, .contentblock__column-right{
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			padding-bottom: 0px;
+
+			.contentblock__slide-pic-block{
+				height: 100%;
+				width: auto;
+
+				.contentblock__slide-pic{
+					width: auto;
+					max-width: auto;
+
+					height: 100%;
+					max-height: 100%;
+				}
+			}
+
+			.text{
+				text-align: center;
+				max-width: rem(400px);
+				padding-top: 0px;
+			}
+		}
+	}
+
+	.sheet-first__footer{
+		position: relative;
+		flex-basis: rem(108px);
+		flex-flow: 0;
+		flex-shrink: 1;
+		bottom: 0;
+
+	}
+}
+*/
+
+@media screen and (max-width: 380px){
+	.sheet-first__footer{
+		bottom: 0;
+	}	
+}
