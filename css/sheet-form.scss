@@ -9,6 +9,10 @@
     background-size: cover;
 
     color: #0f5a47;
+
+    .centered-container{
+        min-height: 100vh;
+    }
 }    
     .sheet-form__contentblock{
         display: flex;
