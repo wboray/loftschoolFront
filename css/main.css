@@ -218,64 +218,6 @@ body {
     .hamburger {
       display: inline-block; } }
 
-.hamburger-overlay {
-  z-index: 999;
-  visibility: hidden;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  background-color: #61c4d9;
-  -webkit-transition: opacity 0.5s, visibility 0.5s, height 0.5s;
-  -o-transition: opacity 0.5s, visibility 0.5s, height 0.5s;
-  transition: opacity 0.5s, visibility 0.5s, height 0.5s;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.875rem;
-  color: #fff; }
-  .hamburger-overlay .hamburger-overlay__close {
-    width: 18px;
-    height: 18px;
-    right: 40px;
-    top: 33px;
-    cursor: pointer;
-    background-color: #61c4d9;
-    background: url("../img/icon-close.png") #61c4d9 center right no-repeat;
-    position: absolute; }
-
-.nav-main {
-  height: 100%; }
-
-.nav-main__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 0 auto;
-  height: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.nav-main__link {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer; }
-
-.hamburger-overlay.active {
-  opacity: 1;
-  visibility: visible;
-  height: 100%; }
-
 .hidden {
   overflow: hidden; }
 
@@ -398,11 +340,12 @@ body {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
   @media screen and (max-width: 768px) {
     .sheet-first__header {
       padding: 25px 1.5625rem 0rem 25px; }
-      .sheet-first__header .menu, .sheet-first__header .sheet-first__phone {
+      .sheet-first__header .sheet-first__phone {
         display: none;
         width: 0;
         height: 0; } }
@@ -424,6 +367,56 @@ body {
   width: 100%;
   max-width: 100%;
   cursor: pointer; }
+
+@media screen and (max-width: 768px) {
+  .sheet-first .centered-container {
+    /*position: absolute;*/
+    z-index: 999; } }
+
+.hamburger-overlay .hamburger-overlay__close {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .hamburger-overlay {
+    z-index: 999;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #61c4d9;
+    -webkit-transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+    -o-transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+    transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    color: #fff; } }
+
+.hamburger-overlay .hamburger-overlay__close {
+  width: 18px;
+  height: 18px;
+  right: 40px;
+  top: 33px;
+  cursor: pointer;
+  background-color: #2f3336;
+  background: url("../img/icon-close.png") #2f3336 center right no-repeat;
+  position: absolute; }
+
+.nav-main {
+  height: 100%;
+  background-color: #2f3336;
+  /*min-height: 800px;*/ }
+
+.hamburger-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  height: 100%; }
+  .hamburger-overlay.active .hamburger-overlay__close {
+    display: unset; }
 
 .menu {
   display: -webkit-box;
@@ -449,12 +442,37 @@ body {
   font-weight: 400;
   line-height: 1.875rem;
   text-decoration: none; }
+  @media screen and (max-width: 768px) {
+    .menu__link {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 2.25rem;
+      font-weight: 400;
+      line-height: 3.875rem; } }
   .menu__link:hover {
     color: #ffffff;
     text-decoration: underline; }
 
 .sheet-first__menu {
   margin-left: 2.8125rem; }
+  @media screen and (max-width: 768px) {
+    .sheet-first__menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin: 0 auto;
+      height: 100%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .sheet-first__phone {
   display: -webkit-box;

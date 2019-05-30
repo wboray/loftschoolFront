@@ -38,10 +38,11 @@ hamburgerOverlay.addEventListener('click', function(event) {
 
     const target = event.target;
     //console.log(target.getAttribute('href'));
-    if (target.getAttribute('href') !== '#'){
+    if (typeof target.getAttribute('href') !== "null" && target.getAttribute('href') !== '#'){
         let section = document.querySelector(target.getAttribute('href')).offsetTop;
         gotoSection(html, section, 600);
     }
+    
 })
 
 function gotoSection(element, to, duration){
