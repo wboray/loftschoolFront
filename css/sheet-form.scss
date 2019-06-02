@@ -10,7 +10,7 @@
 
     color: #0f5a47;
 
-    .centered-container{
+    .centered-container, .contentblock{
         min-height: 100vh;
     }
 }    
@@ -59,6 +59,8 @@
     }
     .form{
         height: 100%;
+        min-height: 100vh;
+        position: relative;
     }
 
     .form__row {
