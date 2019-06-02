@@ -7,7 +7,12 @@
 		<title>Лендинг</title>
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
-		<script src="./js/script.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/menu.js"></script>
+		<script src="./js/slider.js"></script>
+		<script src="./js/modal.js"></script>
+		<script src="./js/command.js"></script>
+		<script src="./js/form.js"></script>
 
 	</head>
 <body>
@@ -25,6 +30,13 @@
 			<li><a class='navigation__page'></a></li>
 			<li><a class='navigation__page'></a></li>
 		</ul>
+
+		<div class="thanks-window overlay" id='thanks-window'>
+			<div class="modal">
+				<p class="thanks-window__message">Сообщение отправлено</p>
+				<button type="button" class="btn btn--green" id='thanks-window-button'>Закрыть</button>
+			</div>
+		</div>	
 
 
 		<section class="sheet-first" id='sheet-first'>
@@ -82,7 +94,7 @@
 							<h1>натуральные  шоколадные  батончики</h1>
 							<p>Наши батончики идеально подходят для тех, кто следит за своим здоровьем</p>
 						</div>
-						<button type="button" class="btn">Заказать</button>
+						<button type="button" class="btn" data-goto-form='1'>Заказать</button>
 					</div>
 					<div class="contentblock__column-right">
 						<div class="contentblock__slide-pic-block"><img src="./img/slide_1.png" class='contentblock__slide-pic' alt='слайд 1, почему то подумалось что это слайд'></div>
@@ -106,19 +118,10 @@
 			</div>	
 
 			<div class="sheet-first__decor1-block">
-				<!--
-				<img class="sheet-first__decor1-img" src='./img/sheet-first-decor1.png'>
-				-->
 			</div>	
 			<div class="sheet-first__decor2-block">
-				<!--
-				<img class="sheet-first__decor2-img" src='./img/sheet-first-decor2.png'>
-				-->
 			</div>
 			<div class="sheet-first__decor3-block">
-				<!--
-				<img class="sheet-first__decor3-img" src='./img/sheet-first-decor3.png'>
-				-->
 			</div>
 		</section>
 		<section class="sheet-why" id='sheet-why'>
@@ -161,7 +164,7 @@
 			-->
 		</section>
 		<section class='sheet-chocco' id='sheet-chocco'>
-			<div class="slider centered-container flex-jcenter">
+			<div class="slider centered-container flex-jcenter" id="slider-sheet-chocco">
 				<div class='slider__left'>
 				</div>
 				<div class='slider__right'>
@@ -170,9 +173,6 @@
 					<li class="slider__item">
 						<div class="slider__pict contentblock__column-left">
 							<img src='./img/sheet-chocco_slide2.png' class='slider__slide-img alt='слайд 1'>
-							<!--
-								<img src='./img/sheet-chocco_slider-decor1.png' class='slider__slide-decor1'>
-							-->	
 						</div>	
 						<div class="slider__content contentblock__column-right">
 							<h2 class="header-h1">Батончик “Морские водоросли”</h2>
@@ -192,10 +192,35 @@
 							</div>
 							<div class="slider__price">
 								<div class="slider__cost">140 &#8381;</div>
-								<button type="button" class="btn btn--green">Заказать</button>
+								<button type="button" class="btn btn--green" data-goto-form='1'>Заказать</button>
 							</div>
-					</div>
-
+						</div>
+					</li>
+					<li class="slider__item" data-item-active='active'>
+						<div class="slider__pict contentblock__column-left">
+							<img src='./img/sheet-chocco_slide2.png' class='slider__slide-img alt='слайд 1'>
+						</div>	
+						<div class="slider__content contentblock__column-right">
+							<h2 class="header-h1">Батончик “Морские водоросли”</h2>
+							<article class='slider__desc'>
+								<div class="slider_name">Состав:</div>
+								<p>Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.</p>
+							</article>
+							<div class="slider__param">
+								<div class="slider_caloria">
+									<div class="slider_param-title">Калорийность</div>
+									<div class="slider_param-data">120 ккал</div>
+								</div>
+								<div class="slider_weight">
+									<div class="slider_param-title">Вес</div>
+									<div class="slider_param-data">98 грамм</div>
+								</div>
+							</div>
+							<div class="slider__price">
+								<div class="slider__cost">140 &#8381;</div>
+								<button type="button" class="btn btn--green" data-goto-form='1'>Заказать</button>
+							</div>
+						</div>
 					</li>
 				</ul>
 		</section>
@@ -214,7 +239,7 @@
 									<use xlink:href='./img/sprite.svg#trigon'></use>
 								</svg>
 							</div>
-							<article class='sheet-command__article sheet-command__article--hidden'>
+							<article class='sheet-command__article'>
 									<div class="sheet-command__position">Оператор</div>
 									<p class="sheet-command__desc">С радостью поможет подобрать батончики и оформить заказ. </p>
 							</article>
@@ -231,7 +256,7 @@
 									<use xlink:href='./img/sprite.svg#trigon'></use>
 								</svg>
 							</div>
-							<article class='sheet-command__article sheet-command__article--hidden'>
+							<article class='sheet-command__article'>
 									<div class="sheet-command__position">Оператор</div>
 									<p class="sheet-command__desc">С радостью поможет подобрать батончики и оформить заказ. </p>
 							</article>
@@ -265,7 +290,7 @@
 									<use xlink:href='./img/sprite.svg#trigon'></use>
 								</svg>
 							</div>
-							<article class='sheet-command__article sheet-command__article--hidden'>
+							<article class='sheet-command__article'>
 								<div class="sheet-command__position">Оператор</div>
 								<p class="sheet-command__desc">С радостью поможет подобрать батончики и оформить заказ. </p>
 							</article>

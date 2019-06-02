@@ -85,6 +85,21 @@
         .sheet-command__name{
             text-decoration: none;
         }
+
+
+        &.active{
+            .sheet-command__article{
+                height: auto;
+                overflow: auto;
+            }
+
+            .sheet-command__trigon{
+                width: 9px;
+                height: 8px;
+                fill:#0f5a47;
+                transform: rotate(180deg);
+            }
+        }
     }
 
 
@@ -112,12 +127,7 @@
         height: 8px;
         fill:#0f5a47;
     }
-    .sheet-command__trigon-revers{
-        width: 9px;
-        height: 8px;
-        fill:#0f5a47;
-        transform: translateY(-4px) rotate(180deg);
-    }
+
 
     .sheet-command__title{
         color: #323232;
@@ -126,6 +136,10 @@
     }
 
     .sheet-command__article{
+        height: 0px;
+        overflow: hidden;
+        transition: height .5s;
+
         .sheet-command__position{
             color: #281e1e;
             font-size: rem(18px);
@@ -138,10 +152,6 @@
             font-weight: 200;        
         }
     
-        &--hidden{
-            height: 0px;
-            overflow: hidden;
-        }
     }    
 }
 

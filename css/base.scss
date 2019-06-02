@@ -227,8 +227,39 @@ body{
 	overflow: hidden;
 }
 
+.thanks-window{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #2f3234;
+	z-index: 1000;
+	opacity: 0;
 
+	&.active{
+		display: flex;
+		opacity: 1;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 1s;
+	}
+}
 
+.modal{
+	background-color: #fff;
+	max-width: 300px;	
+	height: min-content;
+	width: 60%;
+	padding: 30px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+
+	p{
+		margin-bottom: 20px;
+	}
+
+}
 
 
 /*=====================================why===================================*/
