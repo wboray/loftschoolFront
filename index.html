@@ -13,6 +13,7 @@
 		<script src="./js/slider.js"></script>
 		<script src="./js/command.js"></script>
 		<script src="./js/menu.js"></script>
+		<script src="./js/reviews.js"></script>
 		<script src="./js/form.js"></script>
 
 	</head>
@@ -315,6 +316,7 @@
 			<div class="sheet-menu__accordion">
 				<ul class="sheet-menu__accordion-items">
 					<li class="sheet-menu__accordion-item sheet-menu__accordion-item--active">
+
 						<a class="sheet-menu__accordion-item-background sheet-menu__accordion-item-background--acco1" style='background-image: url("./img/menu-acco1.jpg")'>
 							<span class="sheet-menu__title">Батончики с молоком</span>
 						</a>
@@ -366,29 +368,59 @@
 		<section class="sheet-reviews" id='sheet-reviews'>
 			<div class="centered-container flex-jcenter">
 				<div class="header-h1">Отзывы</div>
-				<div class="sheet-reviews__review">
-					<div class="sheet-reviews__circle"></div>
-					<div class='sheet-reviews__photo-block'>
-						<img src="./img/photo.png" alt="" class="sheet-reviews__photo">
-					</div>
-					<article class="display-block sheet-reviews__content">
-						<div class="sheet-reviews__title">Лучший перекус</div>
-						<p class="sheet-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
-						<div class="sheet-reviews__name">Алёна Хмельницкая</div>
-					</article>
-				</div>
+				<ul class="sliderTwo" id="sliderTwo">
+					<li class="sliderTwo-item active">
+						<div class="sheet-reviews__review">
+							<div class="sheet-reviews__circle"></div>
+							<div class='sheet-reviews__photo-block'>
+								<img src="./img/photo.png" alt="" class="sheet-reviews__photo">
+							</div>
+							<article class="display-block sheet-reviews__content">
+								<div class="sheet-reviews__title">Лучший перекус</div>
+								<p class="sheet-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
+								<div class="sheet-reviews__name">Алёна Хмельницкая</div>
+							</article>
+						</div>
+					</li>
+					<li class="sliderTwo-item">
+						<div class="sheet-reviews__review">
+							<div class="sheet-reviews__circle"></div>
+							<div class='sheet-reviews__photo-block'>
+								<img src="./img/photo.png" alt="" class="sheet-reviews__photo">
+							</div>
+							<article class="display-block sheet-reviews__content">
+								<div class="sheet-reviews__title">Человек 2</div>
+								<p class="sheet-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
+								<div class="sheet-reviews__name">Алёна Хмельницкая</div>
+							</article>
+						</div>
+					</li>
+					<li class="sliderTwo-item">
+							<div class="sheet-reviews__review">
+								<div class="sheet-reviews__circle"></div>
+								<div class='sheet-reviews__photo-block'>
+									<img src="./img/photo.png" alt="" class="sheet-reviews__photo">
+								</div>
+								<article class="display-block sheet-reviews__content">
+									<div class="sheet-reviews__title">Человек 3</div>
+									<p class="sheet-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
+									<div class="sheet-reviews__name">Алёна Хмельницкая</div>
+								</article>
+							</div>
+						</li>
+					</ul>	
 				<ul class="sheet-reviews__peoples">
-					<li class="">
-						<a class='sheet-reviews__people sheet-reviews__active'>
-							<img src="./img/people-icon.png" alt="" class="sheet-reviews__people-icon">	
-						</a>
-					</li>		
-					<li class="">
+					<li class="sheet-reviews__peoples-item active">
 						<a class='sheet-reviews__people'>
 							<img src="./img/people-icon.png" alt="" class="sheet-reviews__people-icon">	
 						</a>
 					</li>		
-					<li class="">
+					<li class="sheet-reviews__peoples-item">
+						<a class='sheet-reviews__people'>
+							<img src="./img/people-icon.png" alt="" class="sheet-reviews__people-icon">	
+						</a>
+					</li>		
+					<li class="sheet-reviews__peoples-item">
 						<a class='sheet-reviews__people'>
 							<img src="./img/people-icon.png" alt="" class="sheet-reviews__people-icon">	
 						</a>

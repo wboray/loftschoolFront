@@ -1624,14 +1624,14 @@ body {
         -o-transition: flex-grow 0.5s ease-in-out;
         transition: flex-grow 0.5s ease-in-out;
         transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out, -ms-flex-positive 0.5s ease-in-out;
-        cursor: pointer;
         /*height: max-content;*/ }
         .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item .sheet-menu__accordion-item-background {
           max-width: 6.25rem;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          z-index: 1; }
+          z-index: 1;
+          cursor: pointer; }
           @media screen and (max-width: 768px) {
             .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item .sheet-menu__accordion-item-background {
               max-width: 5rem; } }
@@ -1708,6 +1708,7 @@ body {
         .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active::after {
           content: '';
           position: absolute;
+          cursor: pointer;
           width: 18px;
           height: 18px;
           right: 10px;
@@ -1886,6 +1887,25 @@ body {
       -ms-transform: translateX(-20%);
       transform: translateX(-20%); } }
 
+.sliderTwo {
+  display: block;
+  position: relative;
+  width: 100%; }
+  .sliderTwo .sliderTwo-item {
+    opacity: 0;
+    display: none;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; }
+    .sliderTwo .sliderTwo-item.active {
+      display: block;
+      opacity: 1;
+      -webkit-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out; }
+
 .sheet-reviews__review {
   margin-top: 3.125rem;
   padding: 2.5rem 8.75rem 2.5rem 2.5rem;
@@ -1947,6 +1967,11 @@ body {
   @media screen and (max-width: 768px) {
     .sheet-reviews__peoples {
       margin-bottom: 50px; } }
+  .sheet-reviews__peoples .sheet-reviews__peoples-item.active .sheet-reviews__people, .sheet-reviews__peoples .sheet-reviews__peoples-item:hover .sheet-reviews__people {
+    background-color: #0f5a47;
+    -webkit-box-shadow: 0px 0px 0px 6px #0f5a47;
+    box-shadow: 0px 0px 0px 6px #0f5a47;
+    cursor: pointer; }
 
 .sheet-reviews__people {
   margin: 0px 15px;
@@ -1971,12 +1996,6 @@ body {
   .sheet-reviews__people .sheet-reviews__people-icon {
     width: 100%;
     max-width: 100%; }
-
-.sheet-reviews__active, .sheet-reviews__people:hover {
-  background-color: #0f5a47;
-  -webkit-box-shadow: 0px 0px 0px 6px #0f5a47;
-  box-shadow: 0px 0px 0px 6px #0f5a47;
-  cursor: pointer; }
 
 .sheet-reviews__circle {
   position: absolute;

@@ -69,13 +69,13 @@
                 display: flex;
                 position: relative;
                 transition: flex-grow 0.5s ease-in-out;
-                cursor: pointer;
                 /*height: max-content;*/
 
                 .sheet-menu__accordion-item-background{
                     max-width: rem(100px);
                     display: flex;
                     z-index: 1;
+                    cursor: pointer;
 
                     @include tablets{
                         max-width: rem(80px);
@@ -167,6 +167,7 @@
                 &::after{
                     content: '';
                     position: absolute;
+                    cursor: pointer;
                     width: 18px;
                     height: 18px;
                     right: 10px;
