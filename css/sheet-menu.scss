@@ -68,8 +68,7 @@
             .sheet-menu__accordion-item{
                 display: flex;
                 position: relative;
-                transition: flex-grow 0.5s ease-in-out;
-                /*height: max-content;*/
+                flex-basis: 0;
 
                 .sheet-menu__accordion-item-background{
                     max-width: rem(100px);
@@ -150,8 +149,14 @@
             }
 
             .sheet-menu__accordion-item--active{
-                flex-grow: 1;
+                //flex-grow: 1;
                 max-width: rem(530px);
+                flex-basis: 100%;
+                animation-name: menuBounce;
+                animation-duration: .5s;
+                //transition: flex-grow 1s ease;
+
+                //transition: flex-basis 1s ease;
                 /*
                 @include phones{
                     width: unset;
@@ -188,6 +193,10 @@
                     min-width: 50%;
                     overflow: auto;
                     min-width: rem(120px);
+                    transition: flex-grow 1s ease;
+                    /*
+                    animation-name: menuBounce;
+                    animation-duration: 1.2s;*/
 
                     .sheet-menu__description{
                         padding: 0px 30px 0px 10px;
@@ -200,7 +209,9 @@
                         */
                         bottom: 0;
                         overflow-y: auto;                        
-/*
+                        
+    
+                        /*
                         @include tablets {
                             right: 0;
                         }

@@ -374,6 +374,96 @@ body {
     -webkit-transform: perspective(400px);
     transform: perspective(400px); } }
 
+@-webkit-keyframes menuBounce {
+  from {
+    flex-basis: 0;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  25% {
+    flex-basis: 25%;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  50% {
+    flex-basis: 50%;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  75% {
+    flex-basis: 75%;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  to {
+    flex-basis: 100%; } }
+
+@keyframes menuBounce {
+  from {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  25% {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  50% {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  75% {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  to {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; } }
+
+@-webkit-keyframes menuBounceRevers {
+  from {
+    flex-basis: 100%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  25% {
+    flex-basis: 75%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  50% {
+    flex-basis: 50%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  75% {
+    flex-basis: 25%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  to {
+    flex-basis: 0%; } }
+
+@keyframes menuBounceRevers {
+  from {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  25% {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  50% {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  75% {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  to {
+    -ms-flex-preferred-size: 0%;
+    flex-basis: 0%; } }
+
 .sheet-first {
   width: 100%;
   height: 100vh;
@@ -1665,12 +1755,8 @@ body {
         display: -ms-flexbox;
         display: flex;
         position: relative;
-        -webkit-transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
-        transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
-        -o-transition: flex-grow 0.5s ease-in-out;
-        transition: flex-grow 0.5s ease-in-out;
-        transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out, -ms-flex-positive 0.5s ease-in-out;
-        /*height: max-content;*/ }
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0; }
         .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item .sheet-menu__accordion-item-background {
           max-width: 6.25rem;
           display: -webkit-box;
@@ -1736,10 +1822,13 @@ body {
           width: 0;
           overflow: hidden; }
       .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active {
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
         max-width: 33.125rem;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -webkit-animation-name: menuBounce;
+        animation-name: menuBounce;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
         /*
                 @include phones{
                     width: unset;
@@ -1776,6 +1865,14 @@ body {
           min-width: 50%;
           overflow: auto;
           min-width: 7.5rem;
+          -webkit-transition: flex-grow 1s ease, -webkit-box-flex 1s ease;
+          transition: flex-grow 1s ease, -webkit-box-flex 1s ease;
+          -o-transition: flex-grow 1s ease;
+          transition: flex-grow 1s ease;
+          transition: flex-grow 1s ease, -webkit-box-flex 1s ease, -ms-flex-positive 1s ease;
+          /*
+                    animation-name: menuBounce;
+                    animation-duration: 1.2s;*/
           /*
                     .sheet-menu__accordion-item-background-i{
                         display: flex;

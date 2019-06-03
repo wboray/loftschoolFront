@@ -23,3 +23,48 @@
         transform: perspective(400px);
     }
 }
+
+
+@keyframes menuBounce {
+    from {
+      flex-basis: 0;
+      animation-timing-function: ease-out;
+    }
+    25% {
+        flex-basis: 25%;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        flex-basis: 50%;
+        animation-timing-function: ease-out;
+    }
+    75% {
+        flex-basis: 75%;
+        animation-timing-function: ease-in;
+    }
+    to {
+        flex-basis: 100%;
+    }
+  }
+
+  @keyframes menuBounceRevers {
+    from {
+      flex-basis: 100%;
+      animation-timing-function: ease;
+    }
+    25% {
+        flex-basis: 75%;
+        animation-timing-function: ease;
+    }
+    50% {
+        flex-basis: 50%;
+        animation-timing-function: ease;
+    }
+    75% {
+        flex-basis: 25%;
+        animation-timing-function: ease;
+    }
+    to {
+        flex-basis: 0%;
+    }
+  }
