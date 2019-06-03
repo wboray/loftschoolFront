@@ -328,6 +328,52 @@ body {
   font-family: "Alegreya Sans - Thin Italic";
   src: local("@"), url("../fonts/AlegreyaSans-ThinItalic.woff") format("woff"), url("../fonts/AlegreyaSans-ThinItalic.woff2") format("woff2"); }
 
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
 .sheet-first {
   width: 100%;
   height: 100vh;
@@ -1892,19 +1938,18 @@ body {
   position: relative;
   width: 100%; }
   .sliderTwo .sliderTwo-item {
-    opacity: 0;
     display: none;
     width: 100%;
-    left: 0;
+    left: 11;
     right: 0;
     bottom: 0;
-    top: 0; }
+    top: 0;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s; }
     .sliderTwo .sliderTwo-item.active {
-      display: block;
-      opacity: 1;
-      -webkit-transition: opacity 1s ease-in-out;
-      -o-transition: opacity 1s ease-in-out;
-      transition: opacity 1s ease-in-out; }
+      display: block; }
 
 .sheet-reviews__review {
   margin-top: 3.125rem;

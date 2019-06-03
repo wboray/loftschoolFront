@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                 items.forEach(element => {
                     element.classList.remove('active');
-                    element.classList.add('outactive');
                 });
                 itemsArrow.forEach(element => {
                     element.classList.remove('active');

@@ -76,18 +76,18 @@
 	width: 100%;
 
 	.sliderTwo-item{
-		opacity: 0;
 		display: none;
 		width: 100%;
-		left: 0;
+		left: 11;
 		right: 0;
 		bottom: 0;
 		top: 0;
 		
+		animation-name: flipInX;
+		animation-duration: 1.2s;
+		
 		&.active{
 			display: block;
-			opacity: 1;
-			transition: opacity 1s ease-in-out;
 		}
 
 	}
