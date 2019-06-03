@@ -1619,6 +1619,12 @@ body {
         display: -ms-flexbox;
         display: flex;
         position: relative;
+        -webkit-transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
+        transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
+        -o-transition: flex-grow 0.5s ease-in-out;
+        transition: flex-grow 0.5s ease-in-out;
+        transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out, -ms-flex-positive 0.5s ease-in-out;
+        cursor: pointer;
         /*height: max-content;*/ }
         .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item .sheet-menu__accordion-item-background {
           max-width: 6.25rem;
@@ -1699,6 +1705,16 @@ body {
                     bottom: 0;
                     z-index: 10;
                 }*/ }
+        .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active::after {
+          content: '';
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          right: 10px;
+          top: 10px;
+          background-image: url("../img/icon-close.png");
+          background-repeat: no-repeat;
+          background-size: contain; }
         .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active .sheet-menu__desc {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1747,6 +1763,7 @@ body {
                     }
                     */ }
           .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active .sheet-menu__desc .sheet-menu__description {
+            padding: 0px 30px 0px 10px;
             position: absolute;
             z-index: 10;
             top: 0;
