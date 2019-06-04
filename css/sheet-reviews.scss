@@ -70,7 +70,7 @@
 	}
 }
 
-.sliderTwo{
+.sliderTwo{ 
 	display: block;
 	position: relative;
 	width: 100%;
@@ -87,7 +87,8 @@
 		animation-duration: 1.2s;
 		
 		&.active{
-			display: block;
+			display: flex;
+			justify-content: center;
 		}
 
 	}

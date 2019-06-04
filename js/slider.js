@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let arrowRight = document.querySelector(element + '>.slider__right')
         let items = document.querySelector(element + '>.slider__items')
         let itemArray = [];
+        let cloneFirst;
+        let cloneEnd;
         let itemActive;
+
+        //клонирование первого и последнего элемента,
+        //что бы прокрутка была бесконечной
+
 
         //console.log(arrowLeft);
         //console.log(arrowRight);
@@ -37,29 +43,80 @@ document.addEventListener("DOMContentLoaded", function(event) {
         })
         if (itemArray.length <= 1) return;//если нет слайдов, то значит не куртим их
 
-        if (itemActive > 0) gotoSlide(itemActive);
         
- 
+        //вставляем клоны первого и последнего элемента
+        cloneFirst = itemArray[0].cloneNode(true);
+        items.appendChild(cloneFirst);
+        cloneEnd = itemArray[itemArray.length - 1].cloneNode(true);
+        items.insertBefore(cloneEnd, items.children[0]);
+        //после вставки нужно пересчитать массив итемов
+        let itemArrayWithClone = [];
+        itemArrayWithClone[0] = cloneFirst;
+        i = 0;
+        itemArray.forEach(element => {
+            i++;
+            itemArrayWithClone[i] = element;
+        });
+        i++
+        itemArrayWithClone[i] = cloneEnd;
+        itemActive++;
+
+        itemArray = itemArrayWithClone;
+
+
+
+        if (itemActive > 0) gotoSlide(itemActive);
+
         slider.addEventListener('click', function(event){
             if (searchInArray(event.target.classList, excludeArray)){
                 //элемент исключения, не будем забирать у него управление
                 console.log('исключение');
             }else{
                 event.preventDefault();
+                let revers = 0;
                 if (event.target == arrowLeft && itemActive > 0){
                     itemActive--;
-                    gotoSlide(itemActive);
+                    if (itemActive == 0) revers = 1;
+                    gotoSlide(itemActive, revers);
                 }else if (event.target == arrowRight  && itemActive < (itemArray.length - 1)){
                     itemActive++;
-                    gotoSlide(itemActive);
+                    if (itemActive == itemArray.length - 1) revers = 2;
+                    gotoSlide(itemActive, revers);
                 }
             }
         })
 
-        function gotoSlide(item){
+        function gotoSlide(item, revers){
+            itemArray[0].removeEventListener("transitionend", transitionEnd);
             itemArray.forEach(element => {
                 element.style.left = ('-' + item * 100 + '%');
+                element.style.transition = 'left 0.5s ease 0s';
             })
+            if (revers > 0){
+                //console.log(revers);
+                itemArray[0].addEventListener('transitionend', transitionEnd())
+                //debugger;
+            }
+
+            function transitionEnd(){
+                //console.log(1);
+                setTimeout(function() {
+                    itemArray.forEach(element => {
+                        element.style.transition = 'unset';
+                    })
+                    itemArray.forEach(element => {
+                        if (revers == 1){
+                            element.style.left = ('-' + 100 * (itemArray.length - 2) + '%');
+                            itemActive = itemArray.length - 2;
+                        }else if(revers == 2){
+                            element.style.left = ('-100%');
+                            itemActive = 1;
+                        }
+                    })/**/
+                    //debugger;
+                }, 1000);    
+               
+            } 
         }        
 
         function searchInArray(needle, haystack){

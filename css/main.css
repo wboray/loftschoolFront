@@ -236,7 +236,7 @@ body {
   text-align: center;
   font-size: 18px;
   font-weight: 600; }
-  .modal p {
+  .modal .overlay__content {
     margin-bottom: 20px; }
 
 /*=====================================why===================================*/
@@ -1354,9 +1354,7 @@ body {
   display: flex;
   min-width: 100%;
   position: relative;
-  -webkit-transition: left 0.5s;
-  -o-transition: left 0.5s;
-  transition: left 0.5s; }
+  /*transition: left 0.5s;*/ }
   @media screen and (max-width: 768px) {
     .slider__item {
       -webkit-box-orient: vertical;
@@ -2043,7 +2041,12 @@ body {
     -webkit-animation-duration: 1.2s;
     animation-duration: 1.2s; }
     .sliderTwo .sliderTwo-item.active {
-      display: block; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
 
 .sheet-reviews__review {
   margin-top: 3.125rem;

@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             if (request.status >= 400){
                 overlayPrintMessage(request.responseText, 'ошибка');
             }else{
-                overlayPrintMessage('все хорошо');
+                overlayPrintMessage(request.response.message);
             }
         })
     })
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const ajaxForm = function (form){
         const citiesUrl = 'https://webdev-api.loftschool.com/sendmail';
         const email = 'wboray@yandex.ru';
-        const formData = new FormData(form);debugger;
+        const formData = new FormData(form);
         formData.append('to', email);
 
         const xhr = new XMLHttpRequest();
