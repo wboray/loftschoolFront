@@ -19,6 +19,24 @@
 	</head>
 <body>
 
+<script type='template' id='overlayTemplate'>
+	<div class="thanks-window overlay" id='thanks-window'>
+		<div class="modal overlay_container">
+			<div class="overlay__content">
+				<div class="overlay__title">
+					Сообщение:
+				</div>
+				<div class="overlay__text">
+				</div>
+			</div>
+			<button type="button" class="btn btn--green overlay__close" id='close-overlay'>Закрыть</button>
+		</div>
+	</div>	
+</script>
+
+
+
+
 	<div class="wrapper">
 
 		<ul class='navigation'>
@@ -32,13 +50,14 @@
 			<li><a class='navigation__page'></a></li>
 			<li><a class='navigation__page'></a></li>
 		</ul>
-
+<!--
 		<div class="thanks-window overlay" id='thanks-window'>
 			<div class="modal">
 				<p class="thanks-window__message">Сообщение отправлено</p>
 				<button type="button" class="btn btn--green" id='thanks-window-button'>Закрыть</button>
 			</div>
 		</div>	
+-->
 
 
 		<section class="sheet-first" id='sheet-first'>
@@ -440,7 +459,7 @@
 		</section>		
 		<section class='sheet-form' id='sheet-form'>
 			<div class="centered-container">
-				<form action="form.php" class="form">
+				<form class="form" id='formid'>
 					<div class="contentblock flex-jcenter">
 						<h2 class="header-h1">Закажите доставку</h2>
 						<div class='sheet-form__contentblock'>
@@ -448,11 +467,11 @@
 								<div class='form__row form__field--namephones'>
 									<label class="form__field">
 										<span class="form__field-title">Имя</span>
-										<input type="text" name="name" class="form__input" placeholder="Имя" />
+										<input type="text" name="name" class="form__input" placeholder="Имя" required/>
 									</label>
 									<label class="form__field">
 										<span class="form__field-title">Телефон</span>
-										<input type="text" name="phone" class="form__input" placeholder="Телефон" />
+										<input type="text" name="phone" class="form__input" placeholder="Телефон" required/>
 									</label>
 								</div>
 								<div class='form__row'>		
@@ -484,7 +503,7 @@
 								<div class='form__row'>
 									<label class="form__field form__field--textarea">
 										<span class="form__field-title">Комментарий</span>
-										<textarea name="text-message" class="form__textarea" placeholder="Что-то тут есть"></textarea>
+										<textarea name="text-message" class="form__textarea" placeholder="Что-то тут есть" required></textarea>
 									</label>
 								</div>	
 								<div class='form__row form__row--center form__row--nomarign'>	

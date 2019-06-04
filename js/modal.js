@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-
+/*
     let thanksWindowButton = document.querySelector('#thanks-window-button');
     let thanksWindow = document.querySelector('#thanks-window');
     let buttons = document.querySelectorAll(".btn[data-goto-form='1']");
@@ -20,4 +20,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             gotoSection(html, section, 600);
         })
     });
+
+    /**/
 })
