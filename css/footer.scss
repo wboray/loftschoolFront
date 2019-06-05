@@ -1,0 +1,32 @@
+.footer{
+    height: 93px;
+    width: 100%;
+}
+
+.footer__phone{
+	display: flex;
+	margin-left: auto;
+	justify-content: flex-start;
+	/*margin-right: rem(51px);*/
+}
+
+
+.footer__phone-number{
+	color: #0f5a47;
+	font-size: rem(24px);
+	font-weight: 400;
+	line-height: rem(30px);
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	min-width: rem(170px);
+
+	&:before{
+		content: '';
+        background: url('../img/sprite.svg#phoneicon') center center no-repeat;
+		width: rem(12px);
+		height: rem(11px);
+		margin-right: rem(6px);
+		display: inline-block;
+	}
+}
