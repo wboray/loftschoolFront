@@ -30,26 +30,17 @@
     align-self: start;
     justify-content: start;
 	width: 100%;
+	z-index: 999;
 
 	@include tablets{
 		padding: 25px rem(25px) rem(0px) 25px;
 
-		.menu, .sheet-first__phone{
+		.sheet-first__phone{
 			display: none;
 			width: 0;
 			height: 0;
 		}
 		
-		&::after{
-			content: '';
-			position: absolute;
-			right: rem(25px);
-			width: 24px;
-			height: 26px;
-			background: url('../img/icons/menu-icon.svg') center center no-repeat;
-			background-size: 100% 100%;
-			align-self: center;
-		}
 	}
 }
 
@@ -74,15 +65,94 @@
 	cursor: pointer;
 }
 
+
+.sheet-first{
+	.centered-container{
+		@include tablets{
+			/*position: absolute;*/
+			z-index: 999;
+		}		
+	}	
+}
+
+.hamburger-overlay{
+
+	.nav-main{
+		@include tablets{
+			z-index: 999;
+			visibility: hidden;
+			position: fixed;
+			overflow: hidden;
+			background-color: #2f3336;
+			font-size: rem(24px);
+			font-weight: 400;
+			line-height: rem(30px);
+			color: #fff;
+		}
+	}
+	
+	@include tablets{
+		width: 24px;
+		height: 26px;
+		margin-left: auto;
+		position: relative;		
+
+		&::after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 24px;
+			height: 26px;
+			background: url('../img/icons/menu-icon.svg') center center no-repeat;
+			background-size: 100% 100%;
+			align-self: center;
+			cursor: pointer;
+		}
+	}
+	
+
+}
+
+
+
+.hamburger-overlay.active{
+	opacity: 1;
+	visibility: visible;
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #2f3336;
+	
+
+	&::after{
+		width: 18px;
+		height: 18px;
+		right: 40px;
+		top: 33px;
+		cursor: pointer;
+		background-color: #2f3336;
+		background: url('../img/icon-close.png') #2f3336 center right no-repeat;
+		position: absolute;
+	}
+
+	.nav-main{
+		visibility: visible;
+		height: 100%;
+	}
+
+}
+
+
 .menu{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-
-	.menu__option{
-
-	}
 }
 
 .menu__option:nth-child(1n+2){
@@ -96,6 +166,15 @@
 	line-height: rem(30px);
 	text-decoration: none;
 
+	@include tablets{
+		color: #fff;
+		text-decoration: none;
+		cursor: pointer;
+ 		font-size: rem(36px);
+		font-weight: 400;
+		line-height: rem(62px);
+	}
+
 	&:hover{
 		color: $textColor;
 		text-decoration: underline;
@@ -105,6 +184,15 @@
 
 .sheet-first__menu{
 	margin-left: rem(45px);
+
+	@include tablets{
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 
