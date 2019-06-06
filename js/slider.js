@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         }
                     })/**/
                     //debugger;
-                }, 1000);    
+                }, 500);    
                
             } 
         }        
