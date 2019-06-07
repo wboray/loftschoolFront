@@ -99,13 +99,17 @@
 
 		&::after{
 			content: '';
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 24px;
-			height: 26px;
+			position: fixed;
+			right: 20px;
+			top: 23px;
+			width: 36px;
+			height: 34px;
 			background: url('../img/icons/menu-icon.svg') center center no-repeat;
 			background-size: 100% 100%;
+			//background-color: red;
+			
+    		//-webkit-mask:  url('../img/icons/menu-icon.svg') no-repeat 50% 50%;
+    		//mask: url('../img/icons/menu-icon.svg') no-repeat 50% 50%;
 			align-self: center;
 			cursor: pointer;
 		}
@@ -125,7 +129,7 @@
 	justify-content: center;
 	top: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	background-color: #2f3336;
 	
 
@@ -137,7 +141,7 @@
 		cursor: pointer;
 		background-color: #2f3336;
 		background: url('../img/icon-close.png') #2f3336 center right no-repeat;
-		position: absolute;
+		position: fixed;
 	}
 
 	.nav-main{

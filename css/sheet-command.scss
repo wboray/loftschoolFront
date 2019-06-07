@@ -1,24 +1,25 @@
 .sheet-command{
-    /*width: 980px;*/
     min-height: 615px;
     height: 100vh;
+    display: flex;
+    align-items: center;
 
-    /*min-height: 810px;*/
+    
     position: relative;
     background-color: #fff;
 
     @include tablets{
-        height: unset;
-        min-height: unset;
+        min-height: 1042px;
+        height: 100%;
     }
 
     .centered-container{
-        /*height: 100%;*/
+        flex-grow: 1;
+        flex-basis: 100%;        
 
         @include tablets{
             padding: 0 50px;
-            height: unset;
-            min-height: unset;
+            height: 100%;
         }
 
         @include phones{
@@ -57,6 +58,7 @@
 
         .sheet-command__content{
             max-width: rem(223px);
+            position: relative;
         }
 
         @include tablets{
@@ -66,6 +68,7 @@
             min-width: rem(223px);
             display: flex;
             flex-direction: column;
+            margin-bottom: 30px;
 
         }
 
@@ -89,8 +92,16 @@
 
         &.active{
             .sheet-command__article{
-                height: auto;
-                overflow: auto;
+                //height: auto;
+                //overflow: auto;
+                //position: absolute;
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+
+                @include tablets{
+                    position: relative;
+                }
             }
 
             .sheet-command__trigon{
@@ -105,12 +116,15 @@
 
 
     .sheet-command__people:nth-of-type(2n){
-        align-self: flex-end;
+        //align-self: flex-end;
+        margin-top: 58px;
         
         @include tablets{
+            margin-top: 0;
+            /*
             justify-content: flex-start;
             align-items: flex-start;
-            align-self: flex-start;
+            align-self: flex-start;*/
         }
     }
 
@@ -136,9 +150,12 @@
     }
 
     .sheet-command__article{
-        height: 0px;
-        overflow: hidden;
-        transition: height .5s;
+        //height: 0px;
+        //overflow-x: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(60%);
+        transition: opacity 1.5s, transform 1s;
 
         .sheet-command__position{
             color: #281e1e;

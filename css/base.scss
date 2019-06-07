@@ -208,12 +208,12 @@ body{
 		width: 6px;
 		height: 6px;
 		border-radius: 50%;
-		background-color: #fff;
+		background-color: #FF8C00;
 		transform: translateX(-3px) translateY(-3px);
 	}
 
 	&.navigation__active{
-		border: solid 1px #fff;
+		border: solid 1px #FF8C00;
 		border-radius: 50%;
 	}	
 
@@ -258,6 +258,40 @@ body{
 
 }
 
+
+.contacts {
+	&__address {
+	  font-size: 21px;
+	  color: #010101;
+	}
+  
+	&__link {
+	  position: relative;
+	  padding-left: 18px;
+	  font-size: 24px;
+	  color: #ffffff;
+	  transition: 0.5s;
+  
+	  &:hover {
+		color: darken(white, 10%);
+  
+		.contacts__link-icon {
+		  fill: darken(white, 10%);
+		}
+	  }
+  
+	  &-icon {
+		position: absolute;
+		fill: #ffffff;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 12px;
+		height: 11px;
+		transition: 0.3s;
+	  }
+	}
+  }
 
 /*=====================================why===================================*/
 

@@ -1,32 +1,109 @@
-.footer{
-    height: 93px;
-    width: 100%;
-}
-
-.footer__phone{
-	display: flex;
-	margin-left: auto;
-	justify-content: flex-start;
-	/*margin-right: rem(51px);*/
-}
+$green: #0f5a47;
 
 
-.footer__phone-number{
-	color: #0f5a47;
-	font-size: rem(24px);
-	font-weight: 400;
-	line-height: rem(30px);
-	text-transform: uppercase;
-	text-decoration: none;
-	display: inline-block;
-	min-width: rem(170px);
 
-	&:before{
-		content: '';
-        background: url('../img/sprite.svg#phoneicon') center center no-repeat;
-		width: rem(12px);
-		height: rem(11px);
-		margin-right: rem(6px);
-		display: inline-block;
+.footer {
+	
+	//height: 93px;
+	width: 96%;
+	max-width: 940px;
+	/**/
+	padding: 22px 0 16px 0;
+	background-color: #fff;
+  
+	&__content {
+	  display: flex;
+	  justify-content: space-between;
 	}
+  
+	&__col {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+	.contacts {
+	  &__link {
+		font-size: 21px;
+		color: $green;
+		text-decoration: none;
+  
+		&:hover {
+		  color: lighten($color: $green, $amount: 10%);
+  
+		  .contacts__link-icon {
+			fill: lighten($color: $green, $amount: 10%);
+		  }
+		}
+  
+		&-icon {
+		  fill: $green;
+		  height: 11px;
+		  width: 11px;
+		}
+	  }
+	}
+  
+	&__phone {
+	  position: relative;
+	  font-size: 21px;
+	  color: $green;
+	  transition: 0.3s;
+  
+	  &:hover {
+		color: lighten($color: $green, $amount: 4%);
+		.footer__phone-icon {
+		  fill: lighten($color: $green, $amount: 4%);
+		}
+	  }
+  
+	  &-icon {
+		position: absolute;
+		width: 12px;
+		height: 11px;
+		transition: 0.3s;
+		fill: $green;
+		transition: 0.3s;
+	  }
+	}
+}
+
+.socials {
+	display: flex;
+  }
+  
+  .socials__icon {
+	display: block;
+	fill: rgba($color: #000000, $alpha: 0.2);
+	width: 20px;
+	height: 20px;
+	transition: .3s;
+  }
+  
+  .socials__item {
+	display: block;
+	margin-right: 20px;
+  
+	&:last-child {
+	  margin-right: 0;
+	}
+  }
+  
+  .socials__link {
+	display: block;
+  
+	&:hover {
+  
+	  .socials__icon {
+		fill: #000000;
+	  }
+	}
+  }
+  
+
+ .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 96%;
 }
