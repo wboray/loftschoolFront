@@ -17,8 +17,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /*
-	transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
   font-family: Alegreya Sans, sans-serif;
   color: #000;
   outline: none; }
@@ -51,6 +49,11 @@ body {
   position: relative;
   overflow: auto; }
 
+section {
+  position: relative;
+  height: 100%;
+  min-height: 650px; }
+
 /*
 .content-left{
 	padding: 0px 29px 0px 0px;
@@ -60,7 +63,6 @@ body {
 }
 */
 .content-center {
-  /*padding: 0px 80px 0px 80px; */
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,24 +166,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 999;
   position: fixed;
-  right: 2.5rem;
-  height: 100vh;
+  z-index: 100;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: -1.9375rem; }
+  z-index: 999; }
   @media screen and (max-width: 768px) {
     .navigation {
       display: none; } }
 
 .navigation__page {
-  /*background: url('../img/ellipse.png') center center no-repeat;*/
   width: 6px;
   height: 6px;
   margin: 3px 0px;
@@ -207,7 +208,6 @@ body {
   overflow: hidden; }
 
 .thanks-window {
-  /*display: none;*/
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -1737,7 +1737,8 @@ body {
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  height: 100vh; }
   .sheet-menu::before {
     content: '';
     position: absolute;
@@ -1952,7 +1953,7 @@ body {
                     }
                     */ }
           .sheet-menu .sheet-menu__accordion .sheet-menu__accordion-items .sheet-menu__accordion-item--active .sheet-menu__desc .sheet-menu__description {
-            padding: 0px 30px 0px 10px;
+            padding: 60px 30px 0px 10px;
             position: absolute;
             z-index: 10;
             top: 0;
@@ -2707,7 +2708,11 @@ input:focus, textarea:focus {
       padding-bottom: 0; } }
   .sheet-map__container {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
 
 .footer {
   width: 96%;
