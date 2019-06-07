@@ -7,7 +7,7 @@
             var $height = 370;
             if (window.matchMedia("(max-width: 768px)").matches) $height = 332;
             if (window.matchMedia("(max-width: 480px)").matches) $height = 220;
-            player = new YT.Player("yt-player", {
+            player = new YT.Player("#yt-player", {
                 width: "100%",
                 height: $height,
                 videoId: "lIQxzE0Aw_g",
@@ -109,9 +109,9 @@
 
     
     
-    window.addEventListener('load', (event) => {
+    window.addEventListener('DOMContentLoaded', (event) => {
         var videoContainer = $("#yt-player");
-        console.log(videoContainer);
+        //console.log(videoContainer);
         if ($(videoContainer).length > 0) youTubePlayer();
     })
     
