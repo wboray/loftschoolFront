@@ -198,9 +198,10 @@ body {
     -webkit-transform: translateX(-3px) translateY(-3px);
     -ms-transform: translateX(-3px) translateY(-3px);
     transform: translateX(-3px) translateY(-3px); }
-  .navigation__page.navigation__active {
-    border: solid 1px #FF8C00;
-    border-radius: 50%; }
+
+.navigation__item.active .navigation__page, .navigation__item:hover .navigation__page {
+  border: solid 1px #FF8C00;
+  border-radius: 50%; }
 
 .hidden {
   overflow: hidden; }

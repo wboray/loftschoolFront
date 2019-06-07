@@ -212,13 +212,16 @@ body{
 		transform: translateX(-3px) translateY(-3px);
 	}
 
-	&.navigation__active{
-		border: solid 1px #FF8C00;
-		border-radius: 50%;
-	}	
+	
 
 }
 
+.navigation__item{
+	&.active .navigation__page, &:hover .navigation__page{
+		border: solid 1px #FF8C00;
+		border-radius: 50%;
+	}
+}
 
 
 
