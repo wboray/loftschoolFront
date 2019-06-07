@@ -3,8 +3,7 @@
     var player = void 0;
     
     function youTubePlayer() {
-        onYouTubeIframeAPIReady();
-        function onYouTubeIframeAPIReady() {
+        window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
             var $height = 370;
             if (window.matchMedia("(max-width: 768px)").matches) $height = 332;
             if (window.matchMedia("(max-width: 480px)").matches) $height = 220;
