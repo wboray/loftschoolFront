@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+window.addEventListener("load", function(event) { 
 
 
     const hamburgerOverlay = document.querySelector('#hamburger-overlay');
@@ -57,14 +57,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         navMainItemLink = document.querySelector('#nav-main__list>li>a[href="' + target.getAttribute('href') + '"]');
         if (navMainItemLink != null){
             navMainItemLink.click();
-        } else if (target.getAttribute('href') == '#' || target.getAttribute('href') == '#sheet-first' ){
+        } else if (target.getAttribute('href') == '#' || target.getAttribute('href') == '#sheet-first'){
             navigationPageActive(target);
-            gotoSection(html, 0, 600);    
+            gotoSection(html, 0, 600);
+            window.location.hash = target.getAttribute('href');
+        } else if (target.getAttribute('href') == '#sheet-form'){
+            let section = document.querySelector(target.getAttribute('href')).offsetTop;
+            navigationPageActive(target);
+            gotoSection(html, section, 600);
+            window.location.hash = target.getAttribute('href');
         }
     })
 
     //при заходе по ссылке
-    if(window.location.hash && window.location.hash !== '#') {
+    if(window.location.hash && window.location.hash !== '#' && window.location.hash !== '#sheet-form') {
         navMainItemLink = document.querySelector('#nav-main__list>li>a[href="' + window.location.hash + '"]');
         if (typeof navMainItemLink == 'object')navMainItemLink.click();
     }    

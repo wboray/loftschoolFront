@@ -83,8 +83,10 @@
 		bottom: 0;
 		top: 0;
 		
-		animation-name: flipInX;
-		animation-duration: 1.2s;
+		//animation-name: flipInX2;
+		animation-duration: 1s;
+		-webkit-animation-name: zoomIn;
+    	animation-name: zoomIn;
 		
 		&.active{
 			display: flex;

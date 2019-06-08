@@ -54,35 +54,83 @@ document.addEventListener("DOMContentLoaded", function(event) {
     form.addEventListener('submit', function (e){
         e.preventDefault();
         const form = e.target;
-        console.log(form);
+        //console.log(form);
         let request = ajaxForm(form);
-
-        request.addEventListener('load', function(){
-            console.log(request);
-            if (request.status >= 400){
-                overlayPrintMessage(request.responseText, 'ошибка');
-            }else{
-                overlayPrintMessage(request.response.message);
-            }
-        })
+        if (request){
+            request.addEventListener('load', function(){
+                //console.log(request);
+                if (request.response == null){
+                        overlayPrintMessage('неизвестная ошибка', 'ошибка');
+                    
+                }else if(request.status > 200){
+                    overlayPrintMessage(request.responseText, 'ошибка');
+                }else{
+                    overlayPrintMessage(request.response.message);
+                }
+            })
+        }
     })
 
 
     const ajaxForm = function (form){
-        const citiesUrl = 'https://webdev-api.loftschool.com/sendmail';
+        const url = 'https://webdev-api.loftschool.com/sendmail';
         const email = 'wboray@yandex.ru';
         const formData = new FormData(form);
         formData.append('to', email);
 
+        try{
+            //alert(2);
+            valid(formData, form);    
+        }catch (error){
+            console.error(error.name + ': ' + error.message);
+            //alert(1);
+            return false;
+        }
+
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-        xhr.open('POST', citiesUrl);
-        //xhr.open('GET', citiesUrl);
+        xhr.open('POST', url);
+        //xhr.open('GET', url);
         xhr.setRequestHeader('X-Requested-width', 'XMLHttpRequest');
         xhr.send(formData);
 
         return xhr;
+        
     }
+
+    function error(message) { 
+        this.message = message;
+        this.name = "Исключение, определенное пользователем";
+    }
+
+    function valid(formData, form){
+        console.log(formData);
+        console.log(formData.get('name'));
+        if (formData.get('name') == '' || formData.get('name') > 20){
+            form.querySelector('input[name="name"]').setCustomValidity('Имя не должно быть пустым и больше чем 20 символов');
+            form.querySelector('input[name="name"]').reportValidity();
+            throw new error('Имя не должно быть пустым и больше чем 20 символов');
+        }
+
+        if (formData.get('phone') == '' || formData.get('phone') > 12){
+            form.querySelector('input[name="phone"]').setCustomValidity('Телефон не должен быть пустым и больше чем 12 символов');
+            form.querySelector('input[name="phone"]').reportValidity();
+            throw new error('Телефон не должен быть пустым и больше чем 12 символов');
+        }
+
+        if (formData.get('comment') == ''){
+            form.querySelector('textarea[name="comment"]').setCustomValidity('Комментарий не должен быть пустым');
+            form.querySelector('textarea[name="comment"]').reportValidity();
+            throw new error('Комментарий не должен быть пустым');
+        }
+    }
+
+    $('input, textarea').on('input', function() {
+         this.setCustomValidity('')
+    })
+
+
+
 
     /*
     const submitButton = document.querySelector('#load');
