@@ -70,6 +70,32 @@
 	}
 }
 
+.sliderTwo{ 
+	display: block;
+	position: relative;
+	width: 100%;
+
+	.sliderTwo-item{
+		display: none;
+		width: 100%;
+		left: 11;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		
+		//animation-name: flipInX2;
+		animation-duration: 1s;
+		-webkit-animation-name: zoomIn;
+    	animation-name: zoomIn;
+		
+		&.active{
+			display: flex;
+			justify-content: center;
+		}
+
+	}
+}
+
 .sheet-reviews__review{
 	margin-top: rem(50px);
 	padding: rem(40px) rem(140px) rem(40px) rem(40px);
@@ -132,6 +158,15 @@
 	@include tablets{
 		margin-bottom: 50px;
 	}
+
+	.sheet-reviews__peoples-item.active, .sheet-reviews__peoples-item:hover{
+		.sheet-reviews__people{
+			background-color: #0f5a47;
+			box-shadow: 0px 0px 0px 6px #0f5a47;
+			cursor: pointer;
+		}
+	}
+
 }
 
 .sheet-reviews__people{
@@ -152,12 +187,6 @@
 	}
 }
 
-.sheet-reviews__active, .sheet-reviews__people:hover{
-	
-	background-color: #0f5a47;
-	box-shadow: 0px 0px 0px 6px #0f5a47;
-	cursor: pointer;
-}
 
 .sheet-reviews__circle{
     position: absolute;

@@ -22,8 +22,7 @@ $backgroundColor: #61c4d9;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	/*
-	transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+	
 	
 	font-family: Alegreya Sans, sans-serif;
 	color: #000;
@@ -64,6 +63,12 @@ body{
 	overflow: auto;
 }
 
+section{
+	position: relative;
+    height: 100%;
+    min-height: 650px;
+}
+
 /*
 .content-left{
 	padding: 0px 29px 0px 0px;
@@ -74,7 +79,7 @@ body{
 */
 
 .content-center{
-	/*padding: 0px 80px 0px 80px; */
+	
     height: 100%;
 	display: flex;
 
@@ -179,13 +184,13 @@ body{
 
 .navigation{
     display: flex;
-    justify-content: center;
-    z-index: 999;
 	position: fixed;
-	right: rem(40px);
-    height: 100vh;
-    flex-direction: column;
-	margin-top: rem(-31px);
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+	right: 40px;
+	flex-direction: column;
+	z-index: 999;
 
 	@include tablets{
 		display: none;
@@ -193,7 +198,6 @@ body{
 }
 
 .navigation__page{
-	/*background: url('../img/ellipse.png') center center no-repeat;*/
 	width: 6px;
     height: 6px;
 	margin: 3px 0px;
@@ -208,17 +212,20 @@ body{
 		width: 6px;
 		height: 6px;
 		border-radius: 50%;
-		background-color: #fff;
+		background-color: #FF8C00;
 		transform: translateX(-3px) translateY(-3px);
 	}
 
-	&.navigation__active{
-		border: solid 1px #fff;
-		border-radius: 50%;
-	}	
+	
 
 }
 
+.navigation__item{
+	&.active .navigation__page, &:hover .navigation__page{
+		border: solid 1px #FF8C00;
+		border-radius: 50%;
+	}
+}
 
 
 
@@ -227,9 +234,70 @@ body{
 	overflow: hidden;
 }
 
+.thanks-window{
+	width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+	position: fixed;
+	background-color: #2f3234;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal{
+	background-color: #fff;
+	max-width: 300px;	
+	height: min-content;
+	width: 60%;
+	padding: 30px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+
+	.overlay__content{
+		margin-bottom: 20px;
+	}
+
+}
 
 
-
+.contacts {
+	&__address {
+	  font-size: 21px;
+	  color: #010101;
+	}
+  
+	&__link {
+	  position: relative;
+	  padding-left: 18px;
+	  font-size: 24px;
+	  color: #ffffff;
+	  transition: 0.5s;
+  
+	  &:hover {
+		color: darken(white, 10%);
+  
+		.contacts__link-icon {
+		  fill: darken(white, 10%);
+		}
+	  }
+  
+	  &-icon {
+		position: absolute;
+		fill: #ffffff;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 12px;
+		height: 11px;
+		transition: 0.3s;
+	  }
+	}
+  }
 
 /*=====================================why===================================*/
 

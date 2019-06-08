@@ -8,6 +8,7 @@
     background-size: cover;
     display: flex;
     justify-content: flex-end;
+    height: 100vh;
 
     &::before{
         content: '';
@@ -31,6 +32,9 @@
         /*margin-right: auto;*/
         @include tablets{
             padding-left: 2%;
+            position: absolute;
+            left: 0;
+            top:0;
         }
 
         @include phones{
@@ -68,12 +72,13 @@
             .sheet-menu__accordion-item{
                 display: flex;
                 position: relative;
-                /*height: max-content;*/
+                flex-basis: 0;
 
                 .sheet-menu__accordion-item-background{
                     max-width: rem(100px);
                     display: flex;
                     z-index: 1;
+                    cursor: pointer;
 
                     @include tablets{
                         max-width: rem(80px);
@@ -148,8 +153,14 @@
             }
 
             .sheet-menu__accordion-item--active{
-                flex-grow: 1;
+                //flex-grow: 1;
                 max-width: rem(530px);
+                flex-basis: 100%;
+                animation-name: menuBounce;
+                animation-duration: .5s;
+                //transition: flex-grow 1s ease;
+
+                //transition: flex-basis 1s ease;
                 /*
                 @include phones{
                     width: unset;
@@ -162,10 +173,23 @@
                     z-index: 10;
                 }*/
                 
+                &::after{
+                    content: '';
+                    position: absolute;
+                    cursor: pointer;
+                    width: 18px;
+                    height: 18px;
+                    right: 10px;
+                    top: 10px;
+                    background-image: url('../img/icon-close.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
 
                 .sheet-menu__desc{
                     display: flex;
                     background-color: #3a3c3f;
+                    
                     opacity: 0.9;
                     color: #fff;
                     flex-grow: 1;
@@ -173,8 +197,13 @@
                     min-width: 50%;
                     overflow: auto;
                     min-width: rem(120px);
+                    transition: flex-grow 1s ease;
+                    /*
+                    animation-name: menuBounce;
+                    animation-duration: 1.2s;*/
 
                     .sheet-menu__description{
+                        padding: 60px 30px 0px 10px;
                         position: absolute;
                         z-index: 10;
                         top: 0;
@@ -184,7 +213,9 @@
                         */
                         bottom: 0;
                         overflow-y: auto;                        
-/*
+                        
+    
+                        /*
                         @include tablets {
                             right: 0;
                         }
