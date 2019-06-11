@@ -7,13 +7,11 @@
     min-height: 500px;
     position: relative;
     height: 100vh;
-    padding-bottom: 50px;
 
     
 
     @include tablets {
         height: 100%;
-        padding-bottom: 0;
     }
     
     .container-map{
@@ -30,6 +28,7 @@
       height: 100%;
       width: 100%;
       position: relative;
+
       //flex-grow: 1;
       //flex-basis: 100%;
       //min-height: 650px;

@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
                 center: [54.181465, 45.187582],
-                zoom: 16, 
+                zoom: 16,
+                height: '100%',
                 scroll: false
             }, {
                 searchControlProvider: 'yandex#search'
@@ -58,5 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             .add(myPlacemark)
             .add(myPlacemarkWithContent);
     });
+
+    //myMap.container.fitToViewport();
 
 })

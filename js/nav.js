@@ -3,6 +3,7 @@ window.addEventListener("load", function(event) {
 
     const hamburgerOverlay = document.querySelector('#hamburger-overlay');
     const hamburgerOverlayClose = document.querySelector('#hamburger-overlay__close');
+    const fixedMenu = document.querySelector('#fp-nav');
     const navMainItem = document.querySelectorAll('#nav-main__list>li');
     
     const navigationFixed = document.querySelector('.navigation');
@@ -28,26 +29,32 @@ window.addEventListener("load", function(event) {
     //при кликах на меню
     hamburgerOverlay.addEventListener('click', function(event) {
         event.preventDefault();
-        
 
-        if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768 && !firstLoad){
+        if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768){
+            if (fixedMenu.style.visibility =='hidden'){
+                fixedMenu.style.visibility = 'visible';
+            }else{
+                fixedMenu.style.visibility = 'hidden';
+            }
             _toggleClass(elements, classes);
         }else{
             let target = event.target;
             if (typeof target.getAttribute('href') !== "null"){
                 if (target.getAttribute('href') !== '#'){
+                    /*
                     let section = document.querySelector(target.getAttribute('href')).offsetTop;
                     if (window.innerWidth <= 768 && !firstLoad)_toggleClass(elements, classes);
                     gotoSection(html, section, 600);
                     
-                    navigationPageActive(target);
-
+                    navigationPageActive(target);*/
+                    if (window.innerWidth <= 768)_toggleClass(elements, classes);
+                    fixedMenu.style.visibility = 'visible';
                     window.location.hash = target.getAttribute('href');
                 }
             }
         }
 
-        firstLoad = false;
+        //firstLoad = false;
     })
 /*
     //при кликах на фиксед меню => точки

@@ -30,7 +30,7 @@
 
 
 <!--
-<ul class='navigation' style='display: none'>
+<ul class='navigation' id="fixedMenu">
 	<li class='navigation__item active'><a href="#sheet-first" class='navigation__page'></a></li>
 	<li class='navigation__item'><a href="#sheet-why" class='navigation__page'></a></li>
 	<li class='navigation__item'><a href="#sheet-chocco" class='navigation__page'></a></li>
@@ -41,7 +41,7 @@
 	<li class='navigation__item'><a href="#sheet-form" class='navigation__page'></a></li>
 	<li class='navigation__item'><a href="#sheet-contact" class='navigation__page'></a></li>
 </ul>
-
+-->		
 <!--
 <div class="section" id='fixedMenu' style='display: fixed; position: absolute; z-index: 999;'>
 	<div class="slide"> Slide 1 </div>
@@ -56,32 +56,32 @@
 		<section class="sheet-first section" id='sheet-first' data-anchor="sheetfirst"> 
 			<div class="centered-container flex-jcenter">
 				<div class="sheet-first__header">
-					<a href="#" class="sheet-first__logo"><img class='sheet-first__logo-img' src='./img/logo.png' alt='CHO CCO'></a>
+					<a class="sheet-first__logo"><img class='sheet-first__logo-img' src='./img/logo.png' alt='CHO CCO'></a>
 
 			<div class="hamburger-overlay" id='hamburger-overlay'>
 				<nav class="nav-main">
 
 					<ul class="menu sheet-first__menu"  id='nav-main__list'>
 						<li class="menu__option">
-							<a href="#sheet-why" class="menu__link">О нас</a>
+							<a href="#sheetwhy" class="menu__link">О нас</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-chocco" class="menu__link">Батончики</a>
+							<a href="#sheetchocco" class="menu__link">Батончики</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-command" class="menu__link">Команда</a>
+							<a href="#sheetcommand" class="menu__link">Команда</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-menu" class="menu__link">Меню</a>
+							<a href="#sheetmenu" class="menu__link">Меню</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-reviews" class="menu__link">Отзывы</a>
+							<a href="#sheetreviews" class="menu__link">Отзывы</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-howwork" class="menu__link">Как мы работаем</a>
+							<a href="#sheethowwork" class="menu__link">Как мы работаем</a>
 						</li>
 						<li class="menu__option">
-							<a href="#sheet-contact" class="menu__link">Контакты</a>
+							<a href="#sheetcontact" class="menu__link">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -614,11 +614,13 @@
 					],
 			//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
 			navigation: true,
-			navigationPosition: 'right'
+			navigationPosition: 'right',
+			verticalCentered: false,
+			scrollingSpeed: 1000
 			//navigationTooltips: ['First page', 'Second page', 'Third and last page']
 		});
 
-		map.container.fitToViewport();
+		
 	</script>
 	<script type='template' id='overlayTemplate'>
 		<div class="thanks-window overlay" id='thanks-window'>
