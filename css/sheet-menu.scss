@@ -1,14 +1,19 @@
 .sheet-menu{
+    min-height: rem(720px);
+    height: 100vh;
+} 
+
+.container-menu{
     /*width: rem(980px);*/
     /*height: rem(720px);*/
-    min-height: rem(720px);
+    
     position: relative;
     background-color: #ccc;
     background: url('../img/menu-background.jpg') 40% center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: flex-end;
-    height: 100vh;
+    height: 100%;
 
     &::before{
         content: '';

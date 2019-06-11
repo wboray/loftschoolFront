@@ -49,7 +49,7 @@ window.addEventListener("load", function(event) {
 
         firstLoad = false;
     })
-
+/*
     //при кликах на фиксед меню => точки
     navigationFixed.addEventListener('click', function(event) {
         event.preventDefault();
@@ -74,8 +74,27 @@ window.addEventListener("load", function(event) {
         navMainItemLink = document.querySelector('#nav-main__list>li>a[href="' + window.location.hash + '"]');
         if (typeof navMainItemLink == 'object')navMainItemLink.click();
     }    
+*/
 
+/*
+    new fullpage('#fullpage', {
+        licenseKey: "D2DB0F76-42B04C3A-938789B7-AE7D1A8F",
+        anchors: [
+            'slide1',
+            'slide2'
+        ],
+        //responsiveWidth: responsiveWidth,
+        //responsiveHeight: responsiveHeight,
+        verticalCentered: false,
+        scrollingSpeed: 1000,
+        menu: '#fixedMenu',
+        navigation: true
+    });
+    
+    //methods
+    fullpage_api.setAllowScrolling(false);*/
 
+    
 
-
+	
 })
