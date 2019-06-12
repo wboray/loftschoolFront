@@ -23,6 +23,7 @@
 		<script src="./js/form.js"></script>
 		<script src="./js/map.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&wboray=c9941847-96af-4927-b104-3b84f23a9b16" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script>
 	</head>
 <body>
 
@@ -599,27 +600,44 @@
 -->	
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
-		var myFullpage = new fullpage('#fullpage', {
-			licenseKey: "D2DB0F76-42B04C3A-938789B7-AE7D1A8F",
-			anchors: [
-						'sheetfirst', 
-						'sheetwhy', 
-						'sheetchocco',
-						'sheetcommand',
-						'sheetmenu',
-						'sheetreviews',
-						'sheethowwork',
-						'sheetform',
-						'sheetcontact'
-					],
-			//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-			navigation: true,
-			navigationPosition: 'right',
-			verticalCentered: false,
-			scrollingSpeed: 1000
-			//navigationTooltips: ['First page', 'Second page', 'Third and last page']
-		});
-
+		const md = new MobileDetect(window.navigator.userAgent);
+		if ($(window).outerWidth() <= 480 && md.mobile()){
+			responsiveWidth = 900;
+			responsiveHeight = false;
+			fp(responsiveWidth, responsiveHeight);
+		}else if ($(window).outerWidth() <= 768 && md.mobile()){
+			responsiveWidth = 1024;
+			responsiveHeight= false;
+			fp(responsiveWidth, responsiveHeight);
+		}else{
+			responsiveWidth = 650;
+			responsiveHeight = 768;
+			fp(responsiveWidth, responsiveHeight);
+		}		 
+		function fp(responsiveWidth, responsiveHeight){ 
+			var myFullpage = new fullpage('#fullpage', {
+				licenseKey: "D2DB0F76-42B04C3A-938789B7-AE7D1A8F",
+				anchors: [
+							'sheetfirst', 
+							'sheetwhy', 
+							'sheetchocco',
+							'sheetcommand',
+							'sheetmenu',
+							'sheetreviews',
+							'sheethowwork',
+							'sheetform',
+							'sheetcontact'
+						],
+				//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				navigation: true,
+				navigationPosition: 'right',
+				verticalCentered: false,
+				scrollingSpeed: 1000,
+				responsiveWidth: responsiveWidth,
+				responsiveHeight: responsiveHeight
+				//navigationTooltips: ['First page', 'Second page', 'Third and last page']
+			});
+		}
 		
 	</script>
 	<script type='template' id='overlayTemplate'>
