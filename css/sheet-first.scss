@@ -75,6 +75,8 @@
 	}	
 }
 
+
+
 .hamburger-overlay{
 
 	.nav-main{
@@ -146,6 +148,17 @@
 		align-items: center;
 	}
 
+}
+
+.sheet-first>.centered-container>.sheet-first__header{
+	.hamburger-overlay{
+
+		
+			@include tablets{
+				display: none;
+			}
+		
+	}
 }
 
 

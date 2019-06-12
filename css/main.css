@@ -1049,6 +1049,10 @@ section {
     -ms-flex-align: center;
     align-items: center; }
 
+@media screen and (max-width: 768px) {
+  .sheet-first > .centered-container > .sheet-first__header .hamburger-overlay {
+    display: none; } }
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
