@@ -7,8 +7,8 @@ window.addEventListener("load", function(event) {
     const navMainItem = document.querySelectorAll('#nav-main__list>li');
     
     const navigationFixed = document.querySelector('.navigation');
-    var navMainItemLink;
-    var firstLoad = true;
+    let navMainItemLink;
+    let firstLoad = true;
 
     const body = document.querySelector('body');
     const html = document.querySelector('html');
@@ -27,8 +27,13 @@ window.addEventListener("load", function(event) {
     }
 
     //при кликах на меню
+
+    //console.log(hamburgerOverlay);
     hamburgerOverlay.addEventListener('click', function(event) {
         event.preventDefault();
+        //debugger;
+        
+
 
         if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768){
             _toggleClass(elements, classes);
@@ -81,24 +86,51 @@ window.addEventListener("load", function(event) {
     }    
 */
 
-/*
-    new fullpage('#fullpage', {
+
+
+const md = new MobileDetect(window.navigator.userAgent);
+
+	 
+// && $(window).outerHeight() > 1050
+//
+function fp(responsiveWidth, responsiveHeight){ 
+    var myFullpage = new fullpage('#fullpage', {
         licenseKey: "D2DB0F76-42B04C3A-938789B7-AE7D1A8F",
         anchors: [
-            'slide1',
-            'slide2'
-        ],
-        //responsiveWidth: responsiveWidth,
-        //responsiveHeight: responsiveHeight,
+                    'sheetfirst', 
+                    'sheetwhy', 
+                    'sheetchocco',
+                    'sheetcommand',
+                    'sheetmenu',
+                    'sheetreviews',
+                    'sheethowwork',
+                    'sheetform',
+                    'sheetcontact'
+                ],
+        //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        navigation: true,
+        navigationPosition: 'right',
         verticalCentered: false,
         scrollingSpeed: 1000,
-        menu: '#fixedMenu',
-        navigation: true
+        responsiveWidth: responsiveWidth,
+        responsiveHeight: responsiveHeight
+        //navigationTooltips: ['First page', 'Second page', 'Third and last page']
     });
-    
-    //methods
-    fullpage_api.setAllowScrolling(false);*/
+}
 
+if ($(window).outerWidth() <= 480 && md.mobile()){
+    let responsiveWidth = 480;
+    let responsiveHeight = false;
+    fp(responsiveWidth, responsiveHeight);
+}else if ($(window).outerWidth() <= 768 && md.mobile()){
+    let responsiveWidth = 768;
+    let responsiveHeight= false;
+    fp(responsiveWidth, responsiveHeight);
+}else {
+    let responsiveWidth = 768;
+    let responsiveHeight = 650;
+    fp(responsiveWidth, responsiveHeight);
+}
     
 
 	
