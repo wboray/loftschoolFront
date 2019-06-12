@@ -13715,7 +13715,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
       // Своё изображение иконки метки.
-      iconImageHref: '../img/map-icon.png',
+      iconImageHref: './img/map-icon.png',
       // Размеры метки.
       iconImageSize: [48, 48]
     }, _defineProperty(_ref, "iconImageSize", [46, 57]), _defineProperty(_ref, "iconImageOffset", [-5, -38]), _defineProperty(_ref, "iconContentLayout", MyIconContentLayout), _ref));
