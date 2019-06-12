@@ -13854,7 +13854,15 @@ window.addEventListener("load", function (event) {
           if (typeof navMainItemLink == 'object')navMainItemLink.click();
       }    
   */
+  //при кликах на кнопке
 
+  var btngo = document.querySelectorAll('.btn[data-goto-form="1"]');
+  btngo.forEach(function (element) {
+    if (_typeof(element) == 'object') element.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.location.hash = 'sheetform';
+    });
+  });
   var md = new MobileDetect(window.navigator.userAgent); // && $(window).outerHeight() > 1050
   //
 
@@ -14054,9 +14062,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     itemArray = itemArrayWithClone;
     if (itemActive > 0) gotoSlide(itemActive);
     slider.addEventListener('click', function (event) {
-      if (searchInArray(event.target.classList, excludeArray)) {
-        //элемент исключения, не будем забирать у него управление
-        console.log('исключение');
+      if (searchInArray(event.target.classList, excludeArray)) {//элемент исключения, не будем забирать у него управление
+        //console.log('исключение');
       } else {
         event.preventDefault();
         var revers = 0;
