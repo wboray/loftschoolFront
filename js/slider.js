@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             if (revers > 0){
                 //console.log(revers);
                 itemArray[0].addEventListener('transitionend', transitionEnd())
+                
                 //debugger;
             }
 
