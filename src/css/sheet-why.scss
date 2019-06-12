@@ -12,7 +12,7 @@
     <img src="./img/sheet-why-decor1.png" alt="" class="sheet-why__decor1">
 */
 
-    background-image: url('../img/sheet-why-decor1.png');
+    background-image: url('./img/sheet-why-decor1.png');
     background-size: auto;
     background-position: left 60%;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
     }
 
     &::after{
-		content: url('../img/sheet-why-decor2.png'); 
+		content: url('./img/sheet-why-decor2.png'); 
         display: block;
         position: absolute;
         left: 0;
@@ -51,7 +51,7 @@
         
         @include phones{
 			content: ''; 
-			background-image: url('../img/sheet-why-decor2.png');
+			background-image: url('./img/sheet-why-decor2.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position-y: bottom;
@@ -124,7 +124,7 @@
             
             &:before{
                 content: '';
-                background: url('../img/t3.png') center center no-repeat;
+                background: url('./img/t3.png') center center no-repeat;
                 display: block;
                 width: rem(67px);
                 height: rem(21px);
@@ -183,17 +183,17 @@
     margin: 0 auto;
 }
 .sheet-why__useful-icon{
-    background: url('../img/icons/useful-icon.svg') #f2f5f4 center center no-repeat;
+    background: url('./img/icons/useful-icon.svg') #f2f5f4 center center no-repeat;
     background-size: 66px 69px;
 }
 
 .sheet-why__tasty-icon{
-    background: url('../img/icons/tasty-icon.svg') #f2f5f4 center center no-repeat;
+    background: url('./img/icons/tasty-icon.svg') #f2f5f4 center center no-repeat;
     background-size: 70px 69px;
 }
 
 .sheet-why__nutritional-icon{
-	background: url('../img/icons/nutritional-icon.svg') #f2f5f4 center center no-repeat;
+	background: url('./img/icons/nutritional-icon.svg') #f2f5f4 center center no-repeat;
     background-size: 75px 64px;
 }
 

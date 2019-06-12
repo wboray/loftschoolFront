@@ -4,7 +4,7 @@
 	min-height: 805px;
 	position: relative;
 	background-color: #fff;
-    background-image:  url("../img/reviews-decor3.png");  
+    background-image:  url("./img/reviews-decor3.png");  
     background-position: top 20px right ;
 	background-repeat: no-repeat;
 
@@ -97,7 +97,7 @@
 	margin-top: rem(50px);
 	padding: rem(40px) rem(140px) rem(40px) rem(40px);
 	display: flex;
-	background: url('../img/reviews-pict.png') #f8faf9 right top no-repeat;
+	background: url('./img/reviews-pict.png') #f8faf9 right top no-repeat;
 	position: relative;
 
 	@include tablets{

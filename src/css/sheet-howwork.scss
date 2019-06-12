@@ -26,7 +26,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url(../img/splash.jpg);
+	background-image: url(./img/splash.jpg);
 	cursor: pointer;
   
 	&::before {
@@ -46,7 +46,7 @@
 	  left: 50%;
 	  top: 50%;
 	  transform: translate(-50%, -50%);
-	  background-image: url(../img/play.png);
+	  background-image: url(./img/play.png);
 	  background-size: contain;
 	  background-repeat: no-repeat;
 	  width: rem(82px);
@@ -81,7 +81,7 @@
 	transform: translateY(-50%);
 	left: 0;
 	outline: none;
-	background: url("../img/icons/play.svg") center center no-repeat;
+	background: url("./img/icons/play.svg") center center no-repeat;
   
 	&.paused {
 	  background: none;
@@ -120,7 +120,7 @@
 	outline: none;
 	border: 0;
 	cursor: pointer;
-	background: url("../img/icons/volume.svg") center center no-repeat;
+	background: url("./img/icons/volume.svg") center center no-repeat;
 	width: rem(40px);
 	height: rem(40px);
   

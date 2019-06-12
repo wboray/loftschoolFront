@@ -5,7 +5,7 @@
     position: relative;
     min-height: 100vh;
     background-color: #cfdeda;
-    background: url('../img/sheet-form-background.png') 40% center no-repeat;
+    background: url('./img/sheet-form-background.png') 40% center no-repeat;
     background-size: cover;
 
     color: #0f5a47;
@@ -195,12 +195,12 @@
     }
     
     .form__btn-custom::before {
-        background: url("../img/form-btn.png") no-repeat;
+        background: url("./img/form-btn.png") no-repeat;
     }
     
     .form__btn-custom::after {
         opacity: 0;
-        background: url("../img/form-btn_active.png") no-repeat;
+        background: url("./img/form-btn_active.png") no-repeat;
     }
 
     .form__radio{
@@ -283,7 +283,7 @@
         .order__radio-elem:checked {
           &+.order__radio-fake {
             &:after {
-              background: url("../img/checkbox-active-icon.png") 50% no-repeat;
+              background: url("./img/checkbox-active-icon.png") 50% no-repeat;
               /*background-size: contain;*/
               width: rem(11px);
               height: rem(9px);

@@ -55,7 +55,7 @@
 		&::after{
 			content: '';
 			position: absolute;
-			background-image: url(../img/sheet-chocco_slider-decor1.png);
+			background-image: url(./img/sheet-chocco_slider-decor1.png);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -161,7 +161,7 @@
 }
 
 .slider__left{
-	background: url('../img/arrow-scroll_slider.png') center center no-repeat;
+	background: url('./img/arrow-scroll_slider.png') center center no-repeat;
 	width: 15px;
 	height: 29px;
 	position: absolute;
@@ -175,7 +175,7 @@
 	}
 }
 .slider__right{
-	background: url('../img/arrow-scroll_slider.png') center center no-repeat;
+	background: url('./img/arrow-scroll_slider.png') center center no-repeat;
 	width: 15px;
 	height: 29px;
 	transform: translateY(-4px) rotate(180deg);

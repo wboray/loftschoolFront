@@ -1517,7 +1517,7 @@ h2.header-h1 {
   width: 100%;
   height: 100vh;
   background-color: #61c4d9;
-  background: url("../img/sheet-wirst-decor.png") #61c4d9 center right no-repeat;
+  background: url("./img/sheet-wirst-decor.png") #61c4d9 center right no-repeat;
   position: relative;
 }
 
@@ -1582,7 +1582,7 @@ h2.header-h1 {
   top: 33px;
   cursor: pointer;
   background-color: #2f3336;
-  background: url("../img/icon-close.png") #2f3336 center right no-repeat;
+  background: url("./img/icon-close.png") #2f3336 center right no-repeat;
   position: fixed;
 }
 
@@ -1657,7 +1657,7 @@ h2.header-h1 {
 
 .sheet-first__number-phone:before {
   content: '';
-  background: url("../img/icons/phone.svg") center center no-repeat;
+  background: url("./img/icons/phone.svg") center center no-repeat;
   width: 12px;
   height: 11px;
   margin-right: 6px;
@@ -1753,7 +1753,7 @@ h2.header-h1 {
 
 .sheet-first__footer .sheet-first__icon-items .sheet-first__item-natural::before {
   content: '';
-  background: url("../img/icons/natural-icon.svg") center center no-repeat;
+  background: url("./img/icons/natural-icon.svg") center center no-repeat;
   width: 44px;
   height: 41px;
   display: inline-block;
@@ -1763,7 +1763,7 @@ h2.header-h1 {
 
 .sheet-first__footer .sheet-first__icon-items .sheet-first__item-delivery::before {
   content: '';
-  background: url("../img/icons/delivery-icon.svg") center center no-repeat;
+  background: url("./img/icons/delivery-icon.svg") center center no-repeat;
   width: 50px;
   height: 40px;
   display: inline-block;
@@ -1773,7 +1773,7 @@ h2.header-h1 {
 
 .sheet-first__footer .sheet-first__icon-items .sheet-first__item-figure::before {
   content: '';
-  background: url("../img/icons/figure-icon.svg") center center no-repeat;
+  background: url("./img/icons/figure-icon.svg") center center no-repeat;
   width: 42px;
   height: 42px;
   display: inline-block;
@@ -1797,21 +1797,21 @@ h2.header-h1 {
 
 
 .sheet-first__icon-natural{
-	background: url('../img/icon_natural.png') center center no-repeat;
+	background: url('./img/icon_natural.png') center center no-repeat;
 	width: rem(44px);
     height: rem(41px);
     display: block;
     margin-right: rem(8px);
 }
 .sheet-first__icon-delivery{
-	background: url('../img/icon_delivery.png') center center no-repeat;
+	background: url('./img/icon_delivery.png') center center no-repeat;
 	width: rem(50px);
     height: rem(40px);
     display: block;
     margin-right: rem(8px);
 }
 .sheet-first__icon-figure{
-	background: url('../img/icon_figure.png') center center no-repeat;
+	background: url('./img/icon_figure.png') center center no-repeat;
 	width: rem(42px);
     height: rem(42px);
     display: block;
@@ -1834,7 +1834,7 @@ h2.header-h1 {
 
 .sheet-first__decor1-block::before {
   content: '';
-  background-image: url("../img/sheet-first-decor1.png");
+  background-image: url("./img/sheet-first-decor1.png");
   background-size: contain;
   display: block;
   position: relative;
@@ -1855,7 +1855,7 @@ h2.header-h1 {
 }
 
 .sheet-first__decor2-block::before {
-  content: url("../img/sheet-first-decor2.png");
+  content: url("./img/sheet-first-decor2.png");
 }
 
 .sheet-first__decor3-block {
@@ -1873,7 +1873,7 @@ h2.header-h1 {
 }
 
 .sheet-first__decor3-block::before {
-  content: url("../img/sheet-first-decor3.png");
+  content: url("./img/sheet-first-decor3.png");
 }
 
 .sheet-first .btn {
@@ -1905,7 +1905,7 @@ h2.header-h1 {
 	.sheet-first{
 		min-height: 1025px;
 		height: 100%;
-		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+		background: url('./img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
 	}
 
 	.sheet-first__header{
@@ -1979,7 +1979,7 @@ h2.header-h1 {
   /*
     <img src="./img/sheet-why-decor1.png" alt="" class="sheet-why__decor1">
 */
-  background-image: url("../img/sheet-why-decor1.png");
+  background-image: url("./img/sheet-why-decor1.png");
   background-size: auto;
   background-position: left 60%;
   background-repeat: no-repeat;
@@ -2016,7 +2016,7 @@ h2.header-h1 {
 }
 
 .sheet-why::after {
-  content: url("../img/sheet-why-decor2.png");
+  content: url("./img/sheet-why-decor2.png");
   display: block;
   position: absolute;
   left: 0;
@@ -2077,7 +2077,7 @@ h2.header-h1 {
 
 .sheet-why__iconblock > div:nth-of-type(1n+2):before {
   content: '';
-  background: url("../img/t3.png") center center no-repeat;
+  background: url("./img/t3.png") center center no-repeat;
   display: block;
   width: 67px;
   height: 21px;
@@ -2116,17 +2116,17 @@ h2.header-h1 {
 }
 
 .sheet-why__useful-icon {
-  background: url("../img/icons/useful-icon.svg") #f2f5f4 center center no-repeat;
+  background: url("./img/icons/useful-icon.svg") #f2f5f4 center center no-repeat;
   background-size: 66px 69px;
 }
 
 .sheet-why__tasty-icon {
-  background: url("../img/icons/tasty-icon.svg") #f2f5f4 center center no-repeat;
+  background: url("./img/icons/tasty-icon.svg") #f2f5f4 center center no-repeat;
   background-size: 70px 69px;
 }
 
 .sheet-why__nutritional-icon {
-  background: url("../img/icons/nutritional-icon.svg") #f2f5f4 center center no-repeat;
+  background: url("./img/icons/nutritional-icon.svg") #f2f5f4 center center no-repeat;
   background-size: 75px 64px;
 }
 
@@ -2217,7 +2217,7 @@ h2.header-h1 {
 .slider__item .slider__pict::after {
   content: '';
   position: absolute;
-  background-image: url(../img/sheet-chocco_slider-decor1.png);
+  background-image: url(./img/sheet-chocco_slider-decor1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2310,7 +2310,7 @@ h2.header-h1 {
 }
 
 .slider__left {
-  background: url("../img/arrow-scroll_slider.png") center center no-repeat;
+  background: url("./img/arrow-scroll_slider.png") center center no-repeat;
   width: 15px;
   height: 29px;
   position: absolute;
@@ -2321,7 +2321,7 @@ h2.header-h1 {
 }
 
 .slider__right {
-  background: url("../img/arrow-scroll_slider.png") center center no-repeat;
+  background: url("./img/arrow-scroll_slider.png") center center no-repeat;
   width: 15px;
   height: 29px;
   -webkit-transform: translateY(-4px) rotate(180deg);
@@ -2508,7 +2508,7 @@ h2.header-h1 {
   /*height: rem(720px);*/
   position: relative;
   background-color: #ccc;
-  background: url("../img/menu-background.jpg") 40% center no-repeat;
+  background: url("./img/menu-background.jpg") 40% center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2672,7 +2672,7 @@ h2.header-h1 {
   height: 18px;
   right: 10px;
   top: 10px;
-  background-image: url("../img/icon-close.png");
+  background-image: url("./img/icon-close.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2798,7 +2798,7 @@ h2.header-h1 {
   min-height: 805px;
   position: relative;
   background-color: #fff;
-  background-image: url("../img/reviews-decor3.png");
+  background-image: url("./img/reviews-decor3.png");
   background-position: top 20px right;
   background-repeat: no-repeat;
 }
@@ -2863,7 +2863,7 @@ h2.header-h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/reviews-pict.png") #f8faf9 right top no-repeat;
+  background: url("./img/reviews-pict.png") #f8faf9 right top no-repeat;
   position: relative;
 }
 
@@ -3006,7 +3006,7 @@ h2.header-h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../img/splash.jpg);
+  background-image: url(./img/splash.jpg);
   cursor: pointer;
 }
 
@@ -3028,7 +3028,7 @@ h2.header-h1 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-image: url(../img/play.png);
+  background-image: url(./img/play.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 82px;
@@ -3064,7 +3064,7 @@ h2.header-h1 {
   transform: translateY(-50%);
   left: 0;
   outline: none;
-  background: url("../img/icons/play.svg") center center no-repeat;
+  background: url("./img/icons/play.svg") center center no-repeat;
 }
 
 .player__start.paused {
@@ -3107,7 +3107,7 @@ h2.header-h1 {
   outline: none;
   border: 0;
   cursor: pointer;
-  background: url("../img/icons/volume.svg") center center no-repeat;
+  background: url("./img/icons/volume.svg") center center no-repeat;
   width: 40px;
   height: 40px;
 }
@@ -3172,7 +3172,7 @@ h2.header-h1 {
   position: relative;
   min-height: 100vh;
   background-color: #cfdeda;
-  background: url("../img/sheet-form-background.png") 40% center no-repeat;
+  background: url("./img/sheet-form-background.png") 40% center no-repeat;
   background-size: cover;
   color: #0f5a47;
   height: 100%;
@@ -3341,12 +3341,12 @@ textarea:focus {
 }
 
 .form__btn-custom::before {
-  background: url("../img/form-btn.png") no-repeat;
+  background: url("./img/form-btn.png") no-repeat;
 }
 
 .form__btn-custom::after {
   opacity: 0;
-  background: url("../img/form-btn_active.png") no-repeat;
+  background: url("./img/form-btn_active.png") no-repeat;
 }
 
 .form__radio {
@@ -3424,7 +3424,7 @@ textarea:focus {
 }
 
 .order__radio_checkbox .order__radio-elem:checked + .order__radio-fake:after {
-  background: url("../img/checkbox-active-icon.png") 50% no-repeat;
+  background: url("./img/checkbox-active-icon.png") 50% no-repeat;
   /*background-size: contain;*/
   width: 11px;
   height: 9px;
@@ -3620,7 +3620,7 @@ textarea:focus {
   }
 
   .sheet-first {
-    background: url("../img/sheet-wirst-decor.png") #61c4d9 top right no-repeat;
+    background: url("./img/sheet-wirst-decor.png") #61c4d9 top right no-repeat;
   }
 
   .sheet-first__header {
@@ -3664,7 +3664,7 @@ textarea:focus {
     top: 23px;
     width: 36px;
     height: 34px;
-    background: url("../img/icons/menu-icon.svg") center center no-repeat;
+    background: url("./img/icons/menu-icon.svg") center center no-repeat;
     background-size: 100% 100%;
     -ms-flex-item-align: center;
     align-self: center;
@@ -3796,7 +3796,7 @@ textarea:focus {
 
   .sheet-first__decor2-block::before {
     content: '';
-    background-image: url("../img/sheet-first-decor2-mobile.png");
+    background-image: url("./img/sheet-first-decor2-mobile.png");
     background-size: contain;
     display: block;
     position: relative;
@@ -3815,7 +3815,7 @@ textarea:focus {
 
   .sheet-first__decor3-block::before {
     content: '';
-    background-image: url("../img/sheet-first-decor3-mobile.png");
+    background-image: url("./img/sheet-first-decor3-mobile.png");
     background-size: contain;
     display: block;
     position: relative;
@@ -4138,7 +4138,7 @@ textarea:focus {
   }
 
   .sheet-first {
-    background-image: url("../img/sheet-wirst-decor.png");
+    background-image: url("./img/sheet-wirst-decor.png");
     background-color: #61c4d9;
     background-position: 100% 100%;
     background-position: 100% 0%;
@@ -4201,7 +4201,7 @@ textarea:focus {
 
   .sheet-why::after {
     content: '';
-    background-image: url("../img/sheet-why-decor2.png");
+    background-image: url("./img/sheet-why-decor2.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: bottom;

@@ -2,15 +2,15 @@
 	width: 100%;
 	height: 100vh;
 	background-color: $backgroundColor;
-	background: url('../img/sheet-wirst-decor.png') $backgroundColor center right no-repeat;
+	background: url('./img/sheet-wirst-decor.png') $backgroundColor center right no-repeat;
 	position: relative;
 
 	@include tablets {
-		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+		background: url('./img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
 	}
 
 	@include phones{
-		background-image: url('../img/sheet-wirst-decor.png');
+		background-image: url('./img/sheet-wirst-decor.png');
 		background-color:  $backgroundColor;
 		background-position: 100% 100%;
 		background-position: 100% 0%;
@@ -104,7 +104,7 @@
 			top: 23px;
 			width: 36px;
 			height: 34px;
-			background: url('../img/icons/menu-icon.svg') center center no-repeat;
+			background: url('./img/icons/menu-icon.svg') center center no-repeat;
 			background-size: 100% 100%;
 			align-self: center;
 			cursor: pointer;
@@ -136,7 +136,7 @@
 		top: 33px;
 		cursor: pointer;
 		background-color: #2f3336;
-		background: url('../img/icon-close.png') #2f3336 center right no-repeat;
+		background: url('./img/icon-close.png') #2f3336 center right no-repeat;
 		position: fixed;
 	}
 
@@ -229,7 +229,7 @@
 
 	&:before{
 		content: '';
-		background: url('../img/icons/phone.svg') center center no-repeat;
+		background: url('./img/icons/phone.svg') center center no-repeat;
 		width: rem(12px);
 		height: rem(11px);
 		margin-right: rem(6px);
@@ -403,7 +403,7 @@
 
 			&-natural::before{
 				content: '';
-				background: url('../img/icons/natural-icon.svg') center center no-repeat;
+				background: url('./img/icons/natural-icon.svg') center center no-repeat;
 				width: 44px;
 				height: 41px;
 				display: inline-block;
@@ -411,7 +411,7 @@
 			}
 			&-delivery::before{
 				content: '';
-				background: url('../img/icons/delivery-icon.svg') center center no-repeat;
+				background: url('./img/icons/delivery-icon.svg') center center no-repeat;
 				width: 50px;
 				height: 40px;
 				display: inline-block;
@@ -419,7 +419,7 @@
 			}
 			&-figure::before{
 				content: '';
-				background: url('../img/icons/figure-icon.svg') center center no-repeat;
+				background: url('./img/icons/figure-icon.svg') center center no-repeat;
 				width: 42px;
 				height: 42px;
 				display: inline-block;
@@ -448,21 +448,21 @@
 
 
 .sheet-first__icon-natural{
-	background: url('../img/icon_natural.png') center center no-repeat;
+	background: url('./img/icon_natural.png') center center no-repeat;
 	width: rem(44px);
     height: rem(41px);
     display: block;
     margin-right: rem(8px);
 }
 .sheet-first__icon-delivery{
-	background: url('../img/icon_delivery.png') center center no-repeat;
+	background: url('./img/icon_delivery.png') center center no-repeat;
 	width: rem(50px);
     height: rem(40px);
     display: block;
     margin-right: rem(8px);
 }
 .sheet-first__icon-figure{
-	background: url('../img/icon_figure.png') center center no-repeat;
+	background: url('./img/icon_figure.png') center center no-repeat;
 	width: rem(42px);
     height: rem(42px);
     display: block;
@@ -495,7 +495,7 @@
 
 	&::before{
 		content: ''; 
-		background-image: url('../img/sheet-first-decor1.png');
+		background-image: url('./img/sheet-first-decor1.png');
 		background-size: contain;
 		display: block;
 		position: relative;
@@ -534,11 +534,11 @@
 	}
 
 	&::before{
-		content: url('../img/sheet-first-decor2.png'); 
+		content: url('./img/sheet-first-decor2.png'); 
 
 		@include tablets{
 			content: ''; 
-			background-image: url('../img/sheet-first-decor2-mobile.png');
+			background-image: url('./img/sheet-first-decor2-mobile.png');
 			background-size: contain;
 			display: block;
 			position: relative;
@@ -576,11 +576,11 @@
 	}
 
 	&::before{
-		content: url('../img/sheet-first-decor3.png'); 
+		content: url('./img/sheet-first-decor3.png'); 
 
 		@include tablets{
 			content: ''; 
-			background-image: url('../img/sheet-first-decor3-mobile.png');
+			background-image: url('./img/sheet-first-decor3-mobile.png');
 			background-size: contain;
 			display: block;
 			position: relative;
@@ -628,7 +628,7 @@
 	.sheet-first{
 		min-height: 1025px;
 		height: 100%;
-		background: url('../img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
+		background: url('./img/sheet-wirst-decor.png') $backgroundColor top right no-repeat;
 	}
 
 	.sheet-first__header{
