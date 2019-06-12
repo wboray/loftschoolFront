@@ -9,8 +9,8 @@
 	background-repeat: no-repeat;
 
 	@include tablets{
-		height: unset;
 		min-height: unset;
+		height: 100% !important;
 
 		background-size:20%;
 		background-position: top 20px right -25px;

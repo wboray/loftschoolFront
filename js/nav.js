@@ -31,13 +31,12 @@ window.addEventListener("load", function(event) {
         event.preventDefault();
 
         if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768){
-            /*
-            if (fixedMenu.style.display =='none'){
-                fixedMenu.style.display = 'flex';
-            }else{
-                fixedMenu.style.display = 'none';
-            }*/
             _toggleClass(elements, classes);
+            if (hamburgerOverlay.classList.contains('active')) {
+                fixedMenu.style.display = 'none';
+            }else{
+                fixedMenu.style.display = 'flex';
+            }
         }else{
             let target = event.target;
             if (typeof target.getAttribute('href') !== "null"){
@@ -49,7 +48,7 @@ window.addEventListener("load", function(event) {
                     
                     navigationPageActive(target);*/
                     if (window.innerWidth <= 768)_toggleClass(elements, classes);
-                    //fixedMenu.style.display = 'flex';
+                    fixedMenu.style.display = 'flex';
                     window.location.hash = target.getAttribute('href');
                 }
             }

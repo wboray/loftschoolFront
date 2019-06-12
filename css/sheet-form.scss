@@ -13,6 +13,10 @@
     .centered-container, .contentblock{
         min-height: 100vh;
     }
+
+    @include tablets{
+        height: 100% !important;
+    }
 }    
     .sheet-form__contentblock{
         display: flex;

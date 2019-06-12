@@ -163,6 +163,10 @@
                 flex-basis: 100%;
                 animation-name: menuBounce;
                 animation-duration: .5s;
+
+                @include tablets{
+                    max-width: unset; 
+                }
                 //transition: flex-grow 1s ease;
 
                 //transition: flex-basis 1s ease;
