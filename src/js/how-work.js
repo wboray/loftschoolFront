@@ -26,7 +26,7 @@
                 }
             });
         };
-        
+
         function onPlayerReady(event) {
             var duration = player.getDuration();
             var interval = void 0;
@@ -54,6 +54,7 @@
             }
         }
         
+document.addEventListener("DOMContentLoaded", function(event) { 
         function changeButtonPosition(percents) {
             $(".player__playback-button").css({left: percents + "%"});
         }
@@ -72,7 +73,7 @@
         }
 
         
-document.addEventListener("DOMContentLoaded", function(event) { 
+
     $(".player__start").on("click", function (e) {
         var playerStatus = player.getPlayerState();
         // 0 - ended, 1 - played, 2 - paused ...    
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     $(".player__splash").on("click", function (e) {
         player.playVideo();
+        this.removeClass("mute");
     });
     
     $(".player__volume-button").on("click", function () {
