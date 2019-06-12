@@ -48,7 +48,7 @@ window.addEventListener("load", function(event) {
                     
                     navigationPageActive(target);*/
                     if (window.innerWidth <= 768)_toggleClass(elements, classes);
-                    fixedMenu.style.display = 'flex';
+                    fixedMenu.style.display = 'none';
                     window.location.hash = target.getAttribute('href');
                 }
             }
