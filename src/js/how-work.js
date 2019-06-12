@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     $(".player__splash").on("click", function (e) {
         $(".player__wrapper").addClass("active");
+        $(".player__start").addClass("paused");
         player.playVideo();
         //this.removeClass("mute");
     });
