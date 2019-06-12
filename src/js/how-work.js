@@ -54,7 +54,7 @@
             }
         }
         
-document.addEventListener("DOMContentLoaded", function(event) { 
+
         function changeButtonPosition(percents) {
             $(".player__playback-button").css({left: percents + "%"});
         }
@@ -73,11 +73,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
 
         
-
+document.addEventListener("DOMContentLoaded", function(event) { 
     $(".player__start").on("click", function (e) {
         var playerStatus = player.getPlayerState();
         // 0 - ended, 1 - played, 2 - paused ...    
+        
         if (playerStatus !== 1) {
+            
             player.playVideo();
         } else {
             player.pauseVideo();
@@ -95,8 +97,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     
     $(".player__splash").on("click", function (e) {
+        $(".player__wrapper").addClass("active");
         player.playVideo();
-        this.removeClass("mute");
+        //this.removeClass("mute");
     });
     
     $(".player__volume-button").on("click", function () {
@@ -110,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
+    
 });
 
 
