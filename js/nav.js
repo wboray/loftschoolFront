@@ -32,11 +32,6 @@ window.addEventListener("load", function(event) {
 
         if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768){
             _toggleClass(elements, classes);
-            if (hamburgerOverlay.classList.contains('active')) {
-                fixedMenu.style.display = 'none';
-            }else{
-                fixedMenu.style.display = 'flex';
-            }
         }else{
             let target = event.target;
             if (typeof target.getAttribute('href') !== "null"){
@@ -48,12 +43,15 @@ window.addEventListener("load", function(event) {
                     
                     navigationPageActive(target);*/
                     if (window.innerWidth <= 768)_toggleClass(elements, classes);
-                    fixedMenu.style.display = 'none';
                     window.location.hash = target.getAttribute('href');
                 }
             }
         }
-
+        if (hamburgerOverlay.classList.contains('active')) {
+            fixedMenu.style.display = 'none';
+        }else{
+            fixedMenu.style.display = 'flex';
+        }
         //firstLoad = false;
     })
 /*
