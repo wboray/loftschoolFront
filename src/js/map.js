@@ -14,12 +14,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
             // Создаём макет содержимого.
             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                '<div style="color: #FFFFFF; font-weight: bold;">11$[properties.iconContent]</div>'
             ),
     
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
+                hintContent: "Cho cco ...",
+                balloonContentHeader: "Cho cco ...",
+                balloonContentBody: "Самые вкусные шоколадные батончики - быстро, вкусно, сытно, ждем по адресу:",
+                balloonContentFooter: "Саранск ..."
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
@@ -36,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             myPlacemarkWithContent = new ymaps.Placemark([54.181349, 45.181572], {
                 hintContent: 'Собственный значок метки с контентом',
                 balloonContent: 'Меточка на соборе ушакова',
-                iconContent: '12'
+                balloonContentBody: "Самые вкусные шоколадные батончики - быстро, вкусно, сытно, ждем по адресу:",
+                balloonContentFooter: "Саранск ..."
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
@@ -63,3 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //myMap.container.fitToViewport();
 
 })
+
+
+
+
+                    
