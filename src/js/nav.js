@@ -85,7 +85,14 @@ window.addEventListener("load", function(event) {
         if (typeof navMainItemLink == 'object')navMainItemLink.click();
     }    
 */
-
+//при кликах на кнопке
+const btngo = document.querySelectorAll('.btn[data-goto-form="1"]')
+btngo.forEach(element => {
+    if (typeof element == 'object') element.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.hash = 'sheetform';
+    })
+});
 
 
 const md = new MobileDetect(window.navigator.userAgent);

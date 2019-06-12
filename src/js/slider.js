@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slider.addEventListener('click', function(event){
             if (searchInArray(event.target.classList, excludeArray)){
                 //элемент исключения, не будем забирать у него управление
-                console.log('исключение');
+                //console.log('исключение');
             }else{
                 event.preventDefault();
                 let revers = 0;
