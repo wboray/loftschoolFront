@@ -6,21 +6,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var myMap = new ymaps.Map('map', {
                 center: [54.181465, 45.187582],
                 zoom: 16,
-                height: '100%',
-                scroll: false
+                height: '100%'
             }, {
                 searchControlProvider: 'yandex#search'
             }),
     
             // Создаём макет содержимого.
             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">11$[properties.iconContent]</div>'
+                '<div style="color: #FFFFFF; font-weight: bold;max-width: 80vw">$[properties.iconContent]</div>'
             ),
     
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                 hintContent: "Cho cco ...",
                 balloonContentHeader: "Cho cco ...",
-                balloonContentBody: "Самые вкусные шоколадные батончики - быстро, вкусно, сытно, ждем по адресу:",
+                balloonContentBody: "Самые вкусные шоколадные батончики:",
                 balloonContentFooter: "Саранск ..."
             }, {
                 // Опции.
@@ -32,13 +31,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 iconImageSize: [46, 57],
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
-                iconImageOffset: [-5, -38]
+                iconImageOffset: [-5, -38],
+                iconContentLayout: MyIconContentLayout
             }),
 
             myPlacemarkWithContent = new ymaps.Placemark([54.181349, 45.181572], {
                 hintContent: 'Собственный значок метки с контентом',
                 balloonContent: 'Меточка на соборе ушакова',
-                balloonContentBody: "Самые вкусные шоколадные батончики - быстро, вкусно, сытно, ждем по адресу:",
+                balloonContentBody: "Самые вкусные шоколадные батончики:",
                 balloonContentFooter: "Саранск ..."
             }, {
                 // Опции.
@@ -61,8 +61,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         myMap.geoObjects
             .add(myPlacemark)
             .add(myPlacemarkWithContent);
+            
+            myMap.behaviors.disable("scrollZoom");
     });
-
+   
     //myMap.container.fitToViewport();
 
 })

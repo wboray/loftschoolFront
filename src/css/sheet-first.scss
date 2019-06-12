@@ -78,7 +78,6 @@
 
 	.nav-main{
 		@include tablets{
-			z-index: 999;
 			display: none;
 			position: fixed;
 			overflow: hidden;
@@ -494,11 +493,12 @@
 	}
 
 	&::before{
-		content: ''; 
-		background-image: url('./img/sheet-first-decor1.png');
+		content: url('./img/sheet-first-decor1.png'); 
+		
+		/*
 		background-size: contain;
 		display: block;
-		position: relative;
+		position: relative;*/
 		@include tablets{
 			width: 99%;
 			height: 90%;
@@ -582,6 +582,7 @@
 			content: ''; 
 			background-image: url('./img/sheet-first-decor3-mobile.png');
 			background-size: contain;
+			background-repeat: no-repeat;
 			display: block;
 			position: relative;
 			width: 100%;

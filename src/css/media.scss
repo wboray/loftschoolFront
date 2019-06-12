@@ -39,8 +39,7 @@ $min-screen: '320px';
         @content;
     }
 }
-
+  
 @function rem($px){
-    //@return $px / 16px + 0rem;
-    @return $px + 0px;
+    @return $px / 16px + 0rem;
 }
