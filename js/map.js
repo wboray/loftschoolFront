@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
                 // Своё изображение иконки метки.
-                iconImageHref: '../img/map-icon.png',
+                iconImageHref: './img/map-icon.png',
                 // Размеры метки.
                 iconImageSize: [46, 57],
                 // Смещение левого верхнего угла иконки относительно

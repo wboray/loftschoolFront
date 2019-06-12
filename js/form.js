@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const body = document.querySelector('body');
     const html = document.querySelector('html');
     const formSubmit = document.querySelector('.form__btn-custom');
+    const formReset = document.querySelector('.form__send-btn');
     //const form = document.querySelector('#formid');
     /*
     const classes = ['active', 'hidden'];
@@ -47,8 +48,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 */
     //отправка и прием данных https://webdev-api.loftschool.com/sendmail 
-
-
     //валидация заполнения формы
     const form = document.querySelector('#formid');
     form.addEventListener('submit', function (e){
@@ -70,6 +69,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
         }
     })
+
+    formReset.addEventListener('click', function (e){
+        e.preventDefault();
+        form.reset();
+    })
+
 
 
     const ajaxForm = function (form){
@@ -106,13 +111,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function valid(formData, form){
         console.log(formData);
         console.log(formData.get('name'));
-        if (formData.get('name') == '' || formData.get('name') > 20){
+        if (formData.get('name') == '' || formData.get('name').length > 20){
             form.querySelector('input[name="name"]').setCustomValidity('Имя не должно быть пустым и больше чем 20 символов');
             form.querySelector('input[name="name"]').reportValidity();
             throw new error('Имя не должно быть пустым и больше чем 20 символов');
         }
 
-        if (formData.get('phone') == '' || formData.get('phone') > 12){
+        if (formData.get('phone') == '' || formData.get('phone').length > 12){
             form.querySelector('input[name="phone"]').setCustomValidity('Телефон не должен быть пустым и больше чем 12 символов');
             form.querySelector('input[name="phone"]').reportValidity();
             throw new error('Телефон не должен быть пустым и больше чем 12 символов');
