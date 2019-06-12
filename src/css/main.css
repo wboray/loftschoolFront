@@ -344,7 +344,8 @@ section {
   min-height: 650px; }
   @media screen and (max-width: 768px) {
     section {
-      min-height: 1025px; } }
+      min-height: 1042px !important;
+      height: 100%; } }
 
 .content-center {
   height: 100%;
@@ -1600,9 +1601,7 @@ section {
 */ }
   @media screen and (max-width: 768px) {
     .sheet-why {
-      height: 100%;
-      /*min-height: 1168px;*/
-      min-height: 1050px !important; } }
+      height: 100%; } }
   @media screen and (max-width: 768px) {
     .sheet-why {
       background-position: left 30%; } }
@@ -1947,10 +1946,6 @@ section {
   align-items: center;
   position: relative;
   background-color: #fff; }
-  @media screen and (max-width: 768px) {
-    .sheet-command {
-      min-height: 1042px;
-      height: 100%; } }
   .sheet-command .centered-container {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -2461,8 +2456,6 @@ section {
   background-repeat: no-repeat; }
   @media screen and (max-width: 768px) {
     .sheet-reviews {
-      min-height: unset;
-      height: 100% !important;
       background-size: 20%;
       background-position: top 20px right -25px; } }
   @media screen and (max-width: 480px) {
@@ -2841,12 +2834,10 @@ section {
   background-color: #cfdeda;
   background: url("../img/sheet-form-background.png") 40% center no-repeat;
   background-size: cover;
-  color: #0f5a47; }
+  color: #0f5a47;
+  height: 100%; }
   .sheet-form .centered-container, .sheet-form .contentblock {
     min-height: 100vh; }
-  @media screen and (max-width: 768px) {
-    .sheet-form {
-      height: 100% !important; } }
 
 .sheet-form__contentblock {
   display: -webkit-box;

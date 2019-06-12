@@ -47,7 +47,7 @@ window.addEventListener("load", function(event) {
                 }
             }
         }
-        if (hamburgerOverlay.classList.contains('active')) {
+        if (hamburgerOverlay.classList.contains('active') || window.innerWidth <= 768) {
             fixedMenu.style.display = 'none';
         }else{
             fixedMenu.style.display = 'flex';

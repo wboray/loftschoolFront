@@ -8,10 +8,6 @@
     position: relative;
     background-color: #fff;
 
-    @include tablets{
-        min-height: 1042px;
-        height: 100%;
-    }
 
     .centered-container{
         flex-grow: 1;

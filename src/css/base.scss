@@ -69,7 +69,8 @@ section{
 	min-height: 650px;
 
 	@include tablets{
-		min-height: 1025px; 
+		min-height: 1042px !important;
+		height: 100%; 
 	}
 }
 
