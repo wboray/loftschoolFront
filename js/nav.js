@@ -31,11 +31,12 @@ window.addEventListener("load", function(event) {
         event.preventDefault();
 
         if (event.target.id == 'hamburger-overlay' && window.innerWidth <= 768){
-            if (fixedMenu.style.visibility =='hidden'){
-                fixedMenu.style.visibility = 'visible';
+            /*
+            if (fixedMenu.style.display =='none'){
+                fixedMenu.style.display = 'flex';
             }else{
-                fixedMenu.style.visibility = 'hidden';
-            }
+                fixedMenu.style.display = 'none';
+            }*/
             _toggleClass(elements, classes);
         }else{
             let target = event.target;
@@ -48,7 +49,7 @@ window.addEventListener("load", function(event) {
                     
                     navigationPageActive(target);*/
                     if (window.innerWidth <= 768)_toggleClass(elements, classes);
-                    fixedMenu.style.visibility = 'visible';
+                    //fixedMenu.style.display = 'flex';
                     window.location.hash = target.getAttribute('href');
                 }
             }

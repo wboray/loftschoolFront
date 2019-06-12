@@ -80,7 +80,7 @@
 	.nav-main{
 		@include tablets{
 			z-index: 999;
-			visibility: hidden;
+			display: none;
 			position: fixed;
 			overflow: hidden;
 			background-color: #2f3336;
@@ -106,10 +106,6 @@
 			height: 34px;
 			background: url('../img/icons/menu-icon.svg') center center no-repeat;
 			background-size: 100% 100%;
-			//background-color: red;
-			
-    		//-webkit-mask:  url('../img/icons/menu-icon.svg') no-repeat 50% 50%;
-    		//mask: url('../img/icons/menu-icon.svg') no-repeat 50% 50%;
 			align-self: center;
 			cursor: pointer;
 		}
@@ -145,8 +141,9 @@
 	}
 
 	.nav-main{
-		visibility: visible;
-		height: 100%;
+		display: flex;
+		min-height: 100vh;
+		align-items: center;
 	}
 
 }

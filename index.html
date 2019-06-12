@@ -601,6 +601,7 @@
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
 		const md = new MobileDetect(window.navigator.userAgent);
+
 		if ($(window).outerWidth() <= 480 && md.mobile()){
 			responsiveWidth = 900;
 			responsiveHeight = false;
@@ -609,11 +610,13 @@
 			responsiveWidth = 1024;
 			responsiveHeight= false;
 			fp(responsiveWidth, responsiveHeight);
-		}else{
+		}else {
 			responsiveWidth = 650;
-			responsiveHeight = 768;
+			responsiveHeight = 650;
 			fp(responsiveWidth, responsiveHeight);
 		}		 
+		// && $(window).outerHeight() > 1050
+		//
 		function fp(responsiveWidth, responsiveHeight){ 
 			var myFullpage = new fullpage('#fullpage', {
 				licenseKey: "D2DB0F76-42B04C3A-938789B7-AE7D1A8F",

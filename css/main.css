@@ -297,6 +297,9 @@ html.fp-enabled,
 #fp-nav ul li a span {
   display: none; }
 
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell {
+  height: auto !important; }
+
 /*===perem===*/
 /*===functions===*/
 *, *:after, *:before {
@@ -339,15 +342,10 @@ section {
   position: relative;
   height: 100%;
   min-height: 650px; }
+  @media screen and (max-width: 768px) {
+    section {
+      height: 100%; } }
 
-/*
-.content-left{
-	padding: 0px 29px 0px 0px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-*/
 .content-center {
   height: 100%;
   display: -webkit-box;
@@ -491,7 +489,7 @@ section {
   border-radius: 50%; }
 
 .hidden {
-  overflow: hidden; }
+  overflow: hidden !important; }
 
 .thanks-window {
   width: 100vw;
@@ -989,7 +987,7 @@ section {
 @media screen and (max-width: 768px) {
   .hamburger-overlay .nav-main {
     z-index: 999;
-    visibility: hidden;
+    display: none;
     position: fixed;
     overflow: hidden;
     background-color: #2f3336;
@@ -1043,8 +1041,13 @@ section {
     background: url("../img/icon-close.png") #2f3336 center right no-repeat;
     position: fixed; }
   .hamburger-overlay.active .nav-main {
-    visibility: visible;
-    height: 100%; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .menu {
   display: -webkit-box;
@@ -1598,7 +1601,7 @@ section {
     .sheet-why {
       height: 100%;
       /*min-height: 1168px;*/
-      min-height: unset; } }
+      min-height: 1050px !important; } }
   @media screen and (max-width: 768px) {
     .sheet-why {
       background-position: left 30%; } }

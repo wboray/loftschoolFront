@@ -66,23 +66,16 @@ body{
 section{
 	position: relative;
     height: 100%;
-    min-height: 650px;
-}
+		min-height: 650px;
 
-/*
-.content-left{
-	padding: 0px 29px 0px 0px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+		@include tablets{
+			height: 100%;
+		}
 }
-*/
 
 .content-center{
-	
     height: 100%;
-	display: flex;
-
+		display: flex;
 }
 
 .block-model{
@@ -231,7 +224,7 @@ section{
 
 
 .hidden{
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .thanks-window{

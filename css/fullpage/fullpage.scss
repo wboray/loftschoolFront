@@ -286,3 +286,8 @@
 #fp-nav ul li a span{
     display: none;
 }
+
+
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
