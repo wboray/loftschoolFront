@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const body = document.querySelector('body');
     const html = document.querySelector('html');
     const formSubmit = document.querySelector('.form__btn-custom');
-    const formReset = document.querySelector('.form__send-btn');
+    const formReset = document.querySelector('.form__clear');
     //const form = document.querySelector('#formid');
     /*
     const classes = ['active', 'hidden'];
